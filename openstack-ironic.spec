@@ -13,7 +13,7 @@
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	2014.1
-Release:	%{release_letter}%{milestone}.2%{?dist}
+Release:	%{release_letter}%{milestone}.2%{?dist}.1
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
@@ -176,6 +176,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.1-rc1.2.1
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 
 * Wed Apr 9 2014 Angus Thomas <athomas@redhat.com> - 2014.1-rc1.2
 - License file in each package
