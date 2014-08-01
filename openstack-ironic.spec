@@ -7,7 +7,7 @@
 %global	release_name icehouse
 %global	release_letter rc
 %global	milestone 1
-%global	full_release ironic-%{version}.%{release_letter}%{milestone}
+%global	full_release ironic-%{upstream_version}
 
 
 Name:		openstack-ironic
@@ -25,7 +25,6 @@ Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
 
 Patch0001:	0001-ironic-Remove-runtime-dependency-on-python-pbr.patch
-Patch0002:	0002-ironic-Default-DB-location.patch
 
 BuildArch:	noarch
 BuildRequires:	python-setuptools
@@ -40,10 +39,9 @@ BuildRequires:	systemd
 
 
 %prep
-%setup -q -n %{full_release}
+%setup -q -n ironic-%{upstream_version}
 
 %patch0001 -p1
-%patch0002 -p1
 
 %build
 %{__python2} setup.py build
