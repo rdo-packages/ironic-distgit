@@ -93,6 +93,7 @@ Requires:	python-keystoneclient
 Requires:	python-jinja2
 Requires:	python-pyghmi
 Requires:	python-alembic
+Requires:	python-posix_ipc
 
 Requires(pre):	shadow-utils
 
@@ -174,6 +175,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Mon Aug 11 2014 Derek Higgins <derekh@redhat.com> - XXX
+- Update requirements
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.1-rc1.2.1
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
