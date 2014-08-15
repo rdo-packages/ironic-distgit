@@ -90,6 +90,7 @@ Requires:	python-sqlalchemy
 Requires:	python-neutronclient
 Requires:	python-glanceclient
 Requires:	python-keystoneclient
+Requires:	python-keystonemiddleware
 Requires:	python-jinja2
 Requires:	python-pyghmi
 Requires:	python-alembic
@@ -175,6 +176,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Fri Aug 15 2014 Derek Higgins <derekh@redhat.com> - XXX
+- Add dependency on python-keystonemiddleware
+
 * Mon Aug 11 2014 Derek Higgins <derekh@redhat.com> - XXX
 - Update requirements
 
