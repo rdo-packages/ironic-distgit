@@ -23,6 +23,7 @@ Source0:	https://launchpad.net/ironic/icehouse/icehouse-rc1/+download/ironic-201
 
 Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
+Source3:	ironic-sudoers
 
 Patch0001:	0001-ironic-Remove-runtime-dependency-on-python-pbr.patch
 
@@ -63,6 +64,9 @@ install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/ironic.conf.sample 
 install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/policy.json %{buildroot}/%{_sysconfdir}/ironic/policy.json
 install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
 install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
+
+# Install sudoers
+install -p -D -m 440 %{SOURCE3} %{buildroot}%{_sysconfdir}/sudoers.d/ironic
 
 
 %description
@@ -109,6 +113,7 @@ Components common to all OpenStack Ironic services
 %{python_sitelib}/ironic*
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
+%config(noreplace) %{_sysconfdir}/sudoers.d/ironic
 
 %pre common
 getent group ironic >/dev/null || groupadd -r ironic
@@ -176,6 +181,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Thu Sep 04 2014 James Slagle <jslagle@redhat.com> - XXX
+- Add ironic-sudoers
+
 * Fri Aug 15 2014 Derek Higgins <derekh@redhat.com> - XXX
 - Add dependency on python-keystonemiddleware
 
