@@ -1,4 +1,4 @@
-From 463088802891877bf9a8aa87bb82db86cb67d66a Mon Sep 17 00:00:00 2001
+From 82acab100c27354ddadc67e67458485dd96f8296 Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Mon, 7 Apr 2014 16:59:04 +0100
 Subject: [PATCH] Remove pbr dependency
@@ -13,7 +13,7 @@ Subject: [PATCH] Remove pbr dependency
 
 diff --git a/requirements.txt b/requirements.txt
 deleted file mode 100644
-index 0b38cea..0000000
+index b543303..0000000
 --- a/requirements.txt
 +++ /dev/null
 @@ -1,36 +0,0 @@
@@ -29,11 +29,11 @@ index 0b38cea..0000000
 -WebOb>=1.2.3
 -greenlet>=0.3.2
 -sqlalchemy-migrate>=0.9.1
--netaddr>=0.7.6
+-netaddr>=0.7.12
 -paramiko>=1.13.0
 -iso8601>=0.1.9
 -python-neutronclient>=2.3.6,<3
--python-glanceclient>=0.13.1
+-python-glanceclient>=0.14.0
 -python-keystoneclient>=0.10.0
 -python-swiftclient>=2.2.0
 -stevedore>=0.14
@@ -65,7 +65,7 @@ index 7363757..09230a0 100644
      pbr=True)
 diff --git a/test-requirements.txt b/test-requirements.txt
 deleted file mode 100644
-index c240f02..0000000
+index 74980b0..0000000
 --- a/test-requirements.txt
 +++ /dev/null
 @@ -1,23 +0,0 @@
@@ -76,7 +76,7 @@ index c240f02..0000000
 -mock>=1.0
 -Babel>=1.3
 -MySQL-python
--oslotest>=1.1.0.0a1
+-oslotest>=1.1.0.0a2
 -psycopg2
 -python-ironicclient>=0.2.1
 -python-subunit>=0.0.18
