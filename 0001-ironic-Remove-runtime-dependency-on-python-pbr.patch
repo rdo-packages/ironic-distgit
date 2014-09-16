@@ -1,4 +1,4 @@
-From 82acab100c27354ddadc67e67458485dd96f8296 Mon Sep 17 00:00:00 2001
+From 3dff88fba1745f731857db421a09641ef6bfe56e Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Mon, 7 Apr 2014 16:59:04 +0100
 Subject: [PATCH] Remove pbr dependency
@@ -6,14 +6,14 @@ Subject: [PATCH] Remove pbr dependency
 ---
  requirements.txt      | 36 ------------------------------------
  setup.py              |  1 -
- test-requirements.txt | 23 -----------------------
- 3 files changed, 60 deletions(-)
+ test-requirements.txt | 19 -------------------
+ 3 files changed, 56 deletions(-)
  delete mode 100644 requirements.txt
  delete mode 100644 test-requirements.txt
 
 diff --git a/requirements.txt b/requirements.txt
 deleted file mode 100644
-index b543303..0000000
+index 6327ef9..0000000
 --- a/requirements.txt
 +++ /dev/null
 @@ -1,36 +0,0 @@
@@ -42,8 +42,8 @@ index b543303..0000000
 -oslo.config>=1.4.0.0a3
 -oslo.db>=0.4.0  # Apache-2.0
 -oslo.rootwrap>=1.3.0.0a1
--oslo.i18n>=0.2.0  # Apache-2.0
--oslo.utils>=0.2.0                       # Apache-2.0
+-oslo.i18n>=0.3.0  # Apache-2.0
+-oslo.utils>=0.3.0                       # Apache-2.0
 -pecan>=0.5.0
 -six>=1.7.0
 -jsonpatch>=1.1
@@ -65,10 +65,10 @@ index 7363757..09230a0 100644
      pbr=True)
 diff --git a/test-requirements.txt b/test-requirements.txt
 deleted file mode 100644
-index 74980b0..0000000
+index ec4e1f3..0000000
 --- a/test-requirements.txt
 +++ /dev/null
-@@ -1,23 +0,0 @@
+@@ -1,19 +0,0 @@
 -hacking>=0.8.0,<0.9
 -coverage>=3.6
 -discover
@@ -88,10 +88,6 @@ index 74980b0..0000000
 -sphinxcontrib-pecanwsme>=0.8
 -oslosphinx>=2.2.0.0a2
 -
--# Required for Nova unit tests in ironic/nova/tests/ and can be removed
--# once the driver code lands in Nova.
--http://tarballs.openstack.org/nova/nova-master.tar.gz#egg=nova
--mox>=0.5.3
 -- 
 1.9.3
 
