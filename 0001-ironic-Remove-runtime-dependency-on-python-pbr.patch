@@ -1,22 +1,25 @@
-From 3dff88fba1745f731857db421a09641ef6bfe56e Mon Sep 17 00:00:00 2001
+From 19e53df96cab69d6bfef49b3bfe685f8ee718845 Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Mon, 7 Apr 2014 16:59:04 +0100
 Subject: [PATCH] Remove pbr dependency
 
 ---
- requirements.txt      | 36 ------------------------------------
+ requirements.txt      | 39 ---------------------------------------
  setup.py              |  1 -
- test-requirements.txt | 19 -------------------
- 3 files changed, 56 deletions(-)
+ test-requirements.txt | 22 ----------------------
+ 3 files changed, 62 deletions(-)
  delete mode 100644 requirements.txt
  delete mode 100644 test-requirements.txt
 
 diff --git a/requirements.txt b/requirements.txt
 deleted file mode 100644
-index 6327ef9..0000000
+index daed34e..0000000
 --- a/requirements.txt
 +++ /dev/null
-@@ -1,36 +0,0 @@
+@@ -1,39 +0,0 @@
+-# The order of packages is significant, because pip processes them in the order
+-# of appearance. Changing the order has an impact on the overall integration
+-# process, which may cause wedges in the gate later.
 -pbr>=0.6,!=0.7,<1.0
 -SQLAlchemy>=0.8.4,<=0.8.99,>=0.9.7,<=0.9.99
 -alembic>=0.6.4
@@ -28,7 +31,7 @@ index 6327ef9..0000000
 -lxml>=2.3
 -WebOb>=1.2.3
 -greenlet>=0.3.2
--sqlalchemy-migrate>=0.9.1
+-sqlalchemy-migrate>=0.9.1,!=0.9.2
 -netaddr>=0.7.12
 -paramiko>=1.13.0
 -iso8601>=0.1.9
@@ -65,10 +68,13 @@ index 7363757..09230a0 100644
      pbr=True)
 diff --git a/test-requirements.txt b/test-requirements.txt
 deleted file mode 100644
-index ec4e1f3..0000000
+index 4f6d8fd..0000000
 --- a/test-requirements.txt
 +++ /dev/null
-@@ -1,19 +0,0 @@
+@@ -1,22 +0,0 @@
+-# The order of packages is significant, because pip processes them in the order
+-# of appearance. Changing the order has an impact on the overall integration
+-# process, which may cause wedges in the gate later.
 -hacking>=0.8.0,<0.9
 -coverage>=3.6
 -discover
