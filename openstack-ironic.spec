@@ -25,6 +25,8 @@ Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
 Source3:	ironic-sudoers
 
+Patch0001: 0001-Remove-runtime-dep-on-python-pbr.patch
+
 BuildArch:	noarch
 BuildRequires:	python-setuptools
 BuildRequires:	python2-devel
@@ -40,9 +42,15 @@ BuildRequires:	systemd
 %prep
 %setup -q -n ironic-%{upstream_version}
 
+%patch0001 -p1
+
 # Remove the requirements file so that PBR hooks don't add it
 # to distutils requires_dist config
 rm -rf {test-,}requirements.txt
+
+# We add REDHATIRONICVERSION/RELEASE with the pbr removal patch
+sed -i s/REDHATIRONICVERSION/%{version}/ ironic/version.py
+sed -i s/REDHATIRONICRELEASE/%{release}/ ironic/version.py
 
 %build
 %{__python2} setup.py build
@@ -182,6 +190,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Thu Oct 09 2014 Dan Prince <dprince@redhat.com> - XXX
+- Patch out PBR runtime dependency.
+
 * Wed Oct 01 2014 Dan Prince <dprince@redhat.com> - XXX
 - Remove requirements.txt and test-requirements.txt in prep rather
   than via a patch.
