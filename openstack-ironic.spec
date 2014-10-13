@@ -4,25 +4,25 @@
 %{!?python2_sitearch: %global python2_sitearch %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 %endif
 
-%global	release_name icehouse
+%global	release_name juno
 %global	release_letter rc
 %global	milestone 1
-%global	full_release ironic-%{version}.%{release_letter}%{milestone}
+%global	full_release ironic-%{version}
 
 
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
-Version:	2014.1
-Release:	%{release_letter}%{milestone}.2%{?dist}.1
+Version:	2014.2.rc2
+Release:	1%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
 #Source0:	https://launchpad.net/ironic/%{release_name}/%{release_name}-%{milestone}/+download/%{full_release}.tar.gz
-Source0:	https://launchpad.net/ironic/icehouse/icehouse-rc1/+download/ironic-2014.1.rc1.tar.gz
-
+Source0:	https://launchpad.net/ironic/juno/juno-rc2/+download/ironic-2014.2.rc2.tar.gz
 
 Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
+Source3:	ironic-rootwrap-sudoers
 
 Patch0001:	0001-ironic-Remove-runtime-dependency-on-python-pbr.patch
 Patch0002:	0002-ironic-Default-DB-location.patch
@@ -41,6 +41,7 @@ BuildRequires:	systemd
 
 %prep
 %setup -q -n %{full_release}
+rm requirements.txt test-requirements.txt
 
 %patch0001 -p1
 %patch0002 -p1
@@ -56,6 +57,10 @@ BuildRequires:	systemd
 mkdir -p %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}
+
+# install sudoers file
+mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
+install -p -D -m 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/sudoers.d/ironic
 
 mkdir -p %{buildroot}%{_sharedstatedir}/ironic/
 mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
@@ -76,25 +81,41 @@ Group: System Environment/Base
 
 Requires:	python-eventlet
 Requires:	python-fixtures
+Requires:	python-greenlet
 Requires:	python-iso8601
+Requires:	python-posix_ipc
 Requires:	python-jsonpatch
+Requires:	python-keystonemiddleware
 Requires:	python-kombu
 Requires:	python-anyjson
+Requires:	python-lockfile
+Requires:	python-lxml
 Requires:	python-migrate
 Requires:	python-mock
 Requires:	python-netaddr
+Requires:	python-oslo-config
+Requires:	python-oslo-db
+Requires:	python-oslo-i18n
+Requires:	python-oslo-rootwrap
+Requires:	python-oslo-utils
 Requires:	python-paramiko
 Requires:	python-pecan
+Requires:	python-retrying
+Requires:	python-six
 Requires:	python-stevedore
+Requires:	python-webob
+Requires:	python-websockify
 Requires:	python-wsme
 Requires:	pycrypto
 Requires:	python-sqlalchemy
 Requires:	python-neutronclient
 Requires:	python-glanceclient
 Requires:	python-keystoneclient
+Requires:	python-swiftclient
 Requires:	python-jinja2
 Requires:	python-pyghmi
 Requires:	python-alembic
+Requires:	pysendfile
 
 Requires(pre):	shadow-utils
 
@@ -106,7 +127,9 @@ Components common to all OpenStack Ironic services
 %doc README.rst LICENSE
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
+%{_bindir}/ironic-nova-bm-migrate
 %{python_sitelib}/ironic*
+%{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
 
@@ -176,9 +199,20 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
-* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.1-rc1.2.1
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
+* Mon Oct 13 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc2-1
+- Rebased to 2014.2.rc2
+
+* Thu Oct 9 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc1-2
+- Added sudoers file for rootwrap (bz #1149189)
+- Removed the autodiscovery patch
+
+* Mon Oct 6 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc1-1
+- Updated Requires
+- Added autodiscovery patch
+
+* Thu Apr 17 2014 Angus Thomas <athomas@redhat.com> - 2014.1-rc2.1
+- License file in each package
 
 * Wed Apr 9 2014 Angus Thomas <athomas@redhat.com> - 2014.1-rc1.2
 - License file in each package
