@@ -6,14 +6,14 @@
 
 %global	release_name juno
 %global	release_letter rc
-%global	milestone 1
-%global	full_release ironic-%{version}
+%global	milestone 2
+%global	full_release ironic-%{version}.%{release_letter}%{milestone}
 
 
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
-Version:	2014.2.rc2
-Release:	2%{?dist}
+Version:	2014.2
+Release:	0.2.%{release_letter}%{milestone}%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
@@ -66,10 +66,10 @@ mkdir -p %{buildroot}%{_sharedstatedir}/ironic/
 mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
 
 #Populate the conf dir
-install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/ironic.conf.sample %{buildroot}/%{_sysconfdir}/ironic/ironic.conf
-install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/policy.json %{buildroot}/%{_sysconfdir}/ironic/policy.json
-install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
-install -p -D -m 640 %{_builddir}/%{full_release}/etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
+install -p -D -m 640 etc/ironic/ironic.conf.sample %{buildroot}/%{_sysconfdir}/ironic/ironic.conf
+install -p -D -m 640 etc/ironic/policy.json %{buildroot}/%{_sysconfdir}/ironic/policy.json
+install -p -D -m 640 etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
+install -p -D -m 640 etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
 
 
 %description
