@@ -13,7 +13,7 @@
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	2014.2
-Release:	0.2.%{release_letter}%{milestone}%{?dist}
+Release:	0.3.%{release_letter}%{milestone}%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
@@ -81,7 +81,6 @@ Group: System Environment/Base
 
 Requires:	ipmitool
 Requires:	python-eventlet
-Requires:	python-fixtures
 Requires:	python-greenlet
 Requires:	python-iso8601
 Requires:	python-posix_ipc
@@ -200,8 +199,7 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
-
-* Tue Oct 14 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc2-2
+* Tue Oct 14 2014 Angus Thomas <athomas@redhat.com> - 2014.2-0.3.rc2
 - Added requirement for ipmitool
 
 * Mon Oct 13 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc2-1
