@@ -5,20 +5,18 @@
 %endif
 
 %global	release_name juno
-%global	release_letter rc
-%global	milestone 2
-%global	full_release ironic-%{version}.%{release_letter}%{milestone}
+%global	full_release ironic-%{version}
 
 
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	2014.2
-Release:	0.3.%{release_letter}%{milestone}%{?dist}
+Release:	1%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
-#Source0:	https://launchpad.net/ironic/%{release_name}/%{release_name}-%{milestone}/+download/%{full_release}.tar.gz
-Source0:	https://launchpad.net/ironic/juno/juno-rc2/+download/ironic-2014.2.rc2.tar.gz
+Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
+#Source0:	https://launchpad.net/ironic/juno/2014.2/+download/ironic-2014.2.tar.gz
 
 Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
@@ -199,6 +197,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Fri Oct 17 2014 Angus Thomas <athomas@redhat.com> - 2014.2-1
+- Rebased to 2014.2 GA release
+
 * Tue Oct 14 2014 Angus Thomas <athomas@redhat.com> - 2014.2-0.3.rc2
 - Added requirement for ipmitool
 
