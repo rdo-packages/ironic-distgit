@@ -11,7 +11,7 @@
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	2014.2
-Release:	1%{?dist}
+Release:	2%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
@@ -58,7 +58,7 @@ install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}
 
 # install sudoers file
 mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
-install -p -D -m 644 %{SOURCE3} %{buildroot}%{_sysconfdir}/sudoers.d/ironic
+install -p -D -m 440 %{SOURCE3} %{buildroot}%{_sysconfdir}/sudoers.d/ironic
 
 mkdir -p %{buildroot}%{_sharedstatedir}/ironic/
 mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
@@ -197,6 +197,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Thu Oct 23 2014 Angus Thomas <athomas@redhat.com> - 2014.2-2
+- Rebased to 2014.2 GA release
+
 * Fri Oct 17 2014 Angus Thomas <athomas@redhat.com> - 2014.2-1
 - Rebased to 2014.2 GA release
 
