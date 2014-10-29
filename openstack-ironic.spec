@@ -107,6 +107,7 @@ Requires:	python-jinja2
 Requires:	python-pyghmi
 Requires:	python-alembic
 Requires:	python-posix_ipc
+Requires:	python-oslo-concurrency
 
 Requires(pre):	shadow-utils
 
@@ -190,6 +191,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Wed Oct 29 2014 Dan Prince <dprince@redhat.com> - XXX
+- Add dependency on oslo.concurrency.
+
 * Thu Oct 09 2014 Dan Prince <dprince@redhat.com> - XXX
 - Patch out PBR runtime dependency.
 
