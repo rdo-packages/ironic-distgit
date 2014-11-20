@@ -1,0 +1,22 @@
+From 7a0f840e574dc51c9e1e11c017a0ad88a625ed91 Mon Sep 17 00:00:00 2001
+From: Angus Thomas <athomas@redhat.com>
+Date: Mon, 6 Oct 2014 14:51:51 +0100
+Subject: [PATCH] Remove pbr dependency
+
+---
+ setup.py | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/setup.py b/setup.py
+index 7363757..09230a0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -26,5 +26,4 @@ except ImportError:
+     pass
+ 
+ setuptools.setup(
+-    setup_requires=['pbr'],
+     pbr=True)
+-- 
+1.9.3
+
