@@ -112,6 +112,7 @@ Requires:	python-jinja2
 Requires:	python-pyghmi
 Requires:	python-alembic
 Requires:	pysendfile
+Requires:	python-pbr
 
 Requires(pre):	shadow-utils
 
