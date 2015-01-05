@@ -11,7 +11,7 @@
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	2014.2
-Release:	2%{?dist}
+Release:	3%{?dist}
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
@@ -22,8 +22,9 @@ Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
 Source3:	ironic-rootwrap-sudoers
 
-Patch0001:	0001-ironic-Remove-runtime-dependency-on-python-pbr.patch
-Patch0002:	0002-ironic-Default-DB-location.patch
+Patch0001: 0001-Remove-pbr-dependency.patch
+Patch0002: 0002-Set-default-DB-location.patch
+Patch0003: 0003-Remove-runtime-pbr-requirement-from-version.py.patch
 
 BuildArch:	noarch
 BuildRequires:	python-setuptools
@@ -39,10 +40,12 @@ BuildRequires:	systemd
 
 %prep
 %setup -q -n %{full_release}
-rm requirements.txt test-requirements.txt
 
 %patch0001 -p1
 %patch0002 -p1
+%patch0003 -p1
+
+rm requirements.txt test-requirements.txt
 
 %build
 %{__python2} setup.py build
@@ -197,6 +200,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Mon Jan 05 2015 James Slagle <jslagle@redhat.com> 2014.2-3
+- Remove runtime pbr requirement from version.py
+
 * Thu Oct 23 2014 Angus Thomas <athomas@redhat.com> - 2014.2-2
 - Rebased to 2014.2 GA release
 

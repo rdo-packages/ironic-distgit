@@ -1,4 +1,4 @@
-From 7a0f840e574dc51c9e1e11c017a0ad88a625ed91 Mon Sep 17 00:00:00 2001
+From a367cfc8bb7b4455b19f9ebd583bf9585afac3ea Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Mon, 6 Oct 2014 14:51:51 +0100
 Subject: [PATCH] Remove pbr dependency
@@ -17,6 +17,3 @@ index 7363757..09230a0 100644
  setuptools.setup(
 -    setup_requires=['pbr'],
      pbr=True)
--- 
-1.9.3
-
