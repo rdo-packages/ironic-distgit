@@ -1,19 +1,11 @@
-%if 0%{?rhel} && 0%{?rhel} <= 6
-%{!?__python2: %global __python2 /usr/bin/python2}
-%{!?python2_sitelib: %global python2_sitelib %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
-%{!?python2_sitearch: %global python2_sitearch %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
-%endif
-
 %global	release_name juno
 %global	full_release ironic-%{version}
-
 
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	2014.2
-Release:	3%{?dist}
+Release:	4%{?dist}
 License:	ASL 2.0
-Group:		System Environment/Base
 URL:		http://www.openstack.org
 Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
 #Source0:	https://launchpad.net/ironic/juno/2014.2/+download/ironic-2014.2.tar.gz
@@ -44,6 +36,9 @@ BuildRequires:	systemd
 %patch0001 -p1
 %patch0002 -p1
 %patch0003 -p1
+
+sed -i s/REDHATVERSION/%{version}/ ironic/version.py
+sed -i s/REDHATRELEASE/%{release}/ ironic/version.py
 
 rm requirements.txt test-requirements.txt
 
@@ -129,7 +124,7 @@ Components common to all OpenStack Ironic services
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
 %{_bindir}/ironic-nova-bm-migrate
-%{python_sitelib}/ironic*
+%{python2_sitelib}/ironic*
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
@@ -200,6 +195,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Mon Feb 23 2015 Haïkel Guémar <hguemar@fedoraproject.org> - 2014.2-4
+- Fix packaging
+
 * Mon Jan 05 2015 James Slagle <jslagle@redhat.com> 2014.2-3
 - Remove runtime pbr requirement from version.py
 
