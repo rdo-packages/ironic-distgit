@@ -124,7 +124,6 @@ Components common to all OpenStack Ironic services
 %doc README.rst LICENSE
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
-%{_bindir}/ironic-nova-bm-migrate
 %{python_sitelib}/ironic*
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
