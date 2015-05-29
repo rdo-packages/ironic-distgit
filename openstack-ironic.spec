@@ -7,11 +7,12 @@
 %global	release_name juno
 %global	full_release ironic-%{version}
 
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		openstack-ironic
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
-Version: XXX
-Release: XXX{?dist}
+Version:        XXX
+Release:        XXX
 License:	ASL 2.0
 Group:		System Environment/Base
 URL:		http://www.openstack.org
@@ -21,8 +22,6 @@ Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironi
 Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
 Source3:	ironic-rootwrap-sudoers
-
-Patch0001:	0001-ironic-Remove-runtime-dependency-on-python-pbr.patch
 
 BuildArch:	noarch
 BuildRequires:	python-setuptools
@@ -39,8 +38,6 @@ BuildRequires:	systemd
 %prep
 %setup -q -n ironic-%{upstream_version}
 rm requirements.txt test-requirements.txt
-
-%patch0001 -p1
 
 %build
 %{__python2} setup.py build
@@ -73,7 +70,6 @@ Ironic provides an API for management and provisioning of physical machines
 
 %package common
 Summary: Ironic common
-Group: System Environment/Base
 
 Requires:	ipmitool
 Requires:	python-eventlet
@@ -124,7 +120,7 @@ Components common to all OpenStack Ironic services
 %doc README.rst LICENSE
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
-%{python_sitelib}/ironic*
+%{python2_sitelib}/ironic*
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
@@ -138,7 +134,6 @@ exit 0
 
 %package api
 Summary: The Ironic API
-Group: System Environment/Base
 
 Requires: %{name}-common = %{version}-%{release}
 
@@ -166,7 +161,6 @@ Ironic API for management and provisioning of physical machines
 
 %package conductor
 Summary: The Ironic Conductor
-Group: System Environment/Base
 
 Requires: %{name}-common = %{version}-%{release}
 
@@ -193,60 +187,5 @@ Ironic Conductor for management and provisioning of physical machines
 %systemd_postun_with_restart openstack-ironic-conductor.service
 
 
-
 %changelog
-* Thu Oct 23 2014 Angus Thomas <athomas@redhat.com> - 2014.2-2
-- Rebased to 2014.2 GA release
-
-* Fri Oct 17 2014 Angus Thomas <athomas@redhat.com> - 2014.2-1
-- Rebased to 2014.2 GA release
-
-* Tue Oct 14 2014 Angus Thomas <athomas@redhat.com> - 2014.2-0.3.rc2
-- Added requirement for ipmitool
-
-* Mon Oct 13 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc2-1
-- Rebased to 2014.2.rc2
-
-* Thu Oct 9 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc1-2
-- Added sudoers file for rootwrap (bz #1149189)
-- Removed the autodiscovery patch
-
-* Mon Oct 6 2014 Angus Thomas <athomas@redhat.com> - 2014.2.rc1-1
-- Updated Requires
-- Added autodiscovery patch
-
-* Thu Apr 17 2014 Angus Thomas <athomas@redhat.com> - 2014.1-rc2.1
-- License file in each package
-
-* Wed Apr 9 2014 Angus Thomas <athomas@redhat.com> - 2014.1-rc1.2
-- License file in each package
-
-* Mon Apr 7 2014 Angus Thomas <athomas@redhat.com> - 2014.1-rc1.1
-- Rebuilt with -rc1 tarball
-- Rebased patches
-- Added dependency on python-alembic
-
-* Thu Mar 27 2014 Angus Thomas <athomas@redhat.com> - 2014.1-b2.5
-- Split into multiple packages
-
-* Fri Feb 28 2014 Angus Thomas <athomas@redhat.com> - 2014.1-b2.4
-- Restored BuildRequires: python-pbr 
-
-* Thu Feb 27 2014 Angus Thomas <athomas@redhat.com> - 2014.1-b2.3
-- Added dependency on python-pyghmi
-- Patch to remove pbr build dependency
-- Fixed python2-devel build dependency
-- Added noreplace to config files
-- Added  unitdir macro for systemd service file installation
-- Added scripts to manage systemd services
-- Removed unnecessary Requires & BuildRequires
-
-
-* Mon Feb 24 2014 Angus Thomas <athomas@redhat.com> - 2014.1-b2.2
-- Removed /var/log/ironic from package
-- Replaced hardcoded file paths with macros
-- Added LICENSE and README.rst docs
-
-* Fri Feb 21 2014 Angus Thomas <athomas@redhat.com> - 2014.1-b2.1
-- Initial package build
 
