@@ -56,6 +56,7 @@ mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
 install -p -D -m 440 %{SOURCE3} %{buildroot}%{_sysconfdir}/sudoers.d/ironic
 
 mkdir -p %{buildroot}%{_sharedstatedir}/ironic/
+mkdir -p %{buildroot}%{_localstatedir}/log/ironic/
 mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
 
 #Populate the conf dir
@@ -133,6 +134,7 @@ Components common to all OpenStack Ironic services
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
+%attr(-,ironic,ironic) %{_localstatedir}/log/ironic
 
 %pre common
 getent group ironic >/dev/null || groupadd -r ironic
