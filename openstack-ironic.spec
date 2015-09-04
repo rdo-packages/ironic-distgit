@@ -16,6 +16,7 @@ Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironi
 Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
 Source3:	ironic-rootwrap-sudoers
+Source4:	ironic-dist.conf
 
 Patch0001: 0001-Remove-pbr-dependency.patch
 Patch0002: 0002-Set-default-DB-location.patch
@@ -70,6 +71,9 @@ install -p -D -m 640 etc/ironic/ironic.conf.sample %{buildroot}/%{_sysconfdir}/i
 install -p -D -m 640 etc/ironic/policy.json %{buildroot}/%{_sysconfdir}/ironic/policy.json
 install -p -D -m 640 etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
 install -p -D -m 640 etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
+
+# Install distribution config
+install -p -D -m 640 %{SOURCE4} %{buildroot}/%{_datadir}/ironic/ironic-dist.conf
 
 
 %description
@@ -140,6 +144,7 @@ Components common to all OpenStack Ironic services
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
 %attr(-,ironic,ironic) %{_localstatedir}/log/ironic
+%attr(-, root, ironic) %{_datadir}/ironic/ironic-dist.conf
 
 %pre common
 getent group ironic >/dev/null || groupadd -r ironic
@@ -207,6 +212,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Tue Oct 20 2015 John Trowbridge <trown@redhat.com> 4.2.0-2
+- pull in fixes from openstack-packages/rpm-master for /var/log/ironic
+
 * Thu Oct 01 2015 John Trowbridge <trown@redhat.com> 4.2.0-1
 - Update to upstream 4.2.0
 - Add Epoch for switch to semver versioning
