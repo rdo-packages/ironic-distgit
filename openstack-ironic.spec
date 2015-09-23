@@ -90,11 +90,20 @@ Requires:	python-lxml
 Requires:	python-migrate
 Requires:	python-mock
 Requires:	python-netaddr
-Requires:	python-oslo-config
-Requires:	python-oslo-db
-Requires:	python-oslo-i18n
-Requires:	python-oslo-rootwrap
+Requires:   python-oslo-concurrency
+Requires:   python-oslo-config
+Requires:   python-oslo-context
+Requires:   python-oslo-db
+Requires:   python-oslo-i18n
+Requires:   python-oslo-log
+Requires:   python-oslo-messaging
+Requires:   python-oslo-middleware
+Requires:   python-oslo-policy
+Requires:   python-oslo-rootwrap
+Requires:   python-oslo-serialization
+Requires:   python-oslo-service
 Requires:	python-oslo-utils
+Requires:   python-oslo-versionedobjects
 Requires:	python-paramiko
 Requires:	python-pecan
 Requires:	python-retrying
@@ -115,14 +124,10 @@ Requires:	python-alembic
 Requires:	pysendfile
 Requires:	python-pbr
 Requires:	python-automaton
-Requires:	python-oslo-context
-Requires:	python-oslo-log
-Requires:	python-oslo-concurrency
-Requires:	python-oslo-policy
-Requires:	python-oslo-serialization
-Requires:	python-oslo-messaging
-Requires:	python-oslo-service
 Requires:	python-requests
+Requires:   python-jsonschema
+Requires:   pytz
+
 
 Requires(pre):	shadow-utils
 
