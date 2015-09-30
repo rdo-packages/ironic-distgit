@@ -10,6 +10,9 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:		openstack-ironic
+# Liberty semver reset
+# https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
+Epoch:          1
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:        XXX
 Release:        XXX
@@ -156,7 +159,7 @@ exit 0
 %package api
 Summary: The Ironic API
 
-Requires: %{name}-common = %{version}-%{release}
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
 Requires(post): systemd
 Requires(preun): systemd
@@ -183,7 +186,7 @@ Ironic API for management and provisioning of physical machines
 %package conductor
 Summary: The Ironic Conductor
 
-Requires: %{name}-common = %{version}-%{release}
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
 Requires(post): systemd
 Requires(preun): systemd
