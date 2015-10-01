@@ -1,4 +1,4 @@
-From a367cfc8bb7b4455b19f9ebd583bf9585afac3ea Mon Sep 17 00:00:00 2001
+From 3803c37aff7b1fc6412588c99c1560c549aad00c Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Mon, 6 Oct 2014 14:51:51 +0100
 Subject: [PATCH] Remove pbr dependency
@@ -8,12 +8,12 @@ Subject: [PATCH] Remove pbr dependency
  1 file changed, 1 deletion(-)
 
 diff --git a/setup.py b/setup.py
-index 7363757..09230a0 100644
+index 782bb21..6357e08 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -26,5 +26,4 @@ except ImportError:
+@@ -25,5 +25,4 @@ except ImportError:
      pass
  
  setuptools.setup(
--    setup_requires=['pbr'],
+-    setup_requires=['pbr>=1.8'],
      pbr=True)

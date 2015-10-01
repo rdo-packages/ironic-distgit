@@ -1,4 +1,4 @@
-From 92f2cac300797eddba28ec5de97a846d1c36867d Mon Sep 17 00:00:00 2001
+From f27daf3372b56622e74362b88a9defbf089db37e Mon Sep 17 00:00:00 2001
 From: James Slagle <jslagle@redhat.com>
 Date: Mon, 5 Jan 2015 15:29:04 -0500
 Subject: [PATCH] Remove runtime pbr requirement from version.py

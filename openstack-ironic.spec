@@ -1,10 +1,13 @@
-%global	release_name juno
+%global	release_name liberty
 %global	full_release ironic-%{version}
 
 Name:		openstack-ironic
+# Liberty semver reset
+# https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
+Epoch:      1
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
-Version:	2014.2
-Release:	5%{?dist}
+Version:	4.2.0
+Release:	1%{?dist}
 License:	ASL 2.0
 URL:		http://www.openstack.org
 Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
@@ -75,43 +78,51 @@ Ironic provides an API for management and provisioning of physical machines
 Summary: Ironic common
 Group: System Environment/Base
 
-Requires:	ipmitool
-Requires:	python-eventlet
-Requires:	python-greenlet
-Requires:	python-iso8601
-Requires:	python-posix_ipc
-Requires:	python-jsonpatch
-Requires:	python-keystonemiddleware
-Requires:	python-kombu
-Requires:	python-anyjson
-Requires:	python-lockfile
-Requires:	python-lxml
-Requires:	python-migrate
-Requires:	python-mock
-Requires:	python-netaddr
-Requires:	python-oslo-config
-Requires:	python-oslo-db
-Requires:	python-oslo-i18n
-Requires:	python-oslo-rootwrap
-Requires:	python-oslo-utils
-Requires:	python-paramiko
-Requires:	python-pecan
-Requires:	python-retrying
-Requires:	python-six
-Requires:	python-stevedore
-Requires:	python-webob
-Requires:	python-websockify
-Requires:	python-wsme
-Requires:	pycrypto
-Requires:	python-sqlalchemy
-Requires:	python-neutronclient
-Requires:	python-glanceclient
-Requires:	python-keystoneclient
-Requires:	python-swiftclient
-Requires:	python-jinja2
-Requires:	python-pyghmi
-Requires:	python-alembic
-Requires:	pysendfile
+Requires:   ipmitool
+Requires:   python-automaton
+Requires:   python-eventlet
+Requires:   python-greenlet
+Requires:   python-iso8601
+Requires:   python-jsonpatch
+Requires:   python-jsonschema
+Requires:   python-keystonemiddleware
+Requires:   python-lxml
+Requires:   python-migrate
+Requires:   python-mock
+Requires:   python-netaddr
+Requires:   python-oslo-concurrency
+Requires:   python-oslo-config
+Requires:   python-oslo-context
+Requires:   python-oslo-db
+Requires:   python-oslo-i18n
+Requires:   python-oslo-log
+Requires:   python-oslo-middleware
+Requires:   python-oslo-policy
+Requires:   python-oslo-rootwrap
+Requires:   python-oslo-serialization
+Requires:   python-oslo-service
+Requires:   python-oslo-utils
+Requires:   python-oslo-versionedobjects
+Requires:   python-paramiko
+Requires:   python-pecan
+Requires:   python-requests
+Requires:   python-retrying
+Requires:   python-six
+Requires:   python-stevedore
+Requires:   python-webob
+Requires:   python-websockify
+Requires:   python-wsme
+Requires:   pycrypto
+Requires:   python-sqlalchemy
+Requires:   python-neutronclient
+Requires:   python-glanceclient
+Requires:   python-keystoneclient
+Requires:   python-swiftclient
+Requires:   python-jinja2
+Requires:   python-pyghmi
+Requires:   python-alembic
+Requires:   pysendfile
+Requires:   pytz
 
 Requires(pre):	shadow-utils
 
@@ -123,7 +134,6 @@ Components common to all OpenStack Ironic services
 %doc README.rst LICENSE
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
-%{_bindir}/ironic-nova-bm-migrate
 %{python2_sitelib}/ironic*
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
@@ -140,7 +150,7 @@ exit 0
 Summary: The Ironic API
 Group: System Environment/Base
 
-Requires: %{name}-common = %{version}-%{release}
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
 Requires(post): systemd
 Requires(preun): systemd
@@ -168,7 +178,7 @@ Ironic API for management and provisioning of physical machines
 Summary: The Ironic Conductor
 Group: System Environment/Base
 
-Requires: %{name}-common = %{version}-%{release}
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
 Requires(post): systemd
 Requires(preun): systemd
@@ -195,6 +205,10 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Thu Oct 01 2015 John Trowbridge <trown@redhat.com> 4.2.0-1
+- Update to upstream 4.2.0
+- Add Epoch for switch to semver versioning
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 2014.2-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
@@ -239,7 +253,7 @@ Ironic Conductor for management and provisioning of physical machines
 - Split into multiple packages
 
 * Fri Feb 28 2014 Angus Thomas <athomas@redhat.com> - 2014.1-b2.4
-- Restored BuildRequires: python-pbr 
+- Restored BuildRequires: python-pbr
 
 * Thu Feb 27 2014 Angus Thomas <athomas@redhat.com> - 2014.1-b2.3
 - Added dependency on python-pyghmi

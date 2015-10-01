@@ -1,4 +1,4 @@
-From 8ee8c61250fce92fe4a6ac9ba86c3f580946ef47 Mon Sep 17 00:00:00 2001
+From ed8035fa80bfe47bc1372331d68ba9f2527ea6ec Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Tue, 23 Sep 2014 14:05:55 +0100
 Subject: [PATCH] Set default DB location
@@ -8,10 +8,10 @@ Subject: [PATCH] Set default DB location
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/etc/ironic/ironic.conf.sample b/etc/ironic/ironic.conf.sample
-index 9aaae0e..a57c361 100644
+index 9328885..0743991 100644
 --- a/etc/ironic/ironic.conf.sample
 +++ b/etc/ironic/ironic.conf.sample
-@@ -635,7 +635,7 @@
+@@ -701,7 +701,7 @@
  # Deprecated group/name - [DEFAULT]/sql_connection
  # Deprecated group/name - [DATABASE]/sql_connection
  # Deprecated group/name - [sql]/connection
