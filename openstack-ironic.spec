@@ -7,7 +7,7 @@ Name:		openstack-ironic
 Epoch:      1
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	4.2.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 License:	ASL 2.0
 URL:		http://www.openstack.org
 Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
