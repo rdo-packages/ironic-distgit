@@ -26,6 +26,7 @@ Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
 Source3:	ironic-rootwrap-sudoers
 Source4:	ironic-dist.conf
+Source5:	ironic.logrotate
 
 BuildArch:	noarch
 BuildRequires:	python-setuptools
@@ -48,7 +49,7 @@ rm requirements.txt test-requirements.txt
 
 %install
 %{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
-
+install -p -D -m 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-ironic
 
 # install systemd scripts
 mkdir -p %{buildroot}%{_unitdir}
@@ -144,6 +145,7 @@ Components common to all OpenStack Ironic services
 %{_bindir}/ironic-rootwrap
 %{python2_sitelib}/ironic*
 %{_sysconfdir}/sudoers.d/ironic
+%config(noreplace) %{_sysconfdir}/logrotate.d/openstack-ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
 %attr(-,ironic,ironic) %{_localstatedir}/log/ironic
