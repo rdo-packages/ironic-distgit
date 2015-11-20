@@ -6,6 +6,7 @@ After=syslog.target network.target
 Type=simple
 User=ironic
 ExecStart=/usr/bin/ironic-api
+Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
