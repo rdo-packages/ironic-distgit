@@ -6,12 +6,11 @@ Name:		openstack-ironic
 # https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
 Epoch:      1
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
-Version:	4.2.0
-Release:	2%{?dist}
+Version:	4.2.2
+Release:	1%{?dist}
 License:	ASL 2.0
 URL:		http://www.openstack.org
-Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
-#Source0:	https://launchpad.net/ironic/juno/2014.2/+download/ironic-2014.2.tar.gz
+Source0:	https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
 
 Source1:	openstack-ironic-api.service
 Source2:	openstack-ironic-conductor.service
@@ -212,6 +211,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Tue Dec 08 2015 Alan Pevec <alan.pevec@redhat.com> 1:4.2.2-1
+- Update to 4.2.2 CVE-2015-7514
+
 * Tue Oct 20 2015 John Trowbridge <trown@redhat.com> 4.2.0-2
 - pull in fixes from openstack-packages/rpm-master for /var/log/ironic
 
