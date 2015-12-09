@@ -4,40 +4,40 @@
 %{!?python2_sitearch: %global python2_sitearch %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 %endif
 
-%global	release_name juno
-%global	full_release ironic-%{version}
+%global release_name juno
+%global full_release ironic-%{version}
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
-Name:		openstack-ironic
+Name:           openstack-ironic
 # Liberty semver reset
 # https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
 Epoch:          1
-Summary:	OpenStack Baremetal Hypervisor API (ironic)
+Summary:        OpenStack Baremetal Hypervisor API (ironic)
 Version:        XXX
 Release:        XXX
-License:	ASL 2.0
-Group:		System Environment/Base
-URL:		http://www.openstack.org
-Source0:	https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
-#Source0:	https://launchpad.net/ironic/juno/2014.2/+download/ironic-2014.2.tar.gz
+License:        ASL 2.0
+Group:          System Environment/Base
+URL:            http://www.openstack.org
+Source0:        https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
+#Source0:       https://launchpad.net/ironic/juno/2014.2/+download/ironic-2014.2.tar.gz
 
-Source1:	openstack-ironic-api.service
-Source2:	openstack-ironic-conductor.service
-Source3:	ironic-rootwrap-sudoers
-Source4:	ironic-dist.conf
-Source5:	ironic.logrotate
+Source1:        openstack-ironic-api.service
+Source2:        openstack-ironic-conductor.service
+Source3:        ironic-rootwrap-sudoers
+Source4:        ironic-dist.conf
+Source5:        ironic.logrotate
 
-BuildArch:	noarch
-BuildRequires:	python-setuptools
-BuildRequires:	python2-devel
-BuildRequires:	python-pbr
-BuildRequires:	openssl-devel
-BuildRequires:	libxml2-devel
-BuildRequires:	libxslt-devel
-BuildRequires:	gmp-devel
-BuildRequires:	python-sphinx
-BuildRequires:	systemd
+BuildArch:      noarch
+BuildRequires:  python-setuptools
+BuildRequires:  python2-devel
+BuildRequires:  python-pbr
+BuildRequires:  openssl-devel
+BuildRequires:  libxml2-devel
+BuildRequires:  libxslt-devel
+BuildRequires:  gmp-devel
+BuildRequires:  python-sphinx
+BuildRequires:  systemd
 
 
 %prep
@@ -80,20 +80,20 @@ Ironic provides an API for management and provisioning of physical machines
 %package common
 Summary: Ironic common
 
-Requires:	ipmitool
-Requires:	python-eventlet
-Requires:	python-greenlet
-Requires:	python-iso8601
-Requires:	python-posix_ipc
-Requires:	python-jsonpatch
-Requires:	python-keystonemiddleware
-Requires:	python-kombu
-Requires:	python-anyjson
-Requires:	python-lockfile
-Requires:	python-lxml
-Requires:	python-migrate
-Requires:	python-mock
-Requires:	python-netaddr
+Requires:   ipmitool
+Requires:   python-eventlet
+Requires:   python-greenlet
+Requires:   python-iso8601
+Requires:   python-posix_ipc
+Requires:   python-jsonpatch
+Requires:   python-keystonemiddleware
+Requires:   python-kombu
+Requires:   python-anyjson
+Requires:   python-lockfile
+Requires:   python-lxml
+Requires:   python-migrate
+Requires:   python-mock
+Requires:   python-netaddr
 Requires:   python-oslo-concurrency
 Requires:   python-oslo-config
 Requires:   python-oslo-context
@@ -106,34 +106,34 @@ Requires:   python-oslo-policy
 Requires:   python-oslo-rootwrap
 Requires:   python-oslo-serialization
 Requires:   python-oslo-service
-Requires:	python-oslo-utils
+Requires:   python-oslo-utils
 Requires:   python-oslo-versionedobjects
-Requires:	python-paramiko
-Requires:	python-pecan
-Requires:	python-retrying
-Requires:	python-six
-Requires:	python-stevedore
-Requires:	python-webob
-Requires:	python-websockify
-Requires:	python-wsme
-Requires:	pycrypto
-Requires:	python-sqlalchemy
-Requires:	python-neutronclient
-Requires:	python-glanceclient
-Requires:	python-keystoneclient
-Requires:	python-swiftclient
-Requires:	python-jinja2
-Requires:	python-pyghmi
-Requires:	python-alembic
-Requires:	pysendfile
-Requires:	python-pbr
-Requires:	python-automaton
-Requires:	python-requests
+Requires:   python-paramiko
+Requires:   python-pecan
+Requires:   python-retrying
+Requires:   python-six
+Requires:   python-stevedore
+Requires:   python-webob
+Requires:   python-websockify
+Requires:   python-wsme
+Requires:   pycrypto
+Requires:   python-sqlalchemy
+Requires:   python-neutronclient
+Requires:   python-glanceclient
+Requires:   python-keystoneclient
+Requires:   python-swiftclient
+Requires:   python-jinja2
+Requires:   python-pyghmi
+Requires:   python-alembic
+Requires:   pysendfile
+Requires:   python-pbr
+Requires:   python-automaton
+Requires:   python-requests
 Requires:   python-jsonschema
 Requires:   pytz
 
 
-Requires(pre):	shadow-utils
+Requires(pre):  shadow-utils
 
 %description common
 Components common to all OpenStack Ironic services
