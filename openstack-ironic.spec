@@ -110,6 +110,7 @@ Requires:   python-oslo-utils
 Requires:   python-oslo-versionedobjects
 Requires:   python-paramiko
 Requires:   python-pecan
+Requires:   python-proliantutils
 Requires:   python-retrying
 Requires:   python-six
 Requires:   python-stevedore
