@@ -81,8 +81,10 @@ Ironic provides an API for management and provisioning of physical machines
 Summary: Ironic common
 
 Requires:   ipmitool
+Requires:   python-dracclient
 Requires:   python-eventlet
 Requires:   python-greenlet
+Requires:   python-ironic-lib
 Requires:   python-iso8601
 Requires:   python-posix_ipc
 Requires:   python-jsonpatch
