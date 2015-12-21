@@ -7,7 +7,7 @@ Name:		openstack-ironic
 Epoch:      1
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	4.2.2
-Release:	1%{?dist}
+Release:	2%{?dist}
 License:	ASL 2.0
 URL:		http://www.openstack.org
 Source0:	https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
@@ -211,6 +211,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Mon Dec 21 2015 Haikel Guemar <hguemar@fedoraproject.org> 1:4.2.2-2
+- Update to 4.2.2
+
 * Tue Dec 08 2015 Alan Pevec <alan.pevec@redhat.com> 1:4.2.2-1
 - Update to 4.2.2 CVE-2015-7514
 
