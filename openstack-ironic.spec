@@ -4,7 +4,6 @@
 %{!?python2_sitearch: %global python2_sitearch %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 %endif
 
-%global release_name juno
 %global full_release ironic-%{version}
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -19,8 +18,7 @@ Release:        XXX
 License:        ASL 2.0
 Group:          System Environment/Base
 URL:            http://www.openstack.org
-Source0:        https://launchpad.net/ironic/%{release_name}/%{version}/+download/ironic-%{version}.tar.gz
-#Source0:       https://launchpad.net/ironic/juno/2014.2/+download/ironic-2014.2.tar.gz
+Source0:        http://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
 
 Source1:        openstack-ironic-api.service
 Source2:        openstack-ironic-conductor.service
