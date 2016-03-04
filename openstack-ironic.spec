@@ -39,7 +39,6 @@ BuildRequires:  gmp-devel
 BuildRequires:  python-sphinx
 BuildRequires:  systemd
 
-
 %prep
 %setup -q -n ironic-%{upstream_version}
 rm requirements.txt test-requirements.txt
@@ -72,7 +71,6 @@ install -p -D -m 640 etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/
 
 # Install distribution config
 install -p -D -m 640 %{SOURCE4} %{buildroot}/%{_datadir}/ironic/ironic-dist.conf
-
 
 %description
 Ironic provides an API for management and provisioning of physical machines
@@ -147,6 +145,8 @@ Components common to all OpenStack Ironic services
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
 %{python2_sitelib}/ironic*
+%exclude %{python2_sitelib}/ironic/tests
+%exclude %{python2_sitelib}/ironic_tempest_plugin
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
@@ -200,7 +200,6 @@ Requires(postun): systemd
 %description conductor
 Ironic Conductor for management and provisioning of physical machines
 
-
 %files conductor
 %doc LICENSE
 %{_bindir}/ironic-conductor
@@ -215,5 +214,16 @@ Ironic Conductor for management and provisioning of physical machines
 %postun conductor
 %systemd_postun_with_restart openstack-ironic-conductor.service
 
+%package -n python-ironic-tests
+Summary:        Ironic tests
+Requires:       %{name}-common = %{epoch}:%{version}-%{release}
+
+%description -n python-ironic-tests
+This package contains the Ironic test files.
+
+%files -n python-ironic-tests
+%license LICENSE
+%{python2_sitelib}/ironic/tests
+%{python2_sitelib}/ironic_tempest_plugin
 
 %changelog
