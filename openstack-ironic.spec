@@ -7,7 +7,7 @@ Name:		openstack-ironic
 Epoch:      1
 Summary:	OpenStack Baremetal Hypervisor API (ironic)
 Version:	4.2.2
-Release:	2%{?dist}
+Release:	3%{?dist}
 License:	ASL 2.0
 URL:		http://www.openstack.org
 Source0:	https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
@@ -20,6 +20,7 @@ Source4:	ironic-dist.conf
 Patch0001: 0001-Remove-pbr-dependency.patch
 Patch0002: 0002-Set-default-DB-location.patch
 Patch0003: 0003-Remove-runtime-pbr-requirement-from-version.py.patch
+Patch0004: 0004-super-patch.patch
 
 BuildArch:	noarch
 BuildRequires:	python-setuptools
@@ -39,6 +40,7 @@ BuildRequires:	systemd
 %patch0001 -p1
 %patch0002 -p1
 %patch0003 -p1
+%patch0004 -p1
 
 sed -i s/REDHATVERSION/%{version}/ ironic/version.py
 sed -i s/REDHATRELEASE/%{release}/ ironic/version.py
@@ -211,6 +213,9 @@ Ironic Conductor for management and provisioning of physical machines
 
 
 %changelog
+* Thu Mar 10 2016 mhuin <mhu@enovance.com> 1:4.2.2-3.el7
+- super patch
+
 * Mon Dec 21 2015 Haikel Guemar <hguemar@fedoraproject.org> 1:4.2.2-2
 - Update to 4.2.2
 

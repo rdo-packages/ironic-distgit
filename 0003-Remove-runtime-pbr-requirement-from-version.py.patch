@@ -1,8 +1,9 @@
-From f27daf3372b56622e74362b88a9defbf089db37e Mon Sep 17 00:00:00 2001
+From 2e23540ca8a0c788dea9d02abaa60c544a719503 Mon Sep 17 00:00:00 2001
 From: James Slagle <jslagle@redhat.com>
-Date: Mon, 5 Jan 2015 15:29:04 -0500
+Date: Wed, 9 Mar 2016 11:42:51 +0000
 Subject: [PATCH] Remove runtime pbr requirement from version.py
 
+Change-Id: Ica15ef67d3cd2c9b40a5644f3a7f97847b121e3c
 ---
  ironic/version.py | 12 ++++++++++--
  1 file changed, 10 insertions(+), 2 deletions(-)
