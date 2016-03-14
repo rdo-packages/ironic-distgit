@@ -79,6 +79,7 @@ Summary: Ironic common
 Requires:   ipmitool
 Requires:   python-dracclient
 Requires:   python-eventlet
+Requires:   python-futurist
 Requires:   python-greenlet
 Requires:   python-ironic-lib
 Requires:   python-iso8601
@@ -109,6 +110,7 @@ Requires:   python-oslo-versionedobjects
 Requires:   python-paramiko
 Requires:   python-pecan
 Requires:   python-proliantutils
+Requires:   python-psutil
 Requires:   python-retrying
 Requires:   python-six
 Requires:   python-stevedore
