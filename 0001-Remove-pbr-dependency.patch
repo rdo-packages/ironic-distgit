@@ -1,8 +1,9 @@
-From 3803c37aff7b1fc6412588c99c1560c549aad00c Mon Sep 17 00:00:00 2001
+From 312a7a683355b2fb543e3db6e6db67843555128b Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
-Date: Mon, 6 Oct 2014 14:51:51 +0100
+Date: Wed, 9 Mar 2016 11:42:28 +0000
 Subject: [PATCH] Remove pbr dependency
 
+Change-Id: Ic0ccef16621d2e25e01b3f1200120385289a5de8
 ---
  setup.py | 1 -
  1 file changed, 1 deletion(-)

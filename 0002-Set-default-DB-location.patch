@@ -1,8 +1,9 @@
-From ed8035fa80bfe47bc1372331d68ba9f2527ea6ec Mon Sep 17 00:00:00 2001
+From a588b7c7c8a5f04b548091306ba61fc17799e765 Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
-Date: Tue, 23 Sep 2014 14:05:55 +0100
+Date: Wed, 9 Mar 2016 11:42:42 +0000
 Subject: [PATCH] Set default DB location
 
+Change-Id: I7036131c7355a2bb2f8ed666a57379cf78df5740
 ---
  etc/ironic/ironic.conf.sample | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
