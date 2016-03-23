@@ -1,5 +1,5 @@
-# UUID          Group Name
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
-40320641f39156e80079350bedb28ceb4d3fe861       	ironic-distgit-core
-005a3b58d5f07eff3663b9a8880985d5b8ac7bc1        	ironic-distgit-ptl
-global:Registered-Users		Registered Users
+# UUID                                  	Group Name
+#
+005a3b58d5f07eff3663b9a8880985d5b8ac7bc1	ironic-distgit-ptl
+40320641f39156e80079350bedb28ceb4d3fe861	ironic-distgit-core
+global:Registered-Users                 	Registered Users
