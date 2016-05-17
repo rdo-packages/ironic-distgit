@@ -25,6 +25,8 @@ Source2:        openstack-ironic-conductor.service
 Source3:        ironic-rootwrap-sudoers
 Source4:        ironic-dist.conf
 Source5:        ironic.logrotate
+Source6:        ironic-tftp
+Source7:        map-file
 
 BuildArch:      noarch
 BuildRequires:  python-setuptools
@@ -69,6 +71,16 @@ install -p -D -m 640 etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/
 
 # Install distribution config
 install -p -D -m 640 %{SOURCE4} %{buildroot}/%{_datadir}/ironic/ironic-dist.conf
+
+# Create httpboot and tftpboot dirs for iPXE
+mkdir -p %{buildroot}/httpboot
+mkdir -p %{buildroot}/tftpboot/pxelinux.cfg
+
+# Create xinetd config for tftp
+install -p -D -m 644 %{SOURCE6} %{buildroot}%{_sysconfdir}/xinetd.d/ironic-tftp
+
+# Adds support for tftp requests that don't include the directory name.
+install -p -D -m 644 %{SOURCE7} %{buildroot}/tftpboot/map-file
 
 %description
 Ironic provides an API for management and provisioning of physical machines
@@ -133,6 +145,7 @@ Requires:   python-requests
 Requires:   python-jsonschema
 Requires:   pytz
 
+Requires: %{name}-common-user = %{epoch}:%{version}-%{release}
 
 Requires(pre):  shadow-utils
 
@@ -150,11 +163,20 @@ Components common to all OpenStack Ironic services
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
-%attr(-,ironic,ironic) %{_sharedstatedir}/ironic
 %attr(-,ironic,ironic) %{_localstatedir}/log/ironic
 %attr(-, root, ironic) %{_datadir}/ironic/ironic-dist.conf
 
-%pre common
+%package common-user
+Summary: Helper package that creates ironic user and group
+
+%description common-user
+Helper package that creates ironic user and group
+
+%files common-user
+%license LICENSE
+%attr(-,ironic,ironic) %{_sharedstatedir}/ironic
+
+%pre common-user
 getent group ironic >/dev/null || groupadd -r ironic
 getent passwd ironic >/dev/null || \
     useradd -r -g ironic -d %{_sharedstatedir}/ironic -s /sbin/nologin \
@@ -192,6 +214,7 @@ Ironic API for management and provisioning of physical machines
 Summary: The Ironic Conductor
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
+Requires: %{name}-tftp = %{epoch}:%{version}-%{release}
 
 Requires(post): systemd
 Requires(preun): systemd
@@ -213,6 +236,43 @@ Ironic Conductor for management and provisioning of physical machines
 
 %postun conductor
 %systemd_postun_with_restart openstack-ironic-conductor.service
+
+%package tftp
+Summary: Ironic TFTP/iPXE configuration
+
+Requires: ipxe-bootimgs
+Requires: policycoreutils
+Requires: syslinux
+
+Requires: %{name}-common-user = %{epoch}:%{version}-%{release}
+
+%description tftp
+This package sets up TFTP and iPXE for Ironic.
+
+%files tftp
+%license LICENSE
+%attr(-,ironic,ironic) /httpboot
+%attr(-,ironic,ironic) /tftpboot
+%attr(-,root,root) %{_sysconfdir}/xinetd.d/ironic-tftp
+
+%post tftp
+install -o ironic -g ironic -m 744 /usr/share/ipxe/undionly.kpxe /tftpboot/undionly.kpxe
+install -o ironic -g ironic -m 744 /usr/share/ipxe/ipxe.efi /tftpboot/ipxe.efi
+install -o ironic -g ironic -m 744 /usr/share/syslinux/pxelinux.0 /tftpboot/pxelinux.0
+# for newer syslinux versions we may need to copy in the library
+# modules as well (Fedora 21 for example)
+if [ -f /usr/share/syslinux/ldlinux.* ]; then
+    cp /usr/share/syslinux/ldlinux.* /tftpboot
+fi
+# Copy in the chain loader for full disk image booting.
+syslinux='/usr/share/syslinux'
+for f in chain.c32 libcom32.c32 libutil.c32; do
+    if [ -f $syslinux/$f ]; then
+        cp $syslinux/$f /tftpboot
+    fi
+done
+# Make sure SELinux labels are correct for /tftpboot
+restorecon -R /tftpboot
 
 %package -n python-ironic-tests
 Summary:        Ironic tests
