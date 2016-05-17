@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dabed58f_63d01e54",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 199,
+      "author": {
+        "id": 96
+      },
+      "writtenOn": "2016-05-17T19:02:39Z",
+      "side": 1,
+      "message": "this should probably be a file in the package source that is then installed in %install",
+      "revId": "e14670fc2f0fa85259ba7335f7330a4044ee2d9e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_83d51245",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 201,
+      "author": {
+        "id": 96
+      },
+      "writtenOn": "2016-05-17T19:02:39Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "e14670fc2f0fa85259ba7335f7330a4044ee2d9e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
