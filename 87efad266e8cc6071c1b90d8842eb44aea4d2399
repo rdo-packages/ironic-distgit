@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dabed58f_83bbd2c3",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 182,
+      "author": {
+        "id": 84
+      },
+      "writtenOn": "2016-05-18T14:19:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dabed58f_63ba5ee3",
+      "revId": "87efad266e8cc6071c1b90d8842eb44aea4d2399",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "dabed58f_83bf52d0",
         "filename": "openstack-ironic.spec",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-05-18T13:17:42Z",
       "side": 1,
       "message": "I remember we had to do restorecon on /tftpboot after messing with it",
+      "revId": "87efad266e8cc6071c1b90d8842eb44aea4d2399",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_63b6dede",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 84
+      },
+      "writtenOn": "2016-05-18T14:19:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dabed58f_83bf52d0",
       "revId": "87efad266e8cc6071c1b90d8842eb44aea4d2399",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
