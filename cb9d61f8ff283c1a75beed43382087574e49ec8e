@@ -16,6 +16,24 @@
       "revId": "cb9d61f8ff283c1a75beed43382087574e49ec8e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "dabed58f_03236206",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 84
+      },
+      "writtenOn": "2016-05-18T15:15:18Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "dabed58f_c3d78aec",
+      "revId": "cb9d61f8ff283c1a75beed43382087574e49ec8e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
