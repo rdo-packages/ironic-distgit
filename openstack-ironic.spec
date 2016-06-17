@@ -13,7 +13,7 @@ Name:           openstack-ironic
 # https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
 Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
-Version:        5.1.0
+Version:        5.1.1
 Release:        1%{?dist}
 License:        ASL 2.0
 Group:          System Environment/Base
@@ -227,5 +227,8 @@ This package contains the Ironic test files.
 %{python2_sitelib}/ironic_tempest_plugin
 
 %changelog
+* Fri Jun 17 2016 Haikel Guemar <hguemar@fedoraproject.org> 1:5.1.1-1
+- Update to 5.1.1
+
 * Thu Mar 24 2016 RDO <rdo-list@redhat.com> 5.1.0-1
 - 5.1.0 Rebuild for Mitaka
