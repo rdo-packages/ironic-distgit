@@ -1,9 +1,3 @@
-%if 0%{?rhel} && 0%{?rhel} <= 6
-%{!?__python2: %global __python2 /usr/bin/python2}
-%{!?python2_sitelib: %global python2_sitelib %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
-%{!?python2_sitearch: %global python2_sitearch %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
-%endif
-
 %global full_release ironic-%{version}
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -16,7 +10,6 @@ Summary:        OpenStack Baremetal Hypervisor API (ironic)
 Version:        XXX
 Release:        XXX
 License:        ASL 2.0
-Group:          System Environment/Base
 URL:            http://www.openstack.org
 Source0:        http://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
 
@@ -154,7 +147,8 @@ Components common to all OpenStack Ironic services
 
 
 %files common -f ironic.lang
-%doc README.rst LICENSE
+%doc README.rst
+%license LICENSE
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
 %{python2_sitelib}/ironic*
@@ -188,7 +182,6 @@ Ironic API for management and provisioning of physical machines
 
 
 %files api
-%doc LICENSE
 %{_bindir}/ironic-api
 %{_unitdir}/openstack-ironic-api.service
 
@@ -214,7 +207,6 @@ Requires(postun): systemd
 Ironic Conductor for management and provisioning of physical machines
 
 %files conductor
-%doc LICENSE
 %{_bindir}/ironic-conductor
 %{_unitdir}/openstack-ironic-conductor.service
 
@@ -235,7 +227,6 @@ Requires:       %{name}-common = %{epoch}:%{version}-%{release}
 This package contains the Ironic test files.
 
 %files -n python-ironic-tests
-%license LICENSE
 %{python2_sitelib}/ironic/tests
 %{python2_sitelib}/ironic_tempest_plugin
 
