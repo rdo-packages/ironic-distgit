@@ -11,7 +11,7 @@ Version:        XXX
 Release:        XXX
 License:        ASL 2.0
 URL:            http://www.openstack.org
-Source0:        http://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
 
 Source1:        openstack-ironic-api.service
 Source2:        openstack-ironic-conductor.service
