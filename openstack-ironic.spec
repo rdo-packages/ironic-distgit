@@ -94,6 +94,12 @@ rm requirements.txt test-requirements.txt
 
 %install
 %{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
+
+# Create fake egg-info for the tempest plugin
+# TODO switch to %{service} everywhere as in openstack-example.spec
+%global service ironic
+%py2_entrypoint %{service} %{service}
+
 install -p -D -m 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-ironic
 
 # install systemd scripts
@@ -196,7 +202,8 @@ Components common to all OpenStack Ironic services
 %license LICENSE
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
-%{python2_sitelib}/ironic*
+%{python2_sitelib}/ironic
+%{python2_sitelib}/ironic-*.egg-info
 %exclude %{python2_sitelib}/ironic/tests
 %exclude %{python2_sitelib}/ironic_tempest_plugin
 %{_sysconfdir}/sudoers.d/ironic
@@ -205,6 +212,7 @@ Components common to all OpenStack Ironic services
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
 %attr(-,ironic,ironic) %{_localstatedir}/log/ironic
 %attr(-, root, ironic) %{_datadir}/ironic/ironic-dist.conf
+%exclude %{python2_sitelib}/ironic_tests.egg_info
 
 %pre common
 getent group ironic >/dev/null || groupadd -r ironic
@@ -278,5 +286,6 @@ This package contains the Ironic test files.
 %files -n python-ironic-tests
 %{python2_sitelib}/ironic/tests
 %{python2_sitelib}/ironic_tempest_plugin
+%{python2_sitelib}/%{service}_tests.egg-info
 
 %changelog
