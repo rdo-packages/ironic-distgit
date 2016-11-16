@@ -31,6 +31,58 @@ BuildRequires:  python-sphinx
 BuildRequires:  systemd
 # Required to compile translation files
 BuildRequires:  python-babel
+# Required to run unit tests
+BuildRequires:  pysendfile
+BuildRequires:  python-alembic
+BuildRequires:  python-automaton
+BuildRequires:  python-dracclient
+BuildRequires:  python-eventlet
+BuildRequires:  python-futurist
+BuildRequires:  python-glanceclient
+BuildRequires:  python-greenlet
+BuildRequires:  python-ironic-inspector-client
+BuildRequires:  python-ironic-lib
+BuildRequires:  python-jinja2
+BuildRequires:  python-jsonpatch
+BuildRequires:  python-jsonschema
+BuildRequires:  python-keystoneauth1
+BuildRequires:  python-keystonemiddleware
+BuildRequires:  python-lxml
+BuildRequires:  python-mock
+BuildRequires:  python-netaddr
+BuildRequires:  python-neutronclient
+BuildRequires:  python-oslo-concurrency
+BuildRequires:  python-oslo-config
+BuildRequires:  python-oslo-context
+BuildRequires:  python-oslo-db
+BuildRequires:  python-oslo-i18n
+BuildRequires:  python-oslo-log
+BuildRequires:  python-oslo-messaging
+BuildRequires:  python-oslo-middleware
+BuildRequires:  python-oslo-policy
+BuildRequires:  python-oslo-rootwrap
+BuildRequires:  python-oslo-serialization
+BuildRequires:  python-oslo-service
+BuildRequires:  python-oslo-utils
+BuildRequires:  python-oslo-versionedobjects
+BuildRequires:  python-oslotest
+BuildRequires:  python-os-testr
+BuildRequires:  python-paramiko
+BuildRequires:  python-pbr
+BuildRequires:  python-pecan
+BuildRequires:  python-proliantutils
+BuildRequires:  python-psutil
+BuildRequires:  python-pyghmi
+BuildRequires:  python-requests
+BuildRequires:  python-retrying
+BuildRequires:  python-six
+BuildRequires:  python-sqlalchemy
+BuildRequires:  python-stevedore
+BuildRequires:  python-swiftclient
+BuildRequires:  python-testresources
+BuildRequires:  python-webob
+BuildRequires:  python-wsme
+BuildRequires:  pytz
 
 %prep
 %setup -q -n ironic-%{upstream_version}
@@ -76,6 +128,9 @@ mv %{buildroot}%{python2_sitelib}/ironic/locale %{buildroot}%{_datadir}/locale
 # Find language files
 %find_lang ironic --all-name
 
+%check
+ostestr --path ironic/tests/unit
+
 %description
 Ironic provides an API for management and provisioning of physical machines
 
@@ -83,22 +138,24 @@ Ironic provides an API for management and provisioning of physical machines
 Summary: Ironic common
 
 Requires:   ipmitool
+Requires:   pysendfile
+Requires:   python-alembic
+Requires:   python-automaton
 Requires:   python-dracclient
 Requires:   python-eventlet
 Requires:   python-futurist
+Requires:   python-glanceclient
 Requires:   python-greenlet
+Requires:   python-ironic-inspector-client
 Requires:   python-ironic-lib
-Requires:   python-iso8601
-Requires:   python-posix_ipc
+Requires:   python-jinja2
 Requires:   python-jsonpatch
+Requires:   python-jsonschema
+Requires:   python-keystoneauth1
 Requires:   python-keystonemiddleware
-Requires:   python-kombu
-Requires:   python-anyjson
-Requires:   python-lockfile
 Requires:   python-lxml
-Requires:   python-migrate
-Requires:   python-mock
 Requires:   python-netaddr
+Requires:   python-neutronclient
 Requires:   python-oslo-concurrency
 Requires:   python-oslo-config
 Requires:   python-oslo-context
@@ -114,29 +171,19 @@ Requires:   python-oslo-service
 Requires:   python-oslo-utils
 Requires:   python-oslo-versionedobjects
 Requires:   python-paramiko
+Requires:   python-pbr
 Requires:   python-pecan
 Requires:   python-proliantutils
 Requires:   python-psutil
+Requires:   python-pyghmi
+Requires:   python-requests
 Requires:   python-retrying
 Requires:   python-six
-Requires:   python-stevedore
-Requires:   python-webob
-Requires:   python-websockify
-Requires:   python-wsme
-Requires:   pycrypto
 Requires:   python-sqlalchemy
-Requires:   python-neutronclient
-Requires:   python-glanceclient
-Requires:   python-keystoneclient
+Requires:   python-stevedore
 Requires:   python-swiftclient
-Requires:   python-jinja2
-Requires:   python-pyghmi
-Requires:   python-alembic
-Requires:   pysendfile
-Requires:   python-pbr
-Requires:   python-automaton
-Requires:   python-requests
-Requires:   python-jsonschema
+Requires:   python-webob
+Requires:   python-wsme
 Requires:   pytz
 
 
