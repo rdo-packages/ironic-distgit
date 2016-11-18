@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5adbc538_94c10ce7",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2016-11-18T11:46:32Z",
+      "side": 1,
+      "message": "It seems lxml is not longer required.",
+      "range": {
+        "startLine": 50,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 27
+      },
+      "revId": "f9333a893ff47494914dabd0b7f188b0b089f3a7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5adbc538_3493d8fb",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 156,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2016-11-18T11:46:32Z",
+      "side": 1,
+      "message": "It seems lxml is not longer required.",
+      "range": {
+        "startLine": 156,
+        "startChar": 11,
+        "endLine": 156,
+        "endChar": 23
+      },
+      "revId": "f9333a893ff47494914dabd0b7f188b0b089f3a7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
