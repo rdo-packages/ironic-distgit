@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fab399f4_9aaeade6",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 205,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-14T16:04:31Z",
+      "side": 1,
+      "message": "We\u0027re still getting ironic_tests.egg_info because of this glob.",
+      "range": {
+        "startLine": 205,
+        "startChar": 0,
+        "endLine": 205,
+        "endChar": 26
+      },
+      "revId": "f5f50633f0a4ca68dfca508dbd6b10b02cc60391",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
