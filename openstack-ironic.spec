@@ -67,6 +67,7 @@ BuildRequires:  python-oslo-service
 BuildRequires:  python-oslo-utils
 BuildRequires:  python-oslo-versionedobjects
 BuildRequires:  python-oslotest
+BuildRequires:  python-osprofiler
 BuildRequires:  python-os-testr
 BuildRequires:  python-paramiko
 BuildRequires:  python-pbr
@@ -177,6 +178,7 @@ Requires:   python-oslo-serialization >= 1.10.0
 Requires:   python-oslo-service >= 1.10.0
 Requires:   python-oslo-utils >= 3.18.0
 Requires:   python-oslo-versionedobjects >= 1.17.0
+Requires:   python-osprofiler
 Requires:   python-paramiko
 Requires:   python-pbr
 Requires:   python-pecan
