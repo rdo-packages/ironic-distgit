@@ -20,6 +20,7 @@ Source4:        ironic-dist.conf
 Source5:        ironic.logrotate
 
 BuildArch:      noarch
+BuildRequires:  openstack-macros
 BuildRequires:  python-setuptools
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
