@@ -80,6 +80,7 @@ BuildRequires:  python-sqlalchemy
 BuildRequires:  python-stevedore
 BuildRequires:  python-swiftclient
 BuildRequires:  python-testresources
+BuildRequires:  python-tooz
 BuildRequires:  python-webob
 BuildRequires:  python-wsme
 BuildRequires:  pytz
@@ -187,6 +188,7 @@ Requires:   python-six
 Requires:   python-sqlalchemy
 Requires:   python-stevedore
 Requires:   python-swiftclient
+Requires:   python-tooz
 Requires:   python-webob
 Requires:   python-wsme
 Requires:   pytz
