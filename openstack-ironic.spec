@@ -292,3 +292,4 @@ This package contains the Ironic test files.
 * Wed Sep 14 2016 Haikel Guemar <hguemar@fedoraproject.org> 1:6.1.0-1
 - Update to 6.1.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic/commit/?id=eff27157f23f31ba4a096eb783410cfd529d5fac
