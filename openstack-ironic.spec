@@ -151,31 +151,31 @@ Requires:   python-automaton
 Requires:   python-dracclient
 Requires:   python-eventlet
 Requires:   python-futurist
-Requires:   python-glanceclient
+Requires:   python-glanceclient >= 1:2.5.0
 Requires:   python-greenlet
 Requires:   python-ironic-inspector-client
-Requires:   python-ironic-lib
+Requires:   python-ironic-lib >= 2.5.0
 Requires:   python-jinja2
 Requires:   python-jsonpatch
 Requires:   python-jsonschema
-Requires:   python-keystoneauth1
-Requires:   python-keystonemiddleware
+Requires:   python-keystoneauth1 >= 2.18.0
+Requires:   python-keystonemiddleware >= 4.12.0
 Requires:   python-netaddr
-Requires:   python-neutronclient
-Requires:   python-oslo-concurrency
-Requires:   python-oslo-config
-Requires:   python-oslo-context
-Requires:   python-oslo-db
-Requires:   python-oslo-i18n
-Requires:   python-oslo-log
-Requires:   python-oslo-messaging
-Requires:   python-oslo-middleware
-Requires:   python-oslo-policy
-Requires:   python-oslo-rootwrap
-Requires:   python-oslo-serialization
-Requires:   python-oslo-service
-Requires:   python-oslo-utils
-Requires:   python-oslo-versionedobjects
+Requires:   python-neutronclient >= 5.1.0
+Requires:   python-oslo-concurrency >= 3.8.0
+Requires:   python-oslo-config >= 2:3.14.0
+Requires:   python-oslo-context >= 2.9.0
+Requires:   python-oslo-db >= 4.15.0
+Requires:   python-oslo-i18n >= 2.1.0
+Requires:   python-oslo-log >= 3.11.0
+Requires:   python-oslo-messaging >= 5.14.0
+Requires:   python-oslo-middleware >= 3.0.0
+Requires:   python-oslo-policy >= 1.17.0
+Requires:   python-oslo-rootwrap >= 5.0.0
+Requires:   python-oslo-serialization >= 1.10.0
+Requires:   python-oslo-service >= 1.10.0
+Requires:   python-oslo-utils >= 3.18.0
+Requires:   python-oslo-versionedobjects >= 1.17.0
 Requires:   python-paramiko
 Requires:   python-pbr
 Requires:   python-pecan
@@ -186,10 +186,10 @@ Requires:   python-requests
 Requires:   python-retrying
 Requires:   python-six
 Requires:   python-sqlalchemy
-Requires:   python-stevedore
-Requires:   python-swiftclient
-Requires:   python-tooz
-Requires:   python-webob
+Requires:   python-stevedore >= 1.17.1
+Requires:   python-swiftclient >= 3.2.0
+Requires:   python-tooz >= 1.47.0
+Requires:   python-webob >= 1.6.0
 Requires:   python-wsme
 Requires:   pytz
 
