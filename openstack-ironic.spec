@@ -292,3 +292,4 @@ This package contains the Ironic test files.
 %{python2_sitelib}/%{service}_tests.egg-info
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic/commit/?id=2b10dd8bfce789b50f29cff0d3f372dfdb56e19d
