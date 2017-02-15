@@ -213,7 +213,7 @@ Components common to all OpenStack Ironic services
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
-%attr(-,ironic,ironic) %{_localstatedir}/log/ironic
+%attr(0750,ironic,ironic) %{_localstatedir}/log/ironic
 %attr(-, root, ironic) %{_datadir}/ironic/ironic-dist.conf
 %exclude %{python2_sitelib}/ironic_tests.egg_info
 
