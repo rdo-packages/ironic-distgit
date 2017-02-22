@@ -55,6 +55,7 @@ BuildRequires:  python-oslo-concurrency
 BuildRequires:  python-oslo-config
 BuildRequires:  python-oslo-context
 BuildRequires:  python-oslo-db
+BuildRequires:  python-oslo-db-tests
 BuildRequires:  python-oslo-i18n
 BuildRequires:  python-oslo-log
 BuildRequires:  python-oslo-messaging
