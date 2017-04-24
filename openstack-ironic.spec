@@ -73,12 +73,12 @@ BuildRequires:  python-pbr
 BuildRequires:  python-pecan
 BuildRequires:  python-proliantutils
 BuildRequires:  python-psutil
-BuildRequires:  python-pyghmi
 BuildRequires:  python-requests
 BuildRequires:  python-retrying
 BuildRequires:  python-six
 BuildRequires:  python-sqlalchemy
 BuildRequires:  python-stevedore
+BuildRequires:  python-sushy
 BuildRequires:  python-swiftclient
 BuildRequires:  python-testresources
 BuildRequires:  python-tooz
@@ -182,12 +182,12 @@ Requires:   python-pbr
 Requires:   python-pecan
 Requires:   python-proliantutils
 Requires:   python-psutil
-Requires:   python-pyghmi
 Requires:   python-requests
 Requires:   python-retrying
 Requires:   python-six
 Requires:   python-sqlalchemy
 Requires:   python-stevedore >= 1.17.1
+Requires:   python-sushy
 Requires:   python-swiftclient >= 3.2.0
 Requires:   python-tooz >= 1.47.0
 Requires:   python-webob >= 1.6.0
