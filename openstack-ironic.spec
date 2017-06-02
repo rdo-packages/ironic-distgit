@@ -61,6 +61,7 @@ BuildRequires:  python-oslo-log
 BuildRequires:  python-oslo-messaging
 BuildRequires:  python-oslo-middleware
 BuildRequires:  python-oslo-policy
+BuildRequires:  python-oslo-reports
 BuildRequires:  python-oslo-rootwrap
 BuildRequires:  python-oslo-serialization
 BuildRequires:  python-oslo-service
@@ -149,6 +150,7 @@ Requires:   ipmitool
 Requires:   pysendfile
 Requires:   python-alembic
 Requires:   python-automaton
+Requires:   python-cinderclient >= 2.1.0
 Requires:   python-dracclient
 Requires:   python-eventlet
 Requires:   python-futurist
@@ -172,6 +174,7 @@ Requires:   python-oslo-log >= 3.11.0
 Requires:   python-oslo-messaging >= 5.14.0
 Requires:   python-oslo-middleware >= 3.0.0
 Requires:   python-oslo-policy >= 1.17.0
+Requires:   python-oslo-reports >= 0.6.0
 Requires:   python-oslo-rootwrap >= 5.0.0
 Requires:   python-oslo-serialization >= 1.10.0
 Requires:   python-oslo-service >= 1.10.0
@@ -184,6 +187,7 @@ Requires:   python-proliantutils
 Requires:   python-psutil
 Requires:   python-requests
 Requires:   python-retrying
+Requires:   python-rfc3986 >= 0.3.1
 Requires:   python-six
 Requires:   python-sqlalchemy
 Requires:   python-stevedore >= 1.17.1
