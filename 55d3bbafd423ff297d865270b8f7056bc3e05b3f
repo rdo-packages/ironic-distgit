@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa7fdbe_6b066522",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2017-07-07T00:49:41Z",
+      "side": 1,
+      "message": "won\u0027t work, DLRN-rpmbuild is not taking depended projects into account...",
+      "revId": "55d3bbafd423ff297d865270b8f7056bc3e05b3f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
