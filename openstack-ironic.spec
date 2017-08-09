@@ -36,6 +36,7 @@ BuildRequires:  python-babel
 BuildRequires:  pysendfile
 BuildRequires:  python-alembic
 BuildRequires:  python-automaton
+BuildRequires:  python-cinderclient
 BuildRequires:  python-dracclient
 BuildRequires:  python-eventlet
 BuildRequires:  python-futurist
