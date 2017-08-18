@@ -41,7 +41,6 @@ BuildRequires:  python-dracclient
 BuildRequires:  python-eventlet
 BuildRequires:  python-futurist
 BuildRequires:  python-glanceclient
-BuildRequires:  python-greenlet
 BuildRequires:  python-ironic-inspector-client
 BuildRequires:  python-ironic-lib
 BuildRequires:  python-jinja2
@@ -50,7 +49,6 @@ BuildRequires:  python-jsonschema
 BuildRequires:  python-keystoneauth1
 BuildRequires:  python-keystonemiddleware
 BuildRequires:  python-mock
-BuildRequires:  python-netaddr
 BuildRequires:  python-neutronclient
 BuildRequires:  python-oslo-concurrency
 BuildRequires:  python-oslo-config
@@ -71,7 +69,6 @@ BuildRequires:  python-oslo-versionedobjects
 BuildRequires:  python-oslotest
 BuildRequires:  python-osprofiler
 BuildRequires:  python-os-testr
-BuildRequires:  python-paramiko
 BuildRequires:  python-pbr
 BuildRequires:  python-pecan
 BuildRequires:  python-proliantutils
@@ -151,39 +148,36 @@ Summary: Ironic common
 Requires:   ipmitool
 Requires:   pysendfile
 Requires:   python-alembic
-Requires:   python-automaton
-Requires:   python-cinderclient >= 2.1.0
+Requires:   python-automaton >= 0.5.0
+Requires:   python-cinderclient >= 3.1.0
 Requires:   python-dracclient
 Requires:   python-eventlet
-Requires:   python-futurist
-Requires:   python-glanceclient >= 1:2.5.0
-Requires:   python-greenlet
+Requires:   python-futurist >= 0.11.0
+Requires:   python-glanceclient >= 1:2.7.0
 Requires:   python-ironic-inspector-client
 Requires:   python-ironic-lib >= 2.5.0
 Requires:   python-jinja2
 Requires:   python-jsonpatch
 Requires:   python-jsonschema
-Requires:   python-keystoneauth1 >= 2.18.0
+Requires:   python-keystoneauth1 >= 3.1.0
 Requires:   python-keystonemiddleware >= 4.12.0
-Requires:   python-netaddr
-Requires:   python-neutronclient >= 5.1.0
+Requires:   python-neutronclient >= 6.3.0
 Requires:   python-oslo-concurrency >= 3.8.0
-Requires:   python-oslo-config >= 2:3.14.0
-Requires:   python-oslo-context >= 2.9.0
-Requires:   python-oslo-db >= 4.15.0
+Requires:   python-oslo-config >= 2:4.0.0
+Requires:   python-oslo-context >= 2.14.0
+Requires:   python-oslo-db >= 4.24.0
 Requires:   python-oslo-i18n >= 2.1.0
-Requires:   python-oslo-log >= 3.11.0
-Requires:   python-oslo-messaging >= 5.14.0
-Requires:   python-oslo-middleware >= 3.0.0
-Requires:   python-oslo-policy >= 1.17.0
+Requires:   python-oslo-log >= 3.22.0
+Requires:   python-oslo-messaging >= 5.24.2
+Requires:   python-oslo-middleware >= 3.27.0
+Requires:   python-oslo-policy >= 1.23.0
 Requires:   python-oslo-reports >= 0.6.0
 Requires:   python-oslo-rootwrap >= 5.0.0
 Requires:   python-oslo-serialization >= 1.10.0
 Requires:   python-oslo-service >= 1.10.0
-Requires:   python-oslo-utils >= 3.18.0
+Requires:   python-oslo-utils >= 3.20.0
 Requires:   python-oslo-versionedobjects >= 1.17.0
-Requires:   python-osprofiler
-Requires:   python-paramiko
+Requires:   python-osprofiler >= 1.4.0
 Requires:   python-pbr
 Requires:   python-pecan
 Requires:   python-proliantutils
@@ -193,11 +187,11 @@ Requires:   python-retrying
 Requires:   python-rfc3986 >= 0.3.1
 Requires:   python-six
 Requires:   python-sqlalchemy
-Requires:   python-stevedore >= 1.17.1
+Requires:   python-stevedore >= 1.20.0
 Requires:   python-sushy
 Requires:   python-swiftclient >= 3.2.0
 Requires:   python-tooz >= 1.47.0
-Requires:   python-webob >= 1.6.0
+Requires:   python-webob >= 1.7.1
 Requires:   python-wsme
 Requires:   pytz
 
