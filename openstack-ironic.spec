@@ -150,11 +150,11 @@ Requires:   pysendfile
 Requires:   python-alembic
 Requires:   python-automaton >= 0.5.0
 Requires:   python-cinderclient >= 3.1.0
-Requires:   python-dracclient
+Requires:   python-dracclient >= 1.3.0
 Requires:   python-eventlet
 Requires:   python-futurist >= 0.11.0
 Requires:   python-glanceclient >= 1:2.7.0
-Requires:   python-ironic-inspector-client
+Requires:   python-ironic-inspector-client >= 1.5.0
 Requires:   python-ironic-lib >= 2.5.0
 Requires:   python-jinja2
 Requires:   python-jsonpatch
@@ -180,7 +180,7 @@ Requires:   python-oslo-versionedobjects >= 1.17.0
 Requires:   python-osprofiler >= 1.4.0
 Requires:   python-pbr
 Requires:   python-pecan
-Requires:   python-proliantutils
+Requires:   python-proliantutils >= 2.4.0
 Requires:   python-psutil
 Requires:   python-requests
 Requires:   python-retrying
