@@ -75,6 +75,7 @@ BuildRequires:  python-proliantutils
 BuildRequires:  python-psutil
 BuildRequires:  python-requests
 BuildRequires:  python-retrying
+BuildRequires:  python-scciclient
 BuildRequires:  python-six
 BuildRequires:  python-sqlalchemy
 BuildRequires:  python-stevedore
@@ -82,8 +83,10 @@ BuildRequires:  python-sushy
 BuildRequires:  python-swiftclient
 BuildRequires:  python-testresources
 BuildRequires:  python-tooz
+BuildRequires:  python-UcsSdk
 BuildRequires:  python-webob
 BuildRequires:  python-wsme
+BuildRequires:  pysnmp
 BuildRequires:  pytz
 
 %prep
@@ -150,11 +153,11 @@ Requires:   pysendfile
 Requires:   python-alembic
 Requires:   python-automaton >= 0.5.0
 Requires:   python-cinderclient >= 3.1.0
-Requires:   python-dracclient
+Requires:   python-dracclient >= 1.3.0
 Requires:   python-eventlet
 Requires:   python-futurist >= 0.11.0
 Requires:   python-glanceclient >= 1:2.7.0
-Requires:   python-ironic-inspector-client
+Requires:   python-ironic-inspector-client >= 1.5.0
 Requires:   python-ironic-lib >= 2.5.0
 Requires:   python-jinja2
 Requires:   python-jsonpatch
@@ -180,19 +183,22 @@ Requires:   python-oslo-versionedobjects >= 1.17.0
 Requires:   python-osprofiler >= 1.4.0
 Requires:   python-pbr
 Requires:   python-pecan
-Requires:   python-proliantutils
+Requires:   python-proliantutils >= 2.4.0
 Requires:   python-psutil
 Requires:   python-requests
 Requires:   python-retrying
 Requires:   python-rfc3986 >= 0.3.1
+Requires:   python-scciclient >= 0.5.0
 Requires:   python-six
 Requires:   python-sqlalchemy
 Requires:   python-stevedore >= 1.20.0
 Requires:   python-sushy
 Requires:   python-swiftclient >= 3.2.0
 Requires:   python-tooz >= 1.47.0
+Requires:   python-UcsSdk >= 0.8.2.2
 Requires:   python-webob >= 1.7.1
 Requires:   python-wsme
+Requires:   pysnmp
 Requires:   pytz
 
 
