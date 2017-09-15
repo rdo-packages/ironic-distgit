@@ -237,9 +237,7 @@ Summary: The Ironic API
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
-Requires(post): systemd
-Requires(preun): systemd
-Requires(postun): systemd
+%{?systemd_requires}
 
 %description api
 Ironic API for management and provisioning of physical machines
@@ -263,9 +261,7 @@ Summary: The Ironic Conductor
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
-Requires(post): systemd
-Requires(preun): systemd
-Requires(postun): systemd
+%{?systemd_requires}
 
 %description conductor
 Ironic Conductor for management and provisioning of physical machines
