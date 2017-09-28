@@ -91,7 +91,8 @@ BuildRequires:  pytz
 
 %prep
 %setup -q -n ironic-%{upstream_version}
-rm requirements.txt test-requirements.txt
+# Let RPM handle the requirements
+%py_req_cleanup
 
 %build
 %{__python2} setup.py build
