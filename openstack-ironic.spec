@@ -68,7 +68,7 @@ BuildRequires:  python-oslo-utils
 BuildRequires:  python-oslo-versionedobjects
 BuildRequires:  python-oslotest
 BuildRequires:  python-osprofiler
-BuildRequires:  python-os-testr
+BuildRequires:  /usr/bin/ostestr
 BuildRequires:  python-pbr
 BuildRequires:  python-pecan
 BuildRequires:  python-proliantutils
@@ -82,6 +82,8 @@ BuildRequires:  python-stevedore
 BuildRequires:  python-sushy
 BuildRequires:  python-swiftclient
 BuildRequires:  python-testresources
+BuildRequires:  python-testscenarios
+BuildRequires:  python-testtools
 BuildRequires:  python-tooz
 BuildRequires:  python-UcsSdk
 BuildRequires:  python-webob
@@ -144,7 +146,7 @@ mv %{buildroot}%{python2_sitelib}/ironic/locale %{buildroot}%{_datadir}/locale
 %find_lang ironic --all-name
 
 %check
-%{__python2} setup.py test
+ostestr --path ironic/tests/unit
 
 %description
 Ironic provides an API for management and provisioning of physical machines
@@ -285,11 +287,16 @@ Ironic Conductor for management and provisioning of physical machines
 
 %package -n python-ironic-tests
 Summary:        Ironic tests
+BuildRequires:  python-tempest
 Requires:       %{name}-common = %{epoch}:%{version}-%{release}
 Requires:       python-mock
 Requires:       python-oslotest
-Requires:       python-os-testr
+Requires:       /usr/bin/ostestr
+Requires:       python-tempest
 Requires:       python-testresources
+Requires:       python-testscenarios
+Requires:       python-testtools
+
 
 %description -n python-ironic-tests
 This package contains the Ironic test files.
