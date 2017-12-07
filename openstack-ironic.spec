@@ -152,6 +152,7 @@ Ironic provides an API for management and provisioning of physical machines
 %package common
 Summary: Ironic common
 
+Requires:   ansible >= 2.4.0
 Requires:   ipmitool
 Requires:   pysendfile
 Requires:   python-alembic
@@ -204,6 +205,7 @@ Requires:   python-webob >= 1.7.1
 Requires:   python-wsme
 Requires:   pysnmp
 Requires:   pytz
+Requires:   systemd-python
 
 
 Requires(pre):  shadow-utils
