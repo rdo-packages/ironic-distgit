@@ -104,11 +104,6 @@ BuildRequires:  pytz
 %install
 %{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
 
-# Create fake egg-info for the tempest plugin
-# TODO switch to %{service} everywhere as in openstack-example.spec
-%global service ironic
-%py2_entrypoint %{service} %{service}
-
 install -p -D -m 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-ironic
 
 # install systemd scripts
@@ -286,13 +281,11 @@ Ironic Conductor for management and provisioning of physical machines
 %systemd_postun_with_restart openstack-ironic-conductor.service
 
 %package -n python-ironic-tests
-Summary:        Ironic tests
-BuildRequires:  python-tempest
+Summary:        Ironic unit tests
 Requires:       %{name}-common = %{epoch}:%{version}-%{release}
 Requires:       python-mock
 Requires:       python-oslotest
 Requires:       /usr/bin/ostestr
-Requires:       python-tempest
 Requires:       python-testresources
 Requires:       python-testscenarios
 Requires:       python-testtools
@@ -303,7 +296,5 @@ This package contains the Ironic test files.
 
 %files -n python-ironic-tests
 %{python2_sitelib}/ironic/tests
-%{python2_sitelib}/ironic_tempest_plugin
-%{python2_sitelib}/%{service}_tests.egg-info
 
 %changelog
