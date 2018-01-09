@@ -251,6 +251,7 @@ Ironic API for management and provisioning of physical machines
 
 %files api
 %{_bindir}/ironic-api
+%{_bindir}/ironic-api-wsgi
 %{_unitdir}/openstack-ironic-api.service
 
 %post api
