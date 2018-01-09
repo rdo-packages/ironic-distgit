@@ -95,7 +95,9 @@ BuildRequires:  pytz
 %setup -q -n ironic-%{upstream_version}
 # Let RPM handle the requirements
 %py_req_cleanup
-
+# Remove tempest plugin entrypoint as a workaround
+sed -i '/tempest/d' setup.cfg
+rm -rf ironic_tempest_plugin
 %build
 %{__python2} setup.py build
 # Generate i18n files
@@ -217,7 +219,6 @@ Components common to all OpenStack Ironic services
 %{python2_sitelib}/ironic
 %{python2_sitelib}/ironic-*.egg-info
 %exclude %{python2_sitelib}/ironic/tests
-%exclude %{python2_sitelib}/ironic_tempest_plugin
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-ironic
 %config(noreplace) %attr(-,root,ironic) %{_sysconfdir}/ironic
