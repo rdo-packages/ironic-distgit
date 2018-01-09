@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa963961_4b58ed56",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-01-09T19:40:11Z",
+      "side": 1,
+      "message": "It\u0027s good to include something like \"TODO\" so that it\u0027s easier to identify temporary workarounds that must be deleted later.",
+      "revId": "1057e0a190eac934d19247308640a8ce53b04275",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
