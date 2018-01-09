@@ -1,0 +1,9 @@
+Code-Review+2: Alan Pevec <alan.pevec@redhat.com>
+Code-Review+2: dtantsur <divius.inside@gmail.com>
+Workflow+1: dtantsur <divius.inside@gmail.com>
+Verified+2: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-by: Jenkins CI <admin@rpmfactory.beta.rdoproject.org>
+Submitted-at: Tue, 09 Jan 2018 10:00:22 +0000
+Reviewed-on: https://review.rdoproject.org/r/11222
+Project: openstack/ironic-distgit
+Branch: refs/heads/rpm-master
