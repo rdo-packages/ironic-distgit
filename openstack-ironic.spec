@@ -69,6 +69,7 @@ BuildRequires:  python-oslo-versionedobjects
 BuildRequires:  python-oslotest
 BuildRequires:  python-osprofiler
 BuildRequires:  /usr/bin/ostestr
+BuildRequires:  python-os-traits
 BuildRequires:  python-pbr
 BuildRequires:  python-pecan
 BuildRequires:  python-proliantutils
@@ -184,6 +185,7 @@ Requires:   python-oslo-service >= 1.10.0
 Requires:   python-oslo-utils >= 3.20.0
 Requires:   python-oslo-versionedobjects >= 1.17.0
 Requires:   python-osprofiler >= 1.4.0
+Requires:   python-os-traits
 Requires:   python-pbr
 Requires:   python-pecan
 Requires:   python-proliantutils >= 2.4.0
