@@ -123,8 +123,6 @@ mkdir -p %{buildroot}%{_localstatedir}/log/ironic/
 mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
 
 #Populate the conf dir
-install -p -D -m 640 etc/ironic/ironic.conf.sample %{buildroot}/%{_sysconfdir}/ironic/ironic.conf
-install -p -D -m 640 etc/ironic/policy.json %{buildroot}/%{_sysconfdir}/ironic/policy.json
 mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
 mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
 # Remove duplicate config files under /usr/etc/ironic
