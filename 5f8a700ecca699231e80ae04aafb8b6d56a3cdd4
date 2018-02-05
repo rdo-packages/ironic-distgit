@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_abf9b4ca",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2018-02-05T08:02:24Z",
+      "side": 1,
+      "message": "should be oslopolicy-sample-generator according to tox.ini",
+      "range": {
+        "startLine": 127,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 21
+      },
+      "revId": "5f8a700ecca699231e80ae04aafb8b6d56a3cdd4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
