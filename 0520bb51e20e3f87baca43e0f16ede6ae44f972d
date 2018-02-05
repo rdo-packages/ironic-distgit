@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_8bc15083",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2018-02-05T07:27:09Z",
+      "side": 0,
+      "message": "Would we not want to run oslo-config-generator as part of the rpm build to generate these on the fly?",
+      "range": {
+        "startLine": 126,
+        "startChar": 0,
+        "endLine": 127,
+        "endChar": 90
+      },
+      "revId": "0520bb51e20e3f87baca43e0f16ede6ae44f972d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
