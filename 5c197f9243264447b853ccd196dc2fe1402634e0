@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9aa53dc9_6b9f2c60",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-02-05T09:25:58Z",
+      "side": 1,
+      "message": "This is not required.",
+      "range": {
+        "startLine": 126,
+        "startChar": 36,
+        "endLine": 126,
+        "endChar": 59
+      },
+      "revId": "5c197f9243264447b853ccd196dc2fe1402634e0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9aa53dc9_0b942035",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-02-05T09:25:58Z",
+      "side": 1,
+      "message": "ditto",
+      "range": {
+        "startLine": 127,
+        "startChar": 42,
+        "endLine": 127,
+        "endChar": 65
+      },
+      "revId": "5c197f9243264447b853ccd196dc2fe1402634e0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
