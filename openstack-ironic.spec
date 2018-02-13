@@ -21,76 +21,76 @@ Source5:        ironic.logrotate
 
 BuildArch:      noarch
 BuildRequires:  openstack-macros
-BuildRequires:  python-setuptools
+BuildRequires:  python2-setuptools
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
+BuildRequires:  python2-pbr
 BuildRequires:  openssl-devel
 BuildRequires:  libxml2-devel
 BuildRequires:  libxslt-devel
 BuildRequires:  gmp-devel
-BuildRequires:  python-sphinx
+BuildRequires:  python2-sphinx
 BuildRequires:  systemd
 # Required to compile translation files
-BuildRequires:  python-babel
+BuildRequires:  python2-babel
 # Required to run unit tests
 BuildRequires:  pysendfile
-BuildRequires:  python-alembic
-BuildRequires:  python-automaton
-BuildRequires:  python-cinderclient
+BuildRequires:  python2-alembic
+BuildRequires:  python2-automaton
+BuildRequires:  python2-cinderclient
 BuildRequires:  python-dracclient
-BuildRequires:  python-eventlet
-BuildRequires:  python-futurist
-BuildRequires:  python-glanceclient
+BuildRequires:  python2-eventlet
+BuildRequires:  python2-futurist
+BuildRequires:  python2-glanceclient
 BuildRequires:  python-ironic-inspector-client
 BuildRequires:  python-ironic-lib
-BuildRequires:  python-jinja2
-BuildRequires:  python-jsonpatch
-BuildRequires:  python-jsonschema
-BuildRequires:  python-keystoneauth1
-BuildRequires:  python-keystonemiddleware
-BuildRequires:  python-mock
-BuildRequires:  python-neutronclient
-BuildRequires:  python-oslo-concurrency
-BuildRequires:  python-oslo-config
-BuildRequires:  python-oslo-context
-BuildRequires:  python-oslo-db
-BuildRequires:  python-oslo-db-tests
-BuildRequires:  python-oslo-i18n
-BuildRequires:  python-oslo-log
-BuildRequires:  python-oslo-messaging
-BuildRequires:  python-oslo-middleware
-BuildRequires:  python-oslo-policy
-BuildRequires:  python-oslo-reports
-BuildRequires:  python-oslo-rootwrap
-BuildRequires:  python-oslo-serialization
-BuildRequires:  python-oslo-service
-BuildRequires:  python-oslo-utils
-BuildRequires:  python-oslo-versionedobjects
-BuildRequires:  python-oslotest
-BuildRequires:  python-osprofiler
+BuildRequires:  python2-jinja2
+BuildRequires:  python2-jsonpatch
+BuildRequires:  python2-jsonschema
+BuildRequires:  python2-keystoneauth1
+BuildRequires:  python2-keystonemiddleware
+BuildRequires:  python2-mock
+BuildRequires:  python2-neutronclient
+BuildRequires:  python2-oslo-concurrency
+BuildRequires:  python2-oslo-config
+BuildRequires:  python2-oslo-context
+BuildRequires:  python2-oslo-db
+BuildRequires:  python2-oslo-db-tests
+BuildRequires:  python2-oslo-i18n
+BuildRequires:  python2-oslo-log
+BuildRequires:  python2-oslo-messaging
+BuildRequires:  python2-oslo-middleware
+BuildRequires:  python2-oslo-policy
+BuildRequires:  python2-oslo-reports
+BuildRequires:  python2-oslo-rootwrap
+BuildRequires:  python2-oslo-serialization
+BuildRequires:  python2-oslo-service
+BuildRequires:  python2-oslo-utils
+BuildRequires:  python2-oslo-versionedobjects
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-osprofiler
 BuildRequires:  /usr/bin/ostestr
-BuildRequires:  python-os-traits
-BuildRequires:  python-pbr
-BuildRequires:  python-pecan
+BuildRequires:  python2-os-traits
+BuildRequires:  python2-pbr
+BuildRequires:  python2-pecan
 BuildRequires:  python-proliantutils
-BuildRequires:  python-psutil
-BuildRequires:  python-requests
+BuildRequires:  python2-psutil
+BuildRequires:  python2-requests
 BuildRequires:  python-retrying
-BuildRequires:  python-scciclient
-BuildRequires:  python-six
-BuildRequires:  python-sqlalchemy
-BuildRequires:  python-stevedore
-BuildRequires:  python-sushy
-BuildRequires:  python-swiftclient
-BuildRequires:  python-testresources
-BuildRequires:  python-testscenarios
-BuildRequires:  python-testtools
-BuildRequires:  python-tooz
+BuildRequires:  python2-scciclient
+BuildRequires:  python2-six
+BuildRequires:  python2-sqlalchemy
+BuildRequires:  python2-stevedore
+BuildRequires:  python2-sushy
+BuildRequires:  python2-swiftclient
+BuildRequires:  python2-testresources
+BuildRequires:  python2-testscenarios
+BuildRequires:  python2-testtools
+BuildRequires:  python2-tooz
 BuildRequires:  python-UcsSdk
 BuildRequires:  python-webob
-BuildRequires:  python-wsme
-BuildRequires:  pysnmp
-BuildRequires:  pytz
+BuildRequires:  python2-wsme
+BuildRequires:  python2-pysnmp
+BuildRequires:  python2-pytz
 
 %prep
 %setup -q -n ironic-%{upstream_version}
@@ -155,57 +155,57 @@ Summary: Ironic common
 
 Requires:   ipmitool
 Requires:   pysendfile
-Requires:   python-alembic
-Requires:   python-automaton >= 0.5.0
-Requires:   python-cinderclient >= 3.1.0
+Requires:   python2-alembic
+Requires:   python2-automaton >= 1.9.0
+Requires:   python2-cinderclient >= 3.3.0
 Requires:   python-dracclient >= 1.3.0
-Requires:   python-eventlet
-Requires:   python-futurist >= 0.11.0
-Requires:   python-glanceclient >= 1:2.7.0
+Requires:   python2-eventlet
+Requires:   python2-futurist >= 1.2.0
+Requires:   python2-glanceclient >= 2.8.0
 Requires:   python-ironic-inspector-client >= 1.5.0
 Requires:   python-ironic-lib >= 2.5.0
-Requires:   python-jinja2
-Requires:   python-jsonpatch
-Requires:   python-jsonschema
-Requires:   python-keystoneauth1 >= 3.1.0
-Requires:   python-keystonemiddleware >= 4.12.0
-Requires:   python-neutronclient >= 6.3.0
-Requires:   python-oslo-concurrency >= 3.8.0
-Requires:   python-oslo-config >= 2:4.0.0
-Requires:   python-oslo-context >= 2.14.0
-Requires:   python-oslo-db >= 4.24.0
-Requires:   python-oslo-i18n >= 2.1.0
-Requires:   python-oslo-log >= 3.22.0
-Requires:   python-oslo-messaging >= 5.24.2
-Requires:   python-oslo-middleware >= 3.27.0
-Requires:   python-oslo-policy >= 1.23.0
-Requires:   python-oslo-reports >= 0.6.0
-Requires:   python-oslo-rootwrap >= 5.0.0
-Requires:   python-oslo-serialization >= 1.10.0
-Requires:   python-oslo-service >= 1.10.0
-Requires:   python-oslo-utils >= 3.20.0
-Requires:   python-oslo-versionedobjects >= 1.17.0
-Requires:   python-osprofiler >= 1.4.0
-Requires:   python-os-traits
-Requires:   python-pbr
-Requires:   python-pecan
+Requires:   python2-jinja2
+Requires:   python2-jsonpatch
+Requires:   python2-jsonschema
+Requires:   python2-keystoneauth1 >= 3.3.0
+Requires:   python2-keystonemiddleware >= 4.17.0
+Requires:   python2-neutronclient >= 6.3.0
+Requires:   python2-oslo-concurrency >= 3.25.0
+Requires:   python2-oslo-config >= 2:5.1.0
+Requires:   python2-oslo-context >= 2.19.2
+Requires:   python2-oslo-db >= 4.27.0
+Requires:   python2-oslo-i18n >= 3.15.3
+Requires:   python2-oslo-log >= 3.36.0
+Requires:   python2-oslo-messaging >= 5.29.0
+Requires:   python2-oslo-middleware >= 3.31.0
+Requires:   python2-oslo-policy >= 1.30.0
+Requires:   python2-oslo-reports >= 1.18.0
+Requires:   python2-oslo-rootwrap >= 5.8.0
+Requires:   python2-oslo-serialization >= 2.18.0
+Requires:   python2-oslo-service >= 1.24.0
+Requires:   python2-oslo-utils >= 3.33.0
+Requires:   python2-oslo-versionedobjects >= 1.31.2
+Requires:   python2-osprofiler >= 1.4.0
+Requires:   python2-os-traits
+Requires:   python2-pbr
+Requires:   python2-pecan
 Requires:   python-proliantutils >= 2.4.0
-Requires:   python-psutil
-Requires:   python-requests
+Requires:   python2-psutil
+Requires:   python2-requests
 Requires:   python-retrying
-Requires:   python-rfc3986 >= 0.3.1
-Requires:   python-scciclient >= 0.5.0
-Requires:   python-six
-Requires:   python-sqlalchemy
-Requires:   python-stevedore >= 1.20.0
-Requires:   python-sushy
-Requires:   python-swiftclient >= 3.2.0
-Requires:   python-tooz >= 1.47.0
+Requires:   python2-rfc3986 >= 0.3.1
+Requires:   python2-scciclient >= 0.5.0
+Requires:   python2-six
+Requires:   python2-sqlalchemy
+Requires:   python2-stevedore >= 1.20.0
+Requires:   python2-sushy
+Requires:   python2-swiftclient >= 3.2.0
+Requires:   python2-tooz >= 1.58.0
 Requires:   python-UcsSdk >= 0.8.2.2
 Requires:   python-webob >= 1.7.1
-Requires:   python-wsme
-Requires:   pysnmp
-Requires:   pytz
+Requires:   python2-wsme
+Requires:   python2-pysnmp
+Requires:   python2-pytz
 
 
 Requires(pre):  shadow-utils
@@ -288,12 +288,12 @@ Ironic Conductor for management and provisioning of physical machines
 %package -n python-ironic-tests
 Summary:        Ironic unit tests
 Requires:       %{name}-common = %{epoch}:%{version}-%{release}
-Requires:       python-mock
-Requires:       python-oslotest
+Requires:       python2-mock
+Requires:       python2-oslotest
 Requires:       /usr/bin/ostestr
-Requires:       python-testresources
-Requires:       python-testscenarios
-Requires:       python-testtools
+Requires:       python2-testresources
+Requires:       python2-testscenarios
+Requires:       python2-testtools
 
 
 %description -n python-ironic-tests
