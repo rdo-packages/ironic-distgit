@@ -101,8 +101,6 @@ sed -i '/tempest/d' setup.cfg
 rm -rf ironic_tempest_plugin
 %build
 %{__python2} setup.py build
-# Generate i18n files
-%{__python2} setup.py compile_catalog -d build/lib/ironic/locale
 
 %install
 %{__python2} setup.py install -O1 --skip-build --root=%{buildroot}
@@ -134,15 +132,6 @@ rmdir %{buildroot}%{_prefix}/etc/ironic
 
 # Install distribution config
 install -p -D -m 640 %{SOURCE4} %{buildroot}/%{_datadir}/ironic/ironic-dist.conf
-
-# Install i18n .mo files (.po and .pot are not required)
-install -d -m 755 %{buildroot}%{_datadir}
-rm -f %{buildroot}%{python2_sitelib}/ironic/locale/*/LC_*/ironic*po
-rm -f %{buildroot}%{python2_sitelib}/ironic/locale/*pot
-mv %{buildroot}%{python2_sitelib}/ironic/locale %{buildroot}%{_datadir}/locale
-
-# Find language files
-%find_lang ironic --all-name
 
 %check
 ostestr --path ironic/tests/unit
@@ -214,7 +203,7 @@ Requires(pre):  shadow-utils
 Components common to all OpenStack Ironic services
 
 
-%files common -f ironic.lang
+%files common
 %doc README.rst
 %license LICENSE
 %{_bindir}/ironic-dbsync
