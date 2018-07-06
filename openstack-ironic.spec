@@ -185,7 +185,7 @@ Requires:   python2-oslo-serialization >= 2.18.0
 Requires:   python2-oslo-service >= 1.24.0
 Requires:   python2-oslo-utils >= 3.33.0
 Requires:   python2-oslo-versionedobjects >= 1.31.2
-Requires:   python2-osprofiler >= 1.4.0
+Requires:   python2-osprofiler >= 1.5.0
 Requires:   python2-os-traits
 Requires:   python2-pbr
 Requires:   python2-pecan
