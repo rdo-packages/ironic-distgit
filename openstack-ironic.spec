@@ -180,7 +180,7 @@ Requires:   python-oslo-serialization >= 1.10.0
 Requires:   python-oslo-service >= 1.10.0
 Requires:   python-oslo-utils >= 3.20.0
 Requires:   python-oslo-versionedobjects >= 1.17.0
-Requires:   python-osprofiler >= 1.4.0
+Requires:   python-osprofiler >= 1.5.0
 Requires:   python-pbr
 Requires:   python-pecan
 Requires:   python-proliantutils >= 2.4.0
