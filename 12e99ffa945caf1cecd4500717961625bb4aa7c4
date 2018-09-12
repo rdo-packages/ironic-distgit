@@ -1,0 +1,10 @@
+Code-Review+1: User bfournie <bfournie@redhat.com>
+Code-Review+2: dtantsur <divius.inside@gmail.com>
+Code-Review+2: hguemar <hguemar@fedoraproject.org>
+Workflow+1: hguemar <hguemar@fedoraproject.org>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 12 Sep 2018 10:00:20 +0000
+Reviewed-on: https://review.rdoproject.org/r/16232
+Project: openstack/ironic-distgit
+Branch: refs/heads/rpm-master
