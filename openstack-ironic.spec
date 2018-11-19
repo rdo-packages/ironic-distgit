@@ -71,6 +71,7 @@ BuildRequires:  python%{pyver}-oslo-reports
 BuildRequires:  python%{pyver}-oslo-rootwrap
 BuildRequires:  python%{pyver}-oslo-serialization
 BuildRequires:  python%{pyver}-oslo-service
+BuildRequires:  python%{pyver}-oslo-upgradecheck
 BuildRequires:  python%{pyver}-oslo-utils
 BuildRequires:  python%{pyver}-oslo-versionedobjects
 BuildRequires:  python%{pyver}-oslotest
@@ -195,6 +196,7 @@ Requires:   python%{pyver}-oslo-rootwrap >= 5.8.0
 Requires:   python%{pyver}-oslo-serialization >= 2.18.0
 Requires:   python%{pyver}-oslo-service >= 1.24.0
 Requires:   python%{pyver}-oslo-utils >= 3.33.0
+Requires:   python%{pyver}-oslo-upgradecheck >= 0.1.0
 Requires:   python%{pyver}-oslo-versionedobjects >= 1.31.2
 Requires:   python%{pyver}-osprofiler >= 1.5.0
 Requires:   python%{pyver}-os-traits >= 0.4.0
@@ -248,6 +250,7 @@ Components common to all OpenStack Ironic services
 %license LICENSE
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
+%{_bindir}/ironic-status
 %{pyver_sitelib}/ironic
 %{pyver_sitelib}/ironic-*.egg-info
 %exclude %{pyver_sitelib}/ironic/tests
