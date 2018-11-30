@@ -274,7 +274,11 @@ Summary: The Ironic API
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
+%if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
+%else
+%{?systemd_ordering} # does not exist on EL7
+%endif
 
 %description api
 Ironic API for management and provisioning of physical machines
@@ -299,7 +303,11 @@ Summary: The Ironic Conductor
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
+%if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
+%else
+%{?systemd_ordering} # does not exist on EL7
+%endif
 
 %description conductor
 Ironic Conductor for management and provisioning of physical machines
