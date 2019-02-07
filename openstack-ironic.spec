@@ -161,9 +161,7 @@ rmdir %{buildroot}%{_prefix}/etc/ironic
 install -p -D -m 640 %{SOURCE4} %{buildroot}/%{_datadir}/ironic/ironic-dist.conf
 
 %check
-# FIXME(ykarel) Temporary ignore tests result until
-# https://storyboard.openstack.org/#!/story/2004953 is fixed.
-PYTHON=%{pyver_bin} stestr-%{pyver} run || true
+PYTHON=%{pyver_bin} stestr-%{pyver} run
 
 %description
 Ironic provides an API for management and provisioning of physical machines
