@@ -57,6 +57,7 @@ BuildRequires:  python%{pyver}-keystoneauth1
 BuildRequires:  python%{pyver}-keystonemiddleware
 BuildRequires:  python%{pyver}-mock
 BuildRequires:  python%{pyver}-neutronclient
+BuildRequires:  python%{pyver}-openstacksdk
 BuildRequires:  python%{pyver}-oslo-concurrency
 BuildRequires:  python%{pyver}-oslo-config
 BuildRequires:  python%{pyver}-oslo-context
@@ -76,15 +77,17 @@ BuildRequires:  python%{pyver}-oslo-utils
 BuildRequires:  python%{pyver}-oslo-versionedobjects
 BuildRequires:  python%{pyver}-oslotest
 BuildRequires:  python%{pyver}-osprofiler
-BuildRequires:  python%{pyver}-stestr
 BuildRequires:  python%{pyver}-os-traits
 BuildRequires:  python%{pyver}-pbr
 BuildRequires:  python%{pyver}-pecan
 BuildRequires:  python%{pyver}-psutil
+BuildRequires:  python%{pyver}-pysnmp
+BuildRequires:  python%{pyver}-pytz
 BuildRequires:  python%{pyver}-requests
 BuildRequires:  python%{pyver}-scciclient
 BuildRequires:  python%{pyver}-six
 BuildRequires:  python%{pyver}-sqlalchemy
+BuildRequires:  python%{pyver}-stestr
 BuildRequires:  python%{pyver}-stevedore
 BuildRequires:  python%{pyver}-sushy
 BuildRequires:  python%{pyver}-swiftclient
@@ -93,8 +96,6 @@ BuildRequires:  python%{pyver}-testscenarios
 BuildRequires:  python%{pyver}-testtools
 BuildRequires:  python%{pyver}-tooz
 BuildRequires:  python%{pyver}-wsme
-BuildRequires:  python%{pyver}-pysnmp
-BuildRequires:  python%{pyver}-pytz
 
 # Handle python2 exception
 %if %{pyver} == 2
@@ -182,6 +183,7 @@ Requires:   python%{pyver}-jsonschema
 Requires:   python%{pyver}-keystoneauth1 >= 3.4.0
 Requires:   python%{pyver}-keystonemiddleware >= 4.17.0
 Requires:   python%{pyver}-neutronclient >= 6.7.0
+Requires:   python%{pyver}-openstacksdk >= 0.25.0
 Requires:   python%{pyver}-oslo-concurrency >= 3.26.0
 Requires:   python%{pyver}-oslo-config >= 2:5.2.0
 Requires:   python%{pyver}-oslo-context >= 2.19.2
@@ -203,6 +205,8 @@ Requires:   python%{pyver}-os-traits >= 0.4.0
 Requires:   python%{pyver}-pbr
 Requires:   python%{pyver}-pecan
 Requires:   python%{pyver}-psutil
+Requires:   python%{pyver}-pysnmp
+Requires:   python%{pyver}-pytz
 Requires:   python%{pyver}-requests
 Requires:   python%{pyver}-rfc3986 >= 0.3.1
 Requires:   python%{pyver}-scciclient >= 0.5.0
@@ -213,15 +217,13 @@ Requires:   python%{pyver}-sushy
 Requires:   python%{pyver}-swiftclient >= 3.2.0
 Requires:   python%{pyver}-tooz >= 1.58.0
 Requires:   python%{pyver}-wsme
-Requires:   python%{pyver}-pysnmp
-Requires:   python%{pyver}-pytz
 
 # Handle python2 exception
 %if %{pyver} == 2
 Requires:   pysendfile
 Requires:   python-dracclient >= 1.3.0
 Requires:   python-ironic-inspector-client >= 1.5.0
-Requires:   python-ironic-lib >= 2.14.0
+Requires:   python-ironic-lib >= 2.15.0
 Requires:   python-proliantutils >= 2.4.0
 Requires:   python-retrying
 Requires:   python-UcsSdk >= 0.8.2.2
@@ -230,7 +232,7 @@ Requires:   python-webob >= 1.7.1
 Requires:   python%{pyver}-pysendfile
 Requires:   python%{pyver}-dracclient >= 1.3.0
 Requires:   python%{pyver}-ironic-inspector-client >= 1.5.0
-Requires:   python%{pyver}-ironic-lib >= 2.14.0
+Requires:   python%{pyver}-ironic-lib >= 2.15.0
 Requires:   python%{pyver}-proliantutils >= 2.4.0
 Requires:   python%{pyver}-retrying
 # FIXME(ykarel) Remove the optional dep until ironic fixes the dependency
