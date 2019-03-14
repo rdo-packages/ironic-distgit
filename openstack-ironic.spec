@@ -215,13 +215,14 @@ Requires:   python%{pyver}-tooz >= 1.58.0
 Requires:   python%{pyver}-wsme
 Requires:   python%{pyver}-pysnmp
 Requires:   python%{pyver}-pytz
+Requires:   python%{pyver}-openstacksdk >= 0.25.0
 
 # Handle python2 exception
 %if %{pyver} == 2
 Requires:   pysendfile
 Requires:   python-dracclient >= 1.3.0
 Requires:   python-ironic-inspector-client >= 1.5.0
-Requires:   python-ironic-lib >= 2.14.0
+Requires:   python-ironic-lib >= 2.15.0
 Requires:   python-proliantutils >= 2.4.0
 Requires:   python-retrying
 Requires:   python-UcsSdk >= 0.8.2.2
@@ -230,7 +231,7 @@ Requires:   python-webob >= 1.7.1
 Requires:   python%{pyver}-pysendfile
 Requires:   python%{pyver}-dracclient >= 1.3.0
 Requires:   python%{pyver}-ironic-inspector-client >= 1.5.0
-Requires:   python%{pyver}-ironic-lib >= 2.14.0
+Requires:   python%{pyver}-ironic-lib >= 2.15.0
 Requires:   python%{pyver}-proliantutils >= 2.4.0
 Requires:   python%{pyver}-retrying
 # FIXME(ykarel) Remove the optional dep until ironic fixes the dependency
