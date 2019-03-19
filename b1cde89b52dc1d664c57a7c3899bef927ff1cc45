@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "19944b04_8fd9867e",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2019-03-19T08:24:34Z",
+      "side": 1,
+      "message": "openstacksdk should be added here",
+      "revId": "b1cde89b52dc1d664c57a7c3899bef927ff1cc45",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "24a844b5_c9b65de8",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 218,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2019-03-19T08:24:34Z",
+      "side": 1,
+      "message": "nit: I\u0027d prefer to keep the list sorted.",
+      "revId": "b1cde89b52dc1d664c57a7c3899bef927ff1cc45",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
