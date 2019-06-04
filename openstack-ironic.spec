@@ -321,3 +321,4 @@ This package contains the Ironic test files.
 * Thu Aug 24 2017 Alfredo Moralejo <amoralej@redhat.com> 1:9.1.0-1
 - Update to 9.1.0
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic/commit/?id=872d2e7c7c1f97970723ed129051af969e2c4c94
