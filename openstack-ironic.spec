@@ -304,6 +304,7 @@ Ironic API for management and provisioning of physical machines
 Summary: The Ironic Conductor
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
+Requires: udev
 
 %if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
