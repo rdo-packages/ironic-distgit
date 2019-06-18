@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "abab3886_3aebd1de",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-06-18T09:04:11Z",
+      "side": 1,
+      "message": "Adding it in common while include it in other ironic containers also, i guess u don\u0027t want that and need only in ironic-conductor. Can u check and update at line 309 for fedora and rhel8 so it\u0027s handled where it\u0027s needed.\n\non CentOS7 it\u0027s already listed as a dependency see https://github.com/rdo-packages/ironic-distgit/blob/rpm-master/openstack-ironic.spec#L309",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 223,
+        "endChar": 19
+      },
+      "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
