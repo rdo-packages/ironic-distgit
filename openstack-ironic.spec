@@ -217,6 +217,11 @@ Requires:   python%{pyver}-sushy
 Requires:   python%{pyver}-swiftclient >= 3.2.0
 Requires:   python%{pyver}-tooz >= 1.58.0
 Requires:   python%{pyver}-wsme
+%if 0%{?fedora} || 0%{?rhel} >=8
+Requires:   systemd-udev
+%else
+Requires:   systemd
+%endif
 
 # Handle python2 exception
 %if %{pyver} == 2
