@@ -45,6 +45,30 @@
       "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0285c613_1fda88bc",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2019-06-19T07:01:00Z",
+      "side": 1,
+      "message": "systemd_ordering is an optimization for containers, as usually systemd is not needed when running services in containers, look at https://review.rdoproject.org/r/#/c/17617/.",
+      "parentUuid": "a614bf14_995f6551",
+      "range": {
+        "startLine": 313,
+        "startChar": 0,
+        "endLine": 317,
+        "endChar": 6
+      },
+      "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
