@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7857485f_eb0d24c0",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 411
+      },
+      "writtenOn": "2019-06-19T09:57:21Z",
+      "side": 1,
+      "message": "yes, please only restrict that to the ironic-conductor subpackage",
+      "parentUuid": "abab3886_3aebd1de",
+      "range": {
+        "startLine": 223,
+        "startChar": 0,
+        "endLine": 223,
+        "endChar": 19
+      },
+      "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a614bf14_995f6551",
         "filename": "openstack-ironic.spec",
         "patchSetId": 1
