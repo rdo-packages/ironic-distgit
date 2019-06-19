@@ -69,6 +69,30 @@
       "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f7715914_522a81d6",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-06-19T07:30:35Z",
+      "side": 1,
+      "message": "so systemd_ordering macros is introduced since systemd-231:- https://github.com/systemd/systemd/commit/2424b6bd716f0c1c3bf3406b1fd1a16ba1b6a556, you can check the version of systemd in repos for different distros, or if u have system where it\u0027s installed u can try rpm -E %{systemd_ordering}.\n\nso as i understand the bug, you now need systemd-udev in ironic-conductor container, so you need to explicitly add it as a requires instead of %{?systemd_ordering}",
+      "parentUuid": "a614bf14_995f6551",
+      "range": {
+        "startLine": 313,
+        "startChar": 0,
+        "endLine": 317,
+        "endChar": 6
+      },
+      "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
