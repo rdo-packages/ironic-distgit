@@ -22,6 +22,29 @@
       "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a614bf14_995f6551",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-06-19T05:34:08Z",
+      "side": 1,
+      "message": "Okay I\u0027ll update this.\n\nJust to be sure we need this to \"kinda work\" for Fedora \u003e\u003d28\nand do the right thing on RHEL-7 and RHEL-8\n\nAny tips for how to verify what the %{?systemd_requires} and%{?systemd_ordering} macros expand to on all those platforms?\n\nOr do I just need dev boxes/VM for each scenario",
+      "range": {
+        "startLine": 313,
+        "startChar": 0,
+        "endLine": 317,
+        "endChar": 6
+      },
+      "revId": "baa72098c28b82f4184d5f6fa15934cce51b0d7c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
