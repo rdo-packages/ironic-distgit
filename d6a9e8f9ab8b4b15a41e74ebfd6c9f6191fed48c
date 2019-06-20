@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ac45f197_4c0b1d5d",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2019-06-20T03:45:49Z",
+      "side": 1,
+      "message": "it\u0027s duplicating with the below macros but ok to be explicit.",
+      "range": {
+        "startLine": 307,
+        "startChar": 0,
+        "endLine": 307,
+        "endChar": 14
+      },
+      "revId": "d6a9e8f9ab8b4b15a41e74ebfd6c9f6191fed48c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
