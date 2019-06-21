@@ -22,6 +22,30 @@
       "revId": "d6a9e8f9ab8b4b15a41e74ebfd6c9f6191fed48c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9cc46783_f83a91d6",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 307,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2019-06-21T22:55:30Z",
+      "side": 1,
+      "message": "For the record, it isn\u0027t a duplicate as systemd_requires/systemd_ordering attest to the need for systemd in scriptlets *not* as general runtime requirement.\n\nAlso without this line installing ironic-conductor on el8 doesn\u0027t pulling udevadm which causes breakages.",
+      "parentUuid": "ac45f197_4c0b1d5d",
+      "range": {
+        "startLine": 307,
+        "startChar": 0,
+        "endLine": 307,
+        "endChar": 14
+      },
+      "revId": "d6a9e8f9ab8b4b15a41e74ebfd6c9f6191fed48c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
