@@ -105,7 +105,6 @@ BuildRequires:  python-ironic-inspector-client
 BuildRequires:  python-ironic-lib
 BuildRequires:  python-proliantutils
 BuildRequires:  python-retrying
-BuildRequires:  python-UcsSdk
 BuildRequires:  python-webob
 %else
 BuildRequires:  python%{pyver}-pysendfile
@@ -114,9 +113,6 @@ BuildRequires:  python%{pyver}-ironic-inspector-client
 BuildRequires:  python%{pyver}-ironic-lib
 BuildRequires:  python%{pyver}-proliantutils
 BuildRequires:  python%{pyver}-retrying
-# FIXME(ykarel) Remove the optional dep until ironic fixes the dependency
-# on python3 uncompatible UcsSdk https://storyboard.openstack.org/#!/story/2003925
-#BuildRequires:  python%{pyver}-UcsSdk
 BuildRequires:  python%{pyver}-webob
 %endif
 
@@ -226,7 +222,6 @@ Requires:   python-ironic-inspector-client >= 1.5.0
 Requires:   python-ironic-lib >= 2.15.0
 Requires:   python-proliantutils >= 2.4.0
 Requires:   python-retrying
-Requires:   python-UcsSdk >= 0.8.2.2
 Requires:   python-webob >= 1.7.1
 %else
 Requires:   python%{pyver}-pysendfile
@@ -235,9 +230,6 @@ Requires:   python%{pyver}-ironic-inspector-client >= 1.5.0
 Requires:   python%{pyver}-ironic-lib >= 2.15.0
 Requires:   python%{pyver}-proliantutils >= 2.4.0
 Requires:   python%{pyver}-retrying
-# FIXME(ykarel) Remove the optional dep until ironic fixes the dependency
-# on python3 uncompatible UcsSdk https://storyboard.openstack.org/#!/story/2003925
-#Requires:   python%{pyver}-UcsSdk >= 0.8.2.2
 Requires:   python%{pyver}-webob >= 1.7.1
 %endif
 
