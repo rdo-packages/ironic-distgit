@@ -18,7 +18,7 @@ Name:           openstack-ironic
 # https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
 Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
-Version:        12.1.1
+Version:        12.1.2
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            http://www.openstack.org
@@ -347,6 +347,9 @@ This package contains the Ironic test files.
 %{pyver_sitelib}/ironic/tests
 
 %changelog
+* Thu Aug 08 2019 RDO <dev@lists.rdoproject.org> 1:12.1.2-1
+- Update to 12.1.2
+
 * Thu Jun 06 2019 RDO <dev@lists.rdoproject.org> 1:12.1.1-1
 - Update to 12.1.1
 
