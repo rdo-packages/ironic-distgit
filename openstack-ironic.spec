@@ -47,6 +47,7 @@ BuildRequires:  python%{pyver}-babel
 BuildRequires:  python%{pyver}-alembic
 BuildRequires:  python%{pyver}-automaton
 BuildRequires:  python%{pyver}-cinderclient
+BuildRequires:  python%{pyver}-ddt
 BuildRequires:  python%{pyver}-eventlet
 BuildRequires:  python%{pyver}-futurist
 BuildRequires:  python%{pyver}-glanceclient
