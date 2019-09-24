@@ -177,10 +177,10 @@ Requires:   python%{pyver}-glanceclient >= 2.8.0
 Requires:   python%{pyver}-jinja2
 Requires:   python%{pyver}-jsonpatch
 Requires:   python%{pyver}-jsonschema
-Requires:   python%{pyver}-keystoneauth1 >= 3.4.0
+Requires:   python%{pyver}-keystoneauth1 >= 3.15.0
 Requires:   python%{pyver}-keystonemiddleware >= 4.17.0
 Requires:   python%{pyver}-neutronclient >= 6.7.0
-Requires:   python%{pyver}-openstacksdk >= 0.25.0
+Requires:   python%{pyver}-openstacksdk >= 0.31.2
 Requires:   python%{pyver}-oslo-concurrency >= 3.26.0
 Requires:   python%{pyver}-oslo-config >= 2:5.2.0
 Requires:   python%{pyver}-oslo-context >= 2.19.2
@@ -220,7 +220,7 @@ Requires:   python%{pyver}-wsme
 Requires:   pysendfile
 Requires:   python-dracclient >= 1.3.0
 Requires:   python-ironic-inspector-client >= 1.5.0
-Requires:   python-ironic-lib >= 2.15.0
+Requires:   python-ironic-lib >= 2.17.1
 Requires:   python-proliantutils >= 2.4.0
 Requires:   python-retrying
 Requires:   python-webob >= 1.7.1
@@ -228,7 +228,7 @@ Requires:   python-webob >= 1.7.1
 Requires:   python%{pyver}-pysendfile
 Requires:   python%{pyver}-dracclient >= 1.3.0
 Requires:   python%{pyver}-ironic-inspector-client >= 1.5.0
-Requires:   python%{pyver}-ironic-lib >= 2.15.0
+Requires:   python%{pyver}-ironic-lib >= 2.17.1
 Requires:   python%{pyver}-proliantutils >= 2.4.0
 Requires:   python%{pyver}-retrying
 Requires:   python%{pyver}-webob >= 1.7.1
