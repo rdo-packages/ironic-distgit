@@ -1,0 +1,8 @@
+Code-Review+2: Yatin Karel <ykarel@redhat.com>
+Workflow+1: Dmitry Tantsur <dtantsur@protonmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 25 Sep 2019 12:16:21 +0000
+Reviewed-on: https://review.rdoproject.org/r/22544
+Project: openstack/ironic-distgit
+Branch: refs/heads/rpm-master
