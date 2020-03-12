@@ -124,6 +124,9 @@ BuildRequires:  python%{pyver}-webob
 # Remove tempest plugin entrypoint as a workaround
 sed -i '/tempest/d' setup.cfg
 rm -rf ironic_tempest_plugin
+# (amoralej) Let's remove ironic-lib.filters which is now part of ironic-lib until
+# https://review.opendev.org/#/c/684270/ is merged
+rm -f etc/ironic/rootwrap.d/ironic-lib.filters
 %build
 %{pyver_build}
 
