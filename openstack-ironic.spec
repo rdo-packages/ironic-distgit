@@ -86,7 +86,6 @@ BuildRequires:  python%{pyver}-pysnmp
 BuildRequires:  python%{pyver}-pytz
 BuildRequires:  python%{pyver}-requests
 BuildRequires:  python%{pyver}-scciclient
-BuildRequires:  python%{pyver}-six
 BuildRequires:  python%{pyver}-sqlalchemy
 BuildRequires:  python%{pyver}-stestr
 BuildRequires:  python%{pyver}-stevedore
@@ -210,7 +209,6 @@ Requires:   python%{pyver}-pytz
 Requires:   python%{pyver}-requests
 Requires:   python%{pyver}-rfc3986 >= 0.3.1
 Requires:   python%{pyver}-scciclient >= 0.5.0
-Requires:   python%{pyver}-six
 Requires:   python%{pyver}-sqlalchemy
 Requires:   python%{pyver}-stevedore >= 1.20.0
 Requires:   python%{pyver}-sushy
