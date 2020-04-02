@@ -169,7 +169,6 @@ Ironic provides an API for management and provisioning of physical machines
 %package common
 Summary: Ironic common
 
-Requires:   ipmitool
 Requires:   python%{pyver}-alembic
 Requires:   python%{pyver}-automaton >= 1.9.0
 Requires:   python%{pyver}-cinderclient >= 3.3.0
@@ -204,14 +203,11 @@ Requires:   python%{pyver}-os-traits >= 0.4.0
 Requires:   python%{pyver}-pbr
 Requires:   python%{pyver}-pecan
 Requires:   python%{pyver}-psutil
-Requires:   python%{pyver}-pysnmp
 Requires:   python%{pyver}-pytz
 Requires:   python%{pyver}-requests
 Requires:   python%{pyver}-rfc3986 >= 0.3.1
-Requires:   python%{pyver}-scciclient >= 0.5.0
 Requires:   python%{pyver}-sqlalchemy
 Requires:   python%{pyver}-stevedore >= 1.20.0
-Requires:   python%{pyver}-sushy
 Requires:   python%{pyver}-swiftclient >= 3.2.0
 Requires:   python%{pyver}-tooz >= 1.58.0
 Requires:   python%{pyver}-wsme
@@ -219,20 +215,34 @@ Requires:   python%{pyver}-wsme
 # Handle python2 exception
 %if %{pyver} == 2
 Requires:   pysendfile
-Requires:   python-dracclient >= 1.3.0
-Requires:   python-ironic-inspector-client >= 1.5.0
 Requires:   python-ironic-lib >= 2.17.1
-Requires:   python-proliantutils >= 2.4.0
 Requires:   python-retrying
 Requires:   python-webob >= 1.7.1
 %else
 Requires:   python%{pyver}-pysendfile
-Requires:   python%{pyver}-dracclient >= 1.3.0
-Requires:   python%{pyver}-ironic-inspector-client >= 1.5.0
 Requires:   python%{pyver}-ironic-lib >= 2.17.1
-Requires:   python%{pyver}-proliantutils >= 2.4.0
 Requires:   python%{pyver}-retrying
 Requires:   python%{pyver}-webob >= 1.7.1
+%endif
+
+# Drivers are good to have, but not strictly required
+%if 0%{?fedora} || 0%{?rhel} > 7
+Recommends: ipmitool
+Recommends: python%{pyver}-dracclient >= 1.3.0
+Recommends: python%{pyver}-ironic-inspector-client >= 1.5.0
+Recommends: python%{pyver}-proliantutils >= 2.4.0
+Recommends: python%{pyver}-pysnmp
+Recommends: python%{pyver}-scciclient >= 0.5.0
+Recommends: python%{pyver}-sushy
+%else
+Requires:   ipmitool
+Requires:   python%{pyver}-pysnmp
+Requires:   python%{pyver}-scciclient >= 0.5.0
+Requires:   python%{pyver}-sushy
+# Python 2 exceptions.
+Requires:   python-dracclient >= 1.3.0
+Requires:   python-ironic-inspector-client >= 1.5.0
+Requires:   python-proliantutils >= 2.4.0
 %endif
 
 Requires(pre):  shadow-utils
