@@ -88,7 +88,6 @@ BuildRequires:  python3-wsme
 
 BuildRequires:  python3-pysendfile
 BuildRequires:  python3-dracclient
-BuildRequires:  python3-ironic-inspector-client
 BuildRequires:  python3-ironic-lib
 BuildRequires:  python3-proliantutils
 BuildRequires:  python3-retrying
@@ -195,11 +194,14 @@ Requires:   python3-webob >= 1.7.1
 
 Recommends: ipmitool
 Recommends: python3-dracclient >= 1.3.0
-Recommends: python3-ironic-inspector-client >= 1.5.0
 Recommends: python3-proliantutils >= 2.4.0
 Recommends: python3-pysnmp
 Recommends: python3-scciclient >= 0.5.0
 Recommends: python3-sushy
+
+# Optional features
+Suggests: python%{pyver}-oslo-i18n >= 3.15.3
+Suggests: python%{pyver}-oslo-reports >= 1.18.0
 
 Requires(pre):  shadow-utils
 
