@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "533a388e_80589dd3",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-04-08T07:53:11Z",
+      "side": 1,
+      "message": "python2- exists for all.",
+      "range": {
+        "startLine": 243,
+        "startChar": 0,
+        "endLine": 245,
+        "endChar": 41
+      },
+      "revId": "3f337d0cfbaaca1213e76721f2b3bfa2c38a1e79",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
