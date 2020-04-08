@@ -101,7 +101,6 @@ BuildRequires:  python%{pyver}-wsme
 %if %{pyver} == 2
 BuildRequires:  pysendfile
 BuildRequires:  python-dracclient
-BuildRequires:  python-ironic-inspector-client
 BuildRequires:  python-ironic-lib
 BuildRequires:  python-proliantutils
 BuildRequires:  python-retrying
@@ -109,7 +108,6 @@ BuildRequires:  python-webob
 %else
 BuildRequires:  python%{pyver}-pysendfile
 BuildRequires:  python%{pyver}-dracclient
-BuildRequires:  python%{pyver}-ironic-inspector-client
 BuildRequires:  python%{pyver}-ironic-lib
 BuildRequires:  python%{pyver}-proliantutils
 BuildRequires:  python%{pyver}-retrying
@@ -186,12 +184,10 @@ Requires:   python%{pyver}-oslo-concurrency >= 3.26.0
 Requires:   python%{pyver}-oslo-config >= 2:5.2.0
 Requires:   python%{pyver}-oslo-context >= 2.19.2
 Requires:   python%{pyver}-oslo-db >= 4.27.0
-Requires:   python%{pyver}-oslo-i18n >= 3.15.3
 Requires:   python%{pyver}-oslo-log >= 3.36.0
 Requires:   python%{pyver}-oslo-messaging >= 5.29.0
 Requires:   python%{pyver}-oslo-middleware >= 3.31.0
 Requires:   python%{pyver}-oslo-policy >= 1.30.0
-Requires:   python%{pyver}-oslo-reports >= 1.18.0
 Requires:   python%{pyver}-oslo-rootwrap >= 5.8.0
 Requires:   python%{pyver}-oslo-serialization >= 2.18.0
 Requires:   python%{pyver}-oslo-service >= 1.24.0
@@ -229,20 +225,24 @@ Requires:   python%{pyver}-webob >= 1.7.1
 %if 0%{?fedora} || 0%{?rhel} > 7
 Recommends: ipmitool
 Recommends: python%{pyver}-dracclient >= 1.3.0
-Recommends: python%{pyver}-ironic-inspector-client >= 1.5.0
 Recommends: python%{pyver}-proliantutils >= 2.4.0
 Recommends: python%{pyver}-pysnmp
 Recommends: python%{pyver}-scciclient >= 0.5.0
 Recommends: python%{pyver}-sushy
+
+# Optional features
+Recommends: python%{pyver}-oslo-i18n >= 3.15.3
+Recommends: python%{pyver}-oslo-reports >= 1.18.0
 %else
 Requires:   ipmitool
+Requires:   python%{pyver}-dracclient >= 1.3.0
+Requires:   python%{pyver}-proliantutils >= 2.4.0
 Requires:   python%{pyver}-pysnmp
 Requires:   python%{pyver}-scciclient >= 0.5.0
 Requires:   python%{pyver}-sushy
-# Python 2 exceptions.
-Requires:   python-dracclient >= 1.3.0
-Requires:   python-ironic-inspector-client >= 1.5.0
-Requires:   python-proliantutils >= 2.4.0
+
+Requires:   python%{pyver}-oslo-i18n >= 3.15.3
+Requires:   python%{pyver}-oslo-reports >= 1.18.0
 %endif
 
 Requires(pre):  shadow-utils
