@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "125ecaef_ba771ff1",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-04-28T07:00:45Z",
+      "side": 1,
+      "message": "oslopolicy-sample-generator",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 29
+      },
+      "revId": "87788259feb46e16f3a31b98ef43f9edaf177570",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "13cf2272_81ef8964",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-04-28T07:00:45Z",
+      "side": 1,
+      "message": "conditions can be cleaned up here",
+      "range": {
+        "startLine": 197,
+        "startChar": 0,
+        "endLine": 197,
+        "endChar": 32
+      },
+      "revId": "87788259feb46e16f3a31b98ef43f9edaf177570",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
