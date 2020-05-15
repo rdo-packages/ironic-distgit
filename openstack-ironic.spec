@@ -35,6 +35,7 @@ BuildRequires:  python3-babel
 # Required to run unit tests
 BuildRequires:  python3-alembic
 BuildRequires:  python3-automaton
+BuildRequires:  python3-bcrypt
 BuildRequires:  python3-cinderclient
 BuildRequires:  python3-ddt
 BuildRequires:  python3-eventlet
@@ -266,6 +267,7 @@ Ironic API for management and provisioning of physical machines
 Summary: The Ironic Conductor
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
+Requires: python3-bcrypt
 Requires: udev
 
 %if 0%{?rhel} && 0%{?rhel} < 8
