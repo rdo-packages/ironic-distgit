@@ -200,8 +200,8 @@ Recommends: python3-scciclient >= 0.5.0
 Recommends: python3-sushy
 
 # Optional features
-Suggests: python%{pyver}-oslo-i18n >= 3.15.3
-Suggests: python%{pyver}-oslo-reports >= 1.18.0
+Suggests: python3-oslo-i18n >= 3.15.3
+Suggests: python3-oslo-reports >= 1.18.0
 
 Requires(pre):  shadow-utils
 
