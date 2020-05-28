@@ -30,8 +30,6 @@ BuildRequires:  libxslt-devel
 BuildRequires:  gmp-devel
 BuildRequires:  python3-sphinx
 BuildRequires:  systemd
-# Required to compile translation files
-BuildRequires:  python3-babel
 # Required to run unit tests
 BuildRequires:  python3-alembic
 BuildRequires:  python3-automaton
