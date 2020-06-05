@@ -98,9 +98,6 @@ BuildRequires:  python3-webob
 # Remove tempest plugin entrypoint as a workaround
 sed -i '/tempest/d' setup.cfg
 rm -rf ironic_tempest_plugin
-# (amoralej) Let's remove ironic-lib.filters which is now part of ironic-lib until
-# https://review.opendev.org/#/c/684270/ is merged
-rm -f etc/ironic/rootwrap.d/ironic-lib.filters
 %build
 %{py3_build}
 
@@ -186,7 +183,7 @@ Requires:   python3-tooz >= 1.58.0
 Requires:   python3-wsme
 
 Requires:   python3-pysendfile
-Requires:   python3-ironic-lib >= 2.17.1
+Requires:   python3-ironic-lib >= 4.3.0
 Requires:   python3-retrying
 Requires:   python3-webob >= 1.7.1
 
