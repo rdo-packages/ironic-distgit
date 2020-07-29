@@ -82,7 +82,6 @@ BuildRequires:  python3-testresources
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-tooz
-BuildRequires:  python3-wsme
 
 BuildRequires:  python3-pysendfile
 BuildRequires:  python3-dracclient
@@ -180,7 +179,6 @@ Requires:   python3-sqlalchemy
 Requires:   python3-stevedore >= 1.20.0
 Requires:   python3-swiftclient >= 3.2.0
 Requires:   python3-tooz >= 1.58.0
-Requires:   python3-wsme
 
 Requires:   python3-pysendfile
 Requires:   python3-ironic-lib >= 4.3.0
