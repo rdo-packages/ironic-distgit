@@ -190,7 +190,7 @@ Recommends: python3-dracclient >= 1.3.0
 Recommends: python3-proliantutils >= 2.4.0
 Recommends: python3-pysnmp
 Recommends: python3-scciclient >= 0.5.0
-Recommends: python3-sushy
+Recommends: python3-sushy >= 3.2.0
 
 # Optional features
 Suggests: python3-oslo-i18n >= 3.15.3
