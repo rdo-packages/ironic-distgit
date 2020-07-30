@@ -178,7 +178,7 @@ Requires:   python3-rfc3986 >= 0.3.1
 Requires:   python3-sqlalchemy
 Requires:   python3-stevedore >= 1.20.0
 Requires:   python3-swiftclient >= 3.2.0
-Requires:   python3-tooz >= 1.58.0
+Requires:   python3-tooz >= 2.7.0
 
 Requires:   python3-pysendfile
 Requires:   python3-ironic-lib >= 4.3.0
