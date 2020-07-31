@@ -140,20 +140,21 @@ Ironic provides an API for management and provisioning of physical machines
 %package common
 Summary: Ironic common
 
-Requires:   python3-alembic
+Requires:   python3-alembic >= 0.9.6
 Requires:   python3-automaton >= 1.9.0
 Requires:   python3-cinderclient >= 3.3.0
-Requires:   python3-eventlet
+Requires:   python3-eventlet >= 0.18.2
 Requires:   python3-futurist >= 1.2.0
 Requires:   python3-glanceclient >= 2.8.0
-Requires:   python3-jinja2
-Requires:   python3-jsonpatch
-Requires:   python3-jsonschema
-Requires:   python3-keystoneauth1 >= 3.15.0
+Requires:   python3-ironic-lib >= 4.3.0
+Requires:   python3-jinja2 >= 2.10
+Requires:   python3-jsonpatch >= 1.16
+Requires:   python3-jsonschema >= 2.6.0
+Requires:   python3-keystoneauth1 >= 4.2.0
 Requires:   python3-keystonemiddleware >= 4.17.0
 Requires:   python3-neutronclient >= 6.7.0
 Requires:   python3-openstacksdk >= 0.37.0
-Requires:   python3-oslo-concurrency >= 3.26.0
+Requires:   python3-oslo-concurrency >= 4.2.0
 Requires:   python3-oslo-config >= 2:5.2.0
 Requires:   python3-oslo-context >= 2.19.2
 Requires:   python3-oslo-db >= 4.40.0
@@ -164,32 +165,30 @@ Requires:   python3-oslo-policy >= 1.30.0
 Requires:   python3-oslo-rootwrap >= 5.8.0
 Requires:   python3-oslo-serialization >= 2.18.0
 Requires:   python3-oslo-service >= 1.24.0
-Requires:   python3-oslo-utils >= 3.38.0
 Requires:   python3-oslo-upgradecheck >= 0.1.0
+Requires:   python3-oslo-utils >= 3.38.0
 Requires:   python3-oslo-versionedobjects >= 1.31.2
 Requires:   python3-osprofiler >= 1.5.0
 Requires:   python3-os-traits >= 0.4.0
-Requires:   python3-pbr
-Requires:   python3-pecan
-Requires:   python3-psutil
-Requires:   python3-pytz
-Requires:   python3-requests
+Requires:   python3-pbr >= 2.0.0
+Requires:   python3-pecan >= 1.0.0
+Requires:   python3-psutil >= 3.2.2
+Requires:   python3-pysendfile >= 2.0.0
+Requires:   python3-pytz >= 2013.6
+Requires:   python3-requests >= 2.14.2
+Requires:   python3-retrying >= 1.2.3
 Requires:   python3-rfc3986 >= 0.3.1
-Requires:   python3-sqlalchemy
+Requires:   python3-sqlalchemy >= 1.0.10
 Requires:   python3-stevedore >= 1.20.0
 Requires:   python3-swiftclient >= 3.2.0
 Requires:   python3-tooz >= 2.7.0
-
-Requires:   python3-pysendfile
-Requires:   python3-ironic-lib >= 4.3.0
-Requires:   python3-retrying
 Requires:   python3-webob >= 1.7.1
 
 Recommends: ipmitool
-Recommends: python3-dracclient >= 1.3.0
-Recommends: python3-proliantutils >= 2.4.0
-Recommends: python3-pysnmp
-Recommends: python3-scciclient >= 0.5.0
+Recommends: python3-dracclient >= 3.1.0
+Recommends: python3-proliantutils >= 2.9.1
+Recommends: python3-pysnmp >= 4.3.0
+Recommends: python3-scciclient >= 0.8.0
 Recommends: python3-sushy >= 3.2.0
 
 # Optional features
