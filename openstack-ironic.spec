@@ -140,7 +140,7 @@ Ironic provides an API for management and provisioning of physical machines
 %package common
 Summary: Ironic common
 
-Requires:   python3-alembic >= 0.9.6
+Requires:   python3-alembic >= 1.4.2
 Requires:   python3-automaton >= 1.9.0
 Requires:   python3-cinderclient >= 3.3.0
 Requires:   python3-eventlet >= 0.18.2
@@ -149,15 +149,14 @@ Requires:   python3-glanceclient >= 2.8.0
 Requires:   python3-ironic-lib >= 4.3.0
 Requires:   python3-jinja2 >= 2.10
 Requires:   python3-jsonpatch >= 1.16
-Requires:   python3-jsonschema >= 2.6.0
+Requires:   python3-jsonschema >= 3.2.0
 Requires:   python3-keystoneauth1 >= 4.2.0
 Requires:   python3-keystonemiddleware >= 4.17.0
-Requires:   python3-neutronclient >= 6.7.0
-Requires:   python3-openstacksdk >= 0.37.0
+Requires:   python3-openstacksdk >= 0.48.0
 Requires:   python3-oslo-concurrency >= 4.2.0
 Requires:   python3-oslo-config >= 2:5.2.0
 Requires:   python3-oslo-context >= 2.19.2
-Requires:   python3-oslo-db >= 4.40.0
+Requires:   python3-oslo-db >= 6.0.0
 Requires:   python3-oslo-log >= 3.36.0
 Requires:   python3-oslo-messaging >= 5.29.0
 Requires:   python3-oslo-middleware >= 3.31.0
@@ -178,7 +177,7 @@ Requires:   python3-pytz >= 2013.6
 Requires:   python3-requests >= 2.14.2
 Requires:   python3-retrying >= 1.2.3
 Requires:   python3-rfc3986 >= 0.3.1
-Requires:   python3-sqlalchemy >= 1.0.10
+Requires:   python3-sqlalchemy >= 1.2.19
 Requires:   python3-stevedore >= 1.20.0
 Requires:   python3-swiftclient >= 3.2.0
 Requires:   python3-tooz >= 2.7.0
