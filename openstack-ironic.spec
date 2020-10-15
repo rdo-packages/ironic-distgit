@@ -1,3 +1,5 @@
+%{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
+%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
 %global full_release ironic-%{version}
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -8,7 +10,7 @@ Name:           openstack-ironic
 Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
 Version:        16.0.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        ASL 2.0
 URL:            http://www.openstack.org
 Source0:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
@@ -18,8 +20,18 @@ Source2:        openstack-ironic-conductor.service
 Source3:        ironic-rootwrap-sudoers
 Source4:        ironic-dist.conf
 Source5:        ironic.logrotate
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+Source101:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz.asc
+Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
+%endif
 
 BuildArch:      noarch
+
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+BuildRequires:  /usr/bin/gpgv2
+%endif
 BuildRequires:  openstack-macros
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-devel
@@ -91,6 +103,10 @@ BuildRequires:  python3-retrying
 BuildRequires:  python3-webob
 
 %prep
+# Required for tarball sources verification
+%if 0%{?sources_gpg} == 1
+%{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
+%endif
 %setup -q -n ironic-%{upstream_version}
 # Let RPM handle the requirements
 %py_req_cleanup
@@ -300,6 +316,9 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
+* Tue Oct 20 2020 Joel Capitao <jcapitao@redhat.com> 1:16.0.1-2
+- Enable sources tarball validation using GPG signature.
+
 * Mon Oct 12 2020 RDO <dev@lists.rdoproject.org> 1:16.0.1-1
 - Update to 16.0.1
 
