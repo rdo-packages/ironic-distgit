@@ -1,0 +1,8 @@
+Code-Review+2: Dmitry Tantsur <dtantsur@protonmail.com>
+Workflow+1: Dmitry Tantsur <dtantsur@protonmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 20 Nov 2020 07:07:54 +0000
+Reviewed-on: https://review.rdoproject.org/r/30901
+Project: openstack/ironic-distgit
+Branch: refs/heads/stein-rdo
