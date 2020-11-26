@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
 %global full_release ironic-%{version}
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -9,8 +9,8 @@ Name:           openstack-ironic
 # https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
 Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
-Version:        16.0.1
-Release:        2%{?dist}
+Version:        16.0.2
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            http://www.openstack.org
 Source0:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
@@ -316,6 +316,9 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
+* Thu Nov 26 2020 RDO <dev@lists.rdoproject.org> 1:16.0.2-1
+- Update to 16.0.2
+
 * Tue Oct 20 2020 Joel Capitao <jcapitao@redhat.com> 1:16.0.1-2
 - Enable sources tarball validation using GPG signature.
 
