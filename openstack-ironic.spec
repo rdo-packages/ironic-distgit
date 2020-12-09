@@ -200,11 +200,11 @@ Requires:   python3-tooz >= 2.7.0
 Requires:   python3-webob >= 1.7.1
 
 Recommends: ipmitool
-Recommends: python3-dracclient >= 3.1.0
-Recommends: python3-proliantutils >= 2.9.1
-Recommends: python3-pysnmp >= 4.3.0
+Recommends: python3-dracclient >= 5.1.0, python3-dracclient < 6.0.0
+Recommends: python3-proliantutils >= 2.10.0
+Recommends: python3-pysnmp >= 4.3.0, python3-pysnmp < 5.0.0
 Recommends: python3-scciclient >= 0.8.0
-Recommends: python3-sushy >= 3.2.0
+Recommends: python3-sushy >= 3.4.0
 
 # Optional features
 Suggests: python3-oslo-i18n >= 3.15.3
