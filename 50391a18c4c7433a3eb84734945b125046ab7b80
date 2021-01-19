@@ -1,0 +1,8 @@
+Code-Review+2: Dmitry Tantsur <dtantsur@protonmail.com>
+Workflow+1: Dmitry Tantsur <dtantsur@protonmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Tue, 19 Jan 2021 06:06:45 +0000
+Reviewed-on: https://review.rdoproject.org/r/31584
+Project: openstack/ironic-distgit
+Branch: refs/heads/victoria-rdo
