@@ -99,7 +99,7 @@ BuildRequires:  python3-pysendfile
 BuildRequires:  python3-dracclient
 BuildRequires:  python3-ironic-lib
 BuildRequires:  python3-proliantutils
-BuildRequires:  python3-retrying
+BuildRequires:  python3-tenacity
 BuildRequires:  python3-webob
 
 %prep
@@ -191,11 +191,11 @@ Requires:   python3-psutil >= 3.2.2
 Requires:   python3-pysendfile >= 2.0.0
 Requires:   python3-pytz >= 2013.6
 Requires:   python3-requests >= 2.14.2
-Requires:   python3-retrying >= 1.2.3
 Requires:   python3-rfc3986 >= 0.3.1
 Requires:   python3-sqlalchemy >= 1.2.19
 Requires:   python3-stevedore >= 1.20.0
 Requires:   python3-swiftclient >= 3.2.0
+Requires:   python3-tenacity >= 6.2.0
 Requires:   python3-tooz >= 2.7.0
 Requires:   python3-webob >= 1.7.1
 
