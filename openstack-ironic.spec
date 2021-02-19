@@ -199,6 +199,7 @@ Requires:   python3-swiftclient >= 3.2.0
 Requires:   python3-tooz >= 2.7.0
 Requires:   python3-webob >= 1.7.1
 
+%if 0%{?fedora} || 0%{?rhel} > 7
 Recommends: ipmitool
 Recommends: python3-dracclient >= 5.1.0
 Recommends: python3-proliantutils >= 2.10.0
@@ -209,6 +210,7 @@ Recommends: python3-sushy >= 3.4.0
 # Optional features
 Suggests: python3-oslo-i18n >= 3.15.3
 Suggests: python3-oslo-reports >= 1.18.0
+%endif
 
 Requires(pre):  shadow-utils
 
