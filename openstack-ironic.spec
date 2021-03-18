@@ -95,7 +95,6 @@ BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-tooz
 
-BuildRequires:  python3-pysendfile
 BuildRequires:  python3-dracclient
 BuildRequires:  python3-ironic-lib
 BuildRequires:  python3-proliantutils
@@ -176,7 +175,7 @@ Requires:   python3-oslo-db >= 6.0.0
 Requires:   python3-oslo-log >= 4.3.0
 Requires:   python3-oslo-messaging >= 5.29.0
 Requires:   python3-oslo-middleware >= 3.31.0
-Requires:   python3-oslo-policy >= 3.6.0
+Requires:   python3-oslo-policy >= 3.6.2
 Requires:   python3-oslo-rootwrap >= 5.8.0
 Requires:   python3-oslo-serialization >= 2.18.0
 Requires:   python3-oslo-service >= 1.24.0
@@ -188,7 +187,6 @@ Requires:   python3-os-traits >= 0.4.0
 Requires:   python3-pbr >= 2.0.0
 Requires:   python3-pecan >= 1.0.0
 Requires:   python3-psutil >= 3.2.2
-Requires:   python3-pysendfile >= 2.0.0
 Requires:   python3-pytz >= 2013.6
 Requires:   python3-requests >= 2.14.2
 Requires:   python3-rfc3986 >= 0.3.1
