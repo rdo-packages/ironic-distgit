@@ -137,7 +137,7 @@ mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
 #Populate the conf dir
 export PYTHONPATH=.
 oslo-config-generator --config-file tools/config/ironic-config-generator.conf --output-file %{buildroot}/%{_sysconfdir}/ironic/ironic.conf
-oslopolicy-sample-generator --config-file tools/policy/ironic-policy-generator.conf --output-file %{buildroot}/%{_sysconfdir}/ironic/policy.json
+oslopolicy-sample-generator --config-file tools/policy/ironic-policy-generator.conf --format json --output-file %{buildroot}/%{_sysconfdir}/ironic/policy.json
 mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
 mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
 # Remove duplicate config files under /usr/etc/ironic
