@@ -19,7 +19,7 @@ Name:           openstack-ironic
 Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
 Version:        13.0.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 License:        ASL 2.0
 URL:            http://www.openstack.org
 Source0:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
@@ -148,7 +148,7 @@ mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
 #Populate the conf dir
 export PYTHONPATH=.
 oslo-config-generator-%{pyver} --config-file tools/config/ironic-config-generator.conf --output-file %{buildroot}/%{_sysconfdir}/ironic/ironic.conf
-oslopolicy-sample-generator-%{pyver} --config-file tools/policy/ironic-policy-generator.conf --output-file %{buildroot}/%{_sysconfdir}/ironic/policy.json
+oslopolicy-sample-generator-%{pyver} --config-file tools/policy/ironic-policy-generator.conf --format json --output-file %{buildroot}/%{_sysconfdir}/ironic/policy.json
 mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
 mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
 # Remove duplicate config files under /usr/etc/ironic
@@ -340,6 +340,9 @@ This package contains the Ironic test files.
 %{pyver_sitelib}/ironic/tests
 
 %changelog
+* Wed Apr 28 2021 Steve Baker <sbaker@redhat.com> 1:13.0.7-2
+- Generate policy.json in json format
+
 * Tue Feb 16 2021 RDO <dev@lists.rdoproject.org> 1:13.0.7-1
 - Update to 13.0.7
 
