@@ -22,6 +22,30 @@
       "revId": "85c3841a1feba07631fd72c92d602f0bad520d9e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e6a9304a_1523de35",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2021-04-27T21:43:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1e1733c7_d47c5146",
+      "range": {
+        "startLine": 13,
+        "startChar": 16,
+        "endLine": 13,
+        "endChar": 17
+      },
+      "revId": "85c3841a1feba07631fd72c92d602f0bad520d9e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
