@@ -1,0 +1,8 @@
+Code-Review+2: Dmitry Tantsur <dtantsur@protonmail.com>
+Workflow+1: Dmitry Tantsur <dtantsur@protonmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 30 Apr 2021 16:45:03 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/33538
+Project: openstack/ironic-distgit
+Branch: refs/heads/wallaby-rdo
