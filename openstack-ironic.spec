@@ -81,6 +81,7 @@ BuildRequires:  python3-os-traits
 BuildRequires:  python3-pbr
 BuildRequires:  python3-pecan
 BuildRequires:  python3-psutil
+BuildRequires:  python3-pycdlib
 BuildRequires:  python3-pysnmp
 BuildRequires:  python3-pytz
 BuildRequires:  python3-requests
@@ -187,6 +188,7 @@ Requires:   python3-os-traits >= 0.4.0
 Requires:   python3-pbr >= 2.0.0
 Requires:   python3-pecan >= 1.0.0
 Requires:   python3-psutil >= 3.2.2
+Requires:   python3-pycdlib >= 1.11.0
 Requires:   python3-pytz >= 2013.6
 Requires:   python3-requests >= 2.14.2
 Requires:   python3-rfc3986 >= 0.3.1
@@ -317,4 +319,3 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
-
