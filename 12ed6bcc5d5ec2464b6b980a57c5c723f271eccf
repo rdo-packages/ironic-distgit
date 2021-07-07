@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "678055a5_67cb00fe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-07T05:10:14Z",
+      "side": 1,
+      "message": "commit and spec changes list pycdlib, but here pycadf.",
+      "range": {
+        "startLine": 7,
+        "startChar": 12,
+        "endLine": 7,
+        "endChar": 18
+      },
+      "revId": "12ed6bcc5d5ec2464b6b980a57c5c723f271eccf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "71c16df8_6c1a6110",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-07T05:10:14Z",
+      "side": 1,
+      "message": "also pycdlib is not in C8 base repos, so would need to add it in RDO itself[1] to consume here, i see it\u0027s already in Fedora so can directly be added.\n\n\n[1] https://www.rdoproject.org/documentation/requirements/#adding-a-new-requirement-to-rdo\n[2] https://koji.fedoraproject.org/koji/packageinfo?packageID\u003d24321",
+      "revId": "12ed6bcc5d5ec2464b6b980a57c5c723f271eccf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "29dad4bc_1e644517",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-07T05:10:14Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 11,
+        "startChar": 63,
+        "endLine": 11,
+        "endChar": 69
+      },
+      "revId": "12ed6bcc5d5ec2464b6b980a57c5c723f271eccf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
