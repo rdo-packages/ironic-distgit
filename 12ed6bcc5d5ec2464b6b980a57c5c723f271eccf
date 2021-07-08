@@ -60,6 +60,24 @@
     },
     {
       "key": {
+        "uuid": "831c2ce6_b2b37073",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-08T06:57:18Z",
+      "side": 1,
+      "message": "it\u0027s now available in deps repo post https://review.rdoproject.org/r/c/rdoinfo/+/34430, so it\u0027s good to go post fixing commit message.",
+      "parentUuid": "45767124_85f5381e",
+      "revId": "12ed6bcc5d5ec2464b6b980a57c5c723f271eccf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "29dad4bc_1e644517",
         "filename": "/COMMIT_MSG",
         "patchSetId": 2
