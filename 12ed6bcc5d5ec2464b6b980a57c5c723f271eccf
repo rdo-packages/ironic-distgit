@@ -98,6 +98,23 @@
       "revId": "12ed6bcc5d5ec2464b6b980a57c5c723f271eccf",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6f9c7da1_200c67fa",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-07-08T10:09:56Z",
+      "side": 1,
+      "message": "I see it\u0027s also a runtime requirement in [1], could you add it there, too?\n\n[1] - https://opendev.org/openstack/ironic/src/branch/master/requirements.txt#L32",
+      "revId": "12ed6bcc5d5ec2464b6b980a57c5c723f271eccf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
