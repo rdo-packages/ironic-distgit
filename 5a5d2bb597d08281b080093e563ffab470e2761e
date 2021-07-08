@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "038aaf13_c68c59aa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-08T13:21:39Z",
+      "side": 1,
+      "message": "this left.",
+      "range": {
+        "startLine": 11,
+        "startChar": 63,
+        "endLine": 11,
+        "endChar": 69
+      },
+      "revId": "5a5d2bb597d08281b080093e563ffab470e2761e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
