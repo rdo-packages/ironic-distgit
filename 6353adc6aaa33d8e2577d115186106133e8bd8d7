@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a9ba448_320b2156",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 165,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-19T07:14:35Z",
+      "side": 1,
+      "message": "can also update following:-\n\n2021-07-15 09:16:41.716057 | container | MISMATCH:\n2021-07-15 09:16:41.716065 | container |   python-ironic-lib \u003e\u003d 4.6.1  (\u003e\u003d 4.3.0 in .spec)\n2021-07-15 09:16:41.716073 | container |   python-oslo-db \u003e\u003d 9.1.0  (\u003e\u003d 6.0.0 in .spec)\n2021-07-15 09:16:41.716081 | container |   python-oslo-policy \u003e\u003d 3.7.0  (\u003e\u003d 3.6.2 in .spec)",
+      "revId": "6353adc6aaa33d8e2577d115186106133e8bd8d7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
