@@ -20,6 +20,8 @@ Source2:        openstack-ironic-conductor.service
 Source3:        ironic-rootwrap-sudoers
 Source4:        ironic-dist.conf
 Source5:        ironic.logrotate
+Source6:        openstack-ironic-dnsmasq-tftp-server.service
+Source7:        dnsmasq-tftp-server.conf
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz.asc
@@ -125,6 +127,7 @@ install -p -D -m 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/logrotate.d/openstack
 mkdir -p %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}
+install -p -D -m 644 %{SOURCE6} %{buildroot}%{_unitdir}
 
 # install sudoers file
 mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
@@ -146,6 +149,8 @@ rmdir %{buildroot}%{_prefix}/etc/ironic
 
 # Install distribution config
 install -p -D -m 640 %{SOURCE4} %{buildroot}/%{_datadir}/ironic/ironic-dist.conf
+install -p -D -m 644 %{SOURCE7} %{buildroot}/%{_datadir}/ironic/dnsmasq-tftp-server.conf
+
 
 %check
 PYTHON=%{__python3} stestr run
@@ -234,6 +239,7 @@ Components common to all OpenStack Ironic services
 %attr(-,ironic,ironic) %{_sharedstatedir}/ironic
 %attr(0750,ironic,ironic) %{_localstatedir}/log/ironic
 %attr(-, root, ironic) %{_datadir}/ironic/ironic-dist.conf
+%attr(-, root, ironic) %{_datadir}/ironic/dnsmasq-tftp-server.conf
 %exclude %{python3_sitelib}/ironic_tests.egg_info
 
 %pre common
@@ -299,6 +305,29 @@ Ironic Conductor for management and provisioning of physical machines
 
 %postun conductor
 %systemd_postun_with_restart openstack-ironic-conductor.service
+
+%package dnsmasq-tftp-server
+Summary:    tftp-server service for Ironic using dnsmasq
+Requires:   dnsmasq
+
+%description dnsmasq-tftp-server
+Ironic is service for the management and provisioning of physical machines
+
+This package contains a dnsmasq service pre-configured for using with
+ironic to support TFTP to enable initial PXE boot operations using TFTP.
+
+%files dnsmasq-tftp-server
+%license LICENSE
+%{_unitdir}/openstack-ironic-dnsmasq-tftp-server.service
+
+%post dnsmasq-tftp-server
+%systemd_post openstack-ironic-dnsmasq-tftp-server.service
+
+%preun dnsmasq-tftp-server
+%systemd_preun openstack-ironic-dnsmasq-tftp-server.service
+
+%postun dnsmasq-tftp-server
+%systemd_postun_with_restart openstack-ironic-dnsmasq-tftp-server.service
 
 %package -n python3-ironic-tests
 Summary:        Ironic unit tests
