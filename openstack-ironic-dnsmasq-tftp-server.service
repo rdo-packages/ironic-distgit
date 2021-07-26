@@ -1,0 +1,10 @@
+[Unit]
+Description=tftp boot dnsmasq service for Ironic
+After=network.target
+
+[Service]
+ExecStart=/sbin/dnsmasq -k --conf-file=/etc/ironic/dnsmasq-tftp-server.conf
+
+[Install]
+WantedBy=multi-user.target
+Alias=openstack-ironic-dnsmasq-tftp-server.service
