@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "fba0d22d_4344d00d",
+        "filename": "openstack-ironic-dnsmasq-tftp-server.service",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-07-27T17:27:25Z",
+      "side": 1,
+      "message": "whoops, didn\u0027t set the name to the template I included.",
+      "parentUuid": "4aaee9e6_cfd3705f",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 65
+      },
+      "revId": "5995cb64cccf4c3d92ab2c6e658bf5d38cbf71b5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "56e9d526_886abad6",
         "filename": "openstack-ironic.spec",
         "patchSetId": 1
@@ -99,6 +123,48 @@
       "writtenOn": "2021-07-27T06:42:17Z",
       "side": 1,
       "message": "%systemd_postun_with_restart",
+      "revId": "5995cb64cccf4c3d92ab2c6e658bf5d38cbf71b5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "faee2d20_880243d2",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-07-27T17:27:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "70d2d234_450106ae",
+      "revId": "5995cb64cccf4c3d92ab2c6e658bf5d38cbf71b5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "16e99c70_5f2b06f0",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-07-27T17:27:25Z",
+      "side": 1,
+      "message": "Not sure what this same comment is applied to since both are in regards to the line above. If it is shorten the unit name completely, I guess we could do that but it could then also be confused. Unfortunately we have too many different items and layers involved in what really could have just been part of a container build script 😭",
+      "parentUuid": "073bd336_bedc76ba",
+      "range": {
+        "startLine": 320,
+        "startChar": 0,
+        "endLine": 331,
+        "endChar": 72
+      },
       "revId": "5995cb64cccf4c3d92ab2c6e658bf5d38cbf71b5",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
