@@ -168,6 +168,30 @@
       "revId": "5995cb64cccf4c3d92ab2c6e658bf5d38cbf71b5",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b3af6a7_eda6c358",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 331,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:31:02Z",
+      "side": 1,
+      "message": "sorry for the confusion, with same i meant of replacing  \"-n openstack-ironic-dnsmasq*\" -\u003e dnsmasq*,\n\n%package -n openstack-ironic-dnsmasq* is same as using %package dnsmasq*, the later is more cleaner and avoid repetation but if you use %package -n dnsmasq package will get created without openstack-ironic as prefix like it\u0027s result of PS3 https://logserver.rdoproject.org/91/34691/3/check/DLRN-rpmbuild-centos8/a43e762/buildset/centos8/current/.\n\nI think with adding in package it could also be used for non container deployments.",
+      "parentUuid": "16e99c70_5f2b06f0",
+      "range": {
+        "startLine": 320,
+        "startChar": 0,
+        "endLine": 331,
+        "endChar": 72
+      },
+      "revId": "5995cb64cccf4c3d92ab2c6e658bf5d38cbf71b5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
