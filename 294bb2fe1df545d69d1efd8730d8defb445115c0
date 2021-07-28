@@ -71,6 +71,29 @@
     },
     {
       "key": {
+        "uuid": "03fdc641_88129240",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-07-28T07:45:03Z",
+      "side": 1,
+      "message": "You could add the default config file under /etc/ironic and mark it as %config(noreplace) in the file list?",
+      "range": {
+        "startLine": 152,
+        "startChar": 32,
+        "endLine": 152,
+        "endChar": 88
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9c446eff_8de8bf32",
         "filename": "openstack-ironic.spec",
         "patchSetId": 3
@@ -133,6 +156,29 @@
         "startChar": 7,
         "endLine": 318,
         "endChar": 9
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "17637f70_02b32fec",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-07-28T07:45:03Z",
+      "side": 1,
+      "message": "see my note about config file.",
+      "range": {
+        "startLine": 321,
+        "startChar": 0,
+        "endLine": 321,
+        "endChar": 1
       },
       "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
