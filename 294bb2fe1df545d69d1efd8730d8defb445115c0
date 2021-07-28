@@ -1,0 +1,211 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "397c2f75_1f584df9",
+        "filename": "dnsmasq-tftp-server.service",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "So in package is being shipped at /usr/share/ironic/dnsmasq-tftp-server.conf but here /etc/ location is used.",
+      "range": {
+        "startLine": 7,
+        "startChar": 36,
+        "endLine": 7,
+        "endChar": 72
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa7c1ab9_48c2a057",
+        "filename": "dnsmasq-tftp-server.service",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "openstack-ironic-dnsmasq-tftp-server.service",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6429fb48_99be9ea0",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "for the service i think it\u0027s better to be same like other ironic services openstack-ironic-api.service, openstack-ironic-conductor.service.\n\nso can use openstack-ironic-dnsmasq-tftp-server.service in place of dnsmasq-tftp-server.service at all places.",
+      "range": {
+        "startLine": 23,
+        "startChar": 16,
+        "endLine": 23,
+        "endChar": 43
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9c446eff_8de8bf32",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "remove -n",
+      "range": {
+        "startLine": 308,
+        "startChar": 9,
+        "endLine": 308,
+        "endChar": 11
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4b3fc20d_ce2f85d9",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "remove -n",
+      "range": {
+        "startLine": 312,
+        "startChar": 13,
+        "endLine": 312,
+        "endChar": 15
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "64abf16b_3325824d",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "remove -n",
+      "range": {
+        "startLine": 318,
+        "startChar": 7,
+        "endLine": 318,
+        "endChar": 9
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3e238a69_47b92789",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "remove -n",
+      "range": {
+        "startLine": 323,
+        "startChar": 6,
+        "endLine": 323,
+        "endChar": 8
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "36d58c91_a5f6bce9",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "remove -n",
+      "range": {
+        "startLine": 326,
+        "startChar": 7,
+        "endLine": 326,
+        "endChar": 9
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aff33d35_4bcaef21",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-07-28T05:49:43Z",
+      "side": 1,
+      "message": "remove -n",
+      "range": {
+        "startLine": 329,
+        "startChar": 8,
+        "endLine": 329,
+        "endChar": 10
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
