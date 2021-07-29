@@ -7,8 +7,8 @@ Name:           openstack-ironic
 # https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
 Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
-Version:        15.0.1
-Release:        2%{?dist}
+Version:        15.0.2
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            http://www.openstack.org
 Source0:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
@@ -309,6 +309,9 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
+* Thu Jul 29 2021 RDO <dev@lists.rdoproject.org> 1:15.0.2-1
+- Update to 15.0.2
+
 * Wed Apr 28 2021 Steve Baker <sbaker@redhat.com> 1:15.0.1-2
 - Generate policy.json in json format
 
