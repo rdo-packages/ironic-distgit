@@ -202,10 +202,11 @@ Requires:   python3-webob >= 1.7.1
 %if 0%{?fedora} || 0%{?rhel} > 7
 Recommends: ipmitool
 Recommends: python3-dracclient >= 5.1.0
-Recommends: python3-proliantutils >= 2.10.0
+Recommends: python3-proliantutils >= 2.11.0
 Recommends: python3-pysnmp >= 4.3.0
 Recommends: python3-scciclient >= 0.8.0
-Recommends: python3-sushy >= 3.4.0
+Recommends: python3-sushy >= 3.10.0
+Recommends: python3-xclarityclient >= 0.1.6
 
 # Optional features
 Suggests: python3-oslo-i18n >= 3.15.3
