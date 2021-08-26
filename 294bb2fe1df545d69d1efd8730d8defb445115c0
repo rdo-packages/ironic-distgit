@@ -94,6 +94,30 @@
     },
     {
       "key": {
+        "uuid": "f71553b6_1eef4b6b",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 303
+      },
+      "writtenOn": "2021-08-26T16:32:06Z",
+      "side": 1,
+      "message": "I concur with renaming it to openstack-ironic-*",
+      "parentUuid": "6429fb48_99be9ea0",
+      "range": {
+        "startLine": 23,
+        "startChar": 16,
+        "endLine": 23,
+        "endChar": 43
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "03fdc641_88129240",
         "filename": "openstack-ironic.spec",
         "patchSetId": 3
