@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "1240205e_2425f833",
+        "filename": "dnsmasq-tftp-server.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 682
+      },
+      "writtenOn": "2021-08-26T09:23:51Z",
+      "side": 1,
+      "message": "I think /tftpboot is the reasonable default we define here, because it\u0027s consistent with the default of tftp_root in ironic.",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "397c2f75_1f584df9",
         "filename": "dnsmasq-tftp-server.service",
         "patchSetId": 3
