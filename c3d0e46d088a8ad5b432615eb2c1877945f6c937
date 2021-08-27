@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "efbdcbf0_41343924",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2021-08-27T07:57:16Z",
+      "side": 1,
+      "message": "I think the new config file should be shipped in the new package with %config(noreplace)",
+      "range": {
+        "startLine": 321,
+        "startChar": 0,
+        "endLine": 321,
+        "endChar": 1
+      },
+      "revId": "c3d0e46d088a8ad5b432615eb2c1877945f6c937",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
