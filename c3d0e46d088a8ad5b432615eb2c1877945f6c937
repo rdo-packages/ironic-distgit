@@ -22,6 +22,30 @@
       "revId": "c3d0e46d088a8ad5b432615eb2c1877945f6c937",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "f91226b4_25dca281",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "I think it provides far more value to just include it in the base package, but fine.",
+      "parentUuid": "efbdcbf0_41343924",
+      "range": {
+        "startLine": 321,
+        "startChar": 0,
+        "endLine": 321,
+        "endChar": 1
+      },
+      "revId": "c3d0e46d088a8ad5b432615eb2c1877945f6c937",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }

@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "7c820b2c_bfc08ea1",
+        "filename": "dnsmasq-tftp-server.conf",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1240205e_2425f833",
+      "range": {
+        "startLine": 7,
+        "startChar": 1,
+        "endLine": 7,
+        "endChar": 20
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "397c2f75_1f584df9",
         "filename": "dnsmasq-tftp-server.service",
         "patchSetId": 3
@@ -68,6 +92,30 @@
       "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d38e6370_65569755",
+        "filename": "dnsmasq-tftp-server.service",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa7c1ab9_48c2a057",
+      "range": {
+        "startLine": 11,
+        "startChar": 6,
+        "endLine": 11,
+        "endChar": 33
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     },
     {
       "key": {
@@ -118,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "86663ba8_4195f115",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f71553b6_1eef4b6b",
+      "range": {
+        "startLine": 23,
+        "startChar": 16,
+        "endLine": 23,
+        "endChar": 43
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "03fdc641_88129240",
         "filename": "openstack-ironic.spec",
         "patchSetId": 3
@@ -129,6 +201,30 @@
       "writtenOn": "2021-07-28T07:45:03Z",
       "side": 1,
       "message": "You could add the default config file under /etc/ironic and mark it as %config(noreplace) in the file list?",
+      "range": {
+        "startLine": 152,
+        "startChar": 32,
+        "endLine": 152,
+        "endChar": 88
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14d167b2_c8204649",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "I believe this is done, likely wrong though, but I guess CI will tell me.",
+      "parentUuid": "03fdc641_88129240",
       "range": {
         "startLine": 152,
         "startChar": 32,
@@ -164,6 +260,30 @@
     },
     {
       "key": {
+        "uuid": "c2388885_cba7191e",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9c446eff_8de8bf32",
+      "range": {
+        "startLine": 308,
+        "startChar": 9,
+        "endLine": 308,
+        "endChar": 11
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4b3fc20d_ce2f85d9",
         "filename": "openstack-ironic.spec",
         "patchSetId": 3
@@ -184,6 +304,30 @@
       "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a4c4e671_8d2cf0f2",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4b3fc20d_ce2f85d9",
+      "range": {
+        "startLine": 312,
+        "startChar": 13,
+        "endLine": 312,
+        "endChar": 15
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     },
     {
       "key": {
@@ -210,6 +354,30 @@
     },
     {
       "key": {
+        "uuid": "c15f67af_9f40405a",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "64abf16b_3325824d",
+      "range": {
+        "startLine": 318,
+        "startChar": 7,
+        "endLine": 318,
+        "endChar": 9
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "17637f70_02b32fec",
         "filename": "openstack-ironic.spec",
         "patchSetId": 3
@@ -230,6 +398,30 @@
       "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "01864b79_5cb62b44",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "17637f70_02b32fec",
+      "range": {
+        "startLine": 321,
+        "startChar": 0,
+        "endLine": 321,
+        "endChar": 1
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     },
     {
       "key": {
@@ -256,6 +448,30 @@
     },
     {
       "key": {
+        "uuid": "e7441a7d_ed97fdde",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 323,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3e238a69_47b92789",
+      "range": {
+        "startLine": 323,
+        "startChar": 6,
+        "endLine": 323,
+        "endChar": 8
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "36d58c91_a5f6bce9",
         "filename": "openstack-ironic.spec",
         "patchSetId": 3
@@ -279,6 +495,30 @@
     },
     {
       "key": {
+        "uuid": "78029657_0d16ded8",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "36d58c91_a5f6bce9",
+      "range": {
+        "startLine": 326,
+        "startChar": 7,
+        "endLine": 326,
+        "endChar": 9
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aff33d35_4bcaef21",
         "filename": "openstack-ironic.spec",
         "patchSetId": 3
@@ -299,6 +539,30 @@
       "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26b7e80a_bd0a1cd6",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 329,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2021-08-28T00:00:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aff33d35_4bcaef21",
+      "range": {
+        "startLine": 329,
+        "startChar": 8,
+        "endLine": 329,
+        "endChar": 10
+      },
+      "revId": "294bb2fe1df545d69d1efd8730d8defb445115c0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
