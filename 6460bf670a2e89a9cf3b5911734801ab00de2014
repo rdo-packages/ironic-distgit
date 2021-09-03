@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "20482513_60a17c1b",
+        "filename": "dnsmasq-tftp-server.conf",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2021-09-03T13:28:03Z",
+      "side": 1,
+      "message": "Is\u0027nt this tftp server used by bot ironic and introspection?\n\nI would suggest removing \"for using introspection\" or replace it with \"for ironic\"?",
+      "range": {
+        "startLine": 1,
+        "startChar": 42,
+        "endLine": 1,
+        "endChar": 55
+      },
+      "revId": "6460bf670a2e89a9cf3b5911734801ab00de2014",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "02ab7697_3cc82f24",
+        "filename": "openstack-ironic-dnsmasq-tftp-server.service",
+        "patchSetId": 7
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2021-09-03T13:28:03Z",
+      "side": 1,
+      "message": "The stock \"/usr/lib/systemd/system/dnsmasq.service\" file does not use forking.\nI think we can drop that and add \"-k\" or \"--keep-in-foreground\"\n\nExecStart\u003d/sbin/dnsmasq -k --conf-file\u003d/etc/ironic/dnsmasq-tftp-server.conf",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 72
+      },
+      "revId": "6460bf670a2e89a9cf3b5911734801ab00de2014",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
