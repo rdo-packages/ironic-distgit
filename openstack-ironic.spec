@@ -198,7 +198,8 @@ Requires:   python3-pytz >= 2013.6
 Requires:   python3-requests >= 2.18.0
 Requires:   python3-rfc3986 >= 1.2.0
 Requires:   python3-sqlalchemy >= 1.2.19
-Requires:   python3-stevedore >= 1.20.0
+Requires:   python3-stevedore >= 1.29.0
+Requires:   python3-sushy >= 3.10.0
 Requires:   python3-swiftclient >= 3.2.0
 Requires:   python3-tenacity >= 6.2.0
 Requires:   python3-tooz >= 2.7.0
@@ -210,7 +211,6 @@ Recommends: python3-dracclient >= 5.1.0
 Recommends: python3-proliantutils >= 2.10.0
 Recommends: python3-pysnmp >= 4.3.0
 Recommends: python3-scciclient >= 0.8.0
-Recommends: python3-sushy >= 3.4.0
 
 # Optional features
 Suggests: python3-oslo-i18n >= 3.15.3
