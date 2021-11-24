@@ -1,0 +1,9 @@
+Code-Review+2: Dmitry Tantsur <dtantsur@protonmail.com>
+Code-Review+2: Iury Gregory Melo Ferreira <iurygregory@gmail.com>
+Workflow+1: Iury Gregory Melo Ferreira <iurygregory@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 24 Nov 2021 13:57:46 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/36874
+Project: openstack/ironic-distgit
+Branch: refs/heads/rpm-master
