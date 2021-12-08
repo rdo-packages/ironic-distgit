@@ -22,6 +22,7 @@ Source4:        ironic-dist.conf
 Source5:        ironic.logrotate
 Source6:        openstack-ironic-dnsmasq-tftp-server.service
 Source7:        dnsmasq-tftp-server.conf
+Source8:        openstack-ironic.service
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz.asc
@@ -104,6 +105,15 @@ BuildRequires:  python3-proliantutils
 BuildRequires:  python3-tenacity
 BuildRequires:  python3-webob
 
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
+Requires: udev
+
+%if 0%{?rhel} && 0%{?rhel} < 8
+%{?systemd_requires}
+%else
+%{?systemd_ordering} # does not exist on EL7
+%endif
+
 %prep
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
@@ -128,6 +138,7 @@ mkdir -p %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE6} %{buildroot}%{_unitdir}
+install -p -D -m 644 %{SOURCE8} %{buildroot}%{_unitdir}
 
 # install sudoers file
 mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
@@ -157,6 +168,19 @@ PYTHON=%{__python3} stestr run
 
 %description
 Ironic provides an API for management and provisioning of physical machines
+
+%files
+%{_bindir}/ironic
+%{_unitdir}/openstack-ironic.service
+
+%post
+%systemd_post openstack-ironic.service
+
+%preun
+%systemd_preun openstack-ironic.service
+
+%postun
+%systemd_postun_with_restart openstack-ironic.service
 
 %package common
 Summary: Ironic common
