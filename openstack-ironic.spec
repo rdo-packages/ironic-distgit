@@ -22,6 +22,7 @@ Source4:        ironic-dist.conf
 Source5:        ironic.logrotate
 Source6:        openstack-ironic-dnsmasq-tftp-server.service
 Source7:        dnsmasq-tftp-server.conf
+Source8:        openstack-ironic-singleprocess.service
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz.asc
@@ -128,6 +129,7 @@ mkdir -p %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE6} %{buildroot}%{_unitdir}
+install -p -D -m 644 %{SOURCE8} %{buildroot}%{_unitdir}
 
 # install sudoers file
 mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
@@ -304,6 +306,34 @@ Ironic Conductor for management and provisioning of physical machines
 
 %postun conductor
 %systemd_postun_with_restart openstack-ironic-conductor.service
+
+%package singleprocess
+Summary: The Ironic Conductor and API in the same process
+
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
+Requires: udev
+
+%if 0%{?rhel} && 0%{?rhel} < 8
+%{?systemd_requires}
+%else
+%{?systemd_ordering} # does not exist on EL7
+%endif
+
+%description singleprocess
+Ironic Conductor and API in the same process for management and provisioning of physical machines
+
+%files singleprocess
+%{_bindir}/ironic
+%{_unitdir}/openstack-ironic-singleprocess.service
+
+%post singleprocess
+%systemd_post openstack-ironic-singleprocess.service
+
+%preun singleprocess
+%systemd_preun openstack-ironic-singleprocess.service
+
+%postun singleprocess
+%systemd_postun_with_restart openstack-ironic-singleprocess.service
 
 %package dnsmasq-tftp-server
 Summary:    tftp-server service for Ironic using dnsmasq
