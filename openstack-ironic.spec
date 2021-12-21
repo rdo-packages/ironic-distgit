@@ -17,7 +17,7 @@ Source0:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
 
 Source1:        openstack-ironic-api.service
 Source2:        openstack-ironic-conductor.service
-Source3:        ironic-rootwrap-sudoers
+Source3:        ironic-sudoers
 Source4:        ironic-dist.conf
 Source5:        ironic.logrotate
 Source6:        openstack-ironic-dnsmasq-tftp-server.service
@@ -216,6 +216,7 @@ Requires:   python3-osprofiler >= 1.5.0
 Requires:   python3-os-traits >= 0.4.0
 Requires:   python3-pbr >= 3.1.1
 Requires:   python3-pecan >= 1.0.0
+Requires:   python3-oslo-privsep >= 2.4.0
 Requires:   python3-psutil >= 3.2.2
 Requires:   python3-pycdlib >= 1.11.0
 Requires:   python3-pytz >= 2013.6

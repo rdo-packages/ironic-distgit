@@ -1,2 +1,3 @@
 Defaults:ironic !requiretty
 ironic ALL = (root) NOPASSWD: /usr/bin/ironic-rootwrap /etc/ironic/rootwrap.conf *
+ironic ALL = (root) NOPASSWD: /usr/bin/privsep-helper *
