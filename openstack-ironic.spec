@@ -373,3 +373,4 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic/commit/53a38f18d47d3fef5e9a7a8f6ecf5ab99b2f8e0f
