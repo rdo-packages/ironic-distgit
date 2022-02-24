@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "196346a4_18ca651e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2022-02-24T15:22:35Z",
+      "side": 1,
+      "message": "looks like an issue with missing \u0027rpm\u0027 package ?",
+      "revId": "c16fe57803fa64df9c54398a68960c660b954b40",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
