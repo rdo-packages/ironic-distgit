@@ -158,13 +158,13 @@ mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ir
 rmdir %{buildroot}%{_prefix}/etc/ironic/rootwrap.d
 rmdir %{buildroot}%{_prefix}/etc/ironic
 
-# Install distribution config
+# Install distribution config 
 install -p -D -m 640 %{SOURCE4} %{buildroot}/%{_datadir}/ironic/ironic-dist.conf
 install -p -D -m 644 %{SOURCE7} %{buildroot}/%{_sysconfdir}/ironic/dnsmasq-tftp-server.conf
 
 
 %check
-PYTHON=%{__python3} stestr run
+PYTHON=%{__python3} stestr run --concurrency 4
 
 %description
 Ironic provides an API for management and provisioning of physical machines
@@ -373,3 +373,4 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic/commit/5d2283137c6d083668eec1c7bed7696a06dbafe6
