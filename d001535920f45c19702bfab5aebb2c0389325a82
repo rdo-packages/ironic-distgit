@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c8ad5d5_91ad4f45",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-18T09:58:00Z",
+      "side": 1,
+      "message": "Note that in CI it\u0027s pulling jinja from storage sig repo, but i need to update it in RDO deps repo. We are currently using jinja2 from centos9 os appstream repo which is the preferred option but i\u0027m afraid we\u0027ll need to update...",
+      "revId": "d001535920f45c19702bfab5aebb2c0389325a82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
