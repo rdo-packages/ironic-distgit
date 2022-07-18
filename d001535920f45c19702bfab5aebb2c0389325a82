@@ -16,6 +16,24 @@
       "message": "Note that in CI it\u0027s pulling jinja from storage sig repo, but i need to update it in RDO deps repo. We are currently using jinja2 from centos9 os appstream repo which is the preferred option but i\u0027m afraid we\u0027ll need to update...",
       "revId": "d001535920f45c19702bfab5aebb2c0389325a82",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "457b61e9_895666fc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-18T10:03:17Z",
+      "side": 1,
+      "message": "Actually, i see it\u0027s using python3-jinja2-3.0.1-2.el9s.noarch  in the failed job:\n\n https://trunk.rdoproject.org/centos9-master/component/baremetal/88/11/8811b9b1f56ba6a074160ddca8139f3543dd453a_a1894fe9/rpmbuild.log\n\nit\u0027s weird ...",
+      "parentUuid": "9c8ad5d5_91ad4f45",
+      "revId": "d001535920f45c19702bfab5aebb2c0389325a82",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
