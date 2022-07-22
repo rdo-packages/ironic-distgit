@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "a58a571e676f227be18ec2df0bd1e9de3143de0c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6cd3b0d4_43bb9dfd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2022-07-22T14:47:57Z",
+      "side": 1,
+      "message": "Alfredo, The fix just merged, if you can confirm all is good, it would be appreciated.\n\n\u003copendevreview\u003e Merged openstack/ironic master: Fix adoption unit test image check  https://review.opendev.org/c/openstack/ironic/+/850754",
+      "revId": "a58a571e676f227be18ec2df0bd1e9de3143de0c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
