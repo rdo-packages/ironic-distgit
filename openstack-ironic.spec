@@ -164,7 +164,8 @@ install -p -D -m 644 %{SOURCE7} %{buildroot}/%{_sysconfdir}/ironic/dnsmasq-tftp-
 
 
 %check
-PYTHON=%{__python3} stestr run
+# Skip unit test https://storyboard.openstack.org/#!/story/2010181
+PYTHON=%{__python3} stestr run -B ironic.tests.unit.conductor.test_manager.DoNodeAdoptionTestCase.test__do_adoption_with_netboot
 
 %description
 Ironic provides an API for management and provisioning of physical machines
