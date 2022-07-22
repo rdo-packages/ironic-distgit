@@ -33,6 +33,24 @@
       "message": "Alfredo, The fix just merged, if you can confirm all is good, it would be appreciated.\n\n\u003copendevreview\u003e Merged openstack/ironic master: Fix adoption unit test image check  https://review.opendev.org/c/openstack/ironic/+/850754",
       "revId": "a58a571e676f227be18ec2df0bd1e9de3143de0c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8e2f0fe5_ca1aea8f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-22T15:05:08Z",
+      "side": 1,
+      "message": "Yes, it is good now. It just built in RDO-Trunk repo:\n\nhttps://trunk.rdoproject.org/centos9-master/component/baremetal/9f/66/9f66a95aa7e9594800a7a9caedc27c8f67318238_a1894fe9/rpmbuild.log\n\nThanks for your support!",
+      "parentUuid": "6cd3b0d4_43bb9dfd",
+      "revId": "a58a571e676f227be18ec2df0bd1e9de3143de0c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
