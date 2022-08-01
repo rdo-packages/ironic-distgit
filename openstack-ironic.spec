@@ -98,6 +98,7 @@ BuildRequires:  python3-testresources
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-tooz
+BuildRequires:  python3-webtest
 
 BuildRequires:  python3-dracclient
 BuildRequires:  python3-ironic-lib
