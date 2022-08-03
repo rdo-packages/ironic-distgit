@@ -33,6 +33,23 @@
       "message": "recheck",
       "revId": "b2e06ef9dbd5cd54dca555ad47d8c9af42b35ca8",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44de8c14_c546422e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2022-08-03T10:36:27Z",
+      "side": 1,
+      "message": "python-defusedxml was added as requirement to wallaby spec file to fix. This review can be abandoned. ",
+      "revId": "b2e06ef9dbd5cd54dca555ad47d8c9af42b35ca8",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
