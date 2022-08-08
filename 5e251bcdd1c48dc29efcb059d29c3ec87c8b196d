@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c8963ee4_9794bd00",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-08-08T09:44:21Z",
+      "side": 1,
+      "message": "we have python-jinja2-3.0.1-2.el9s in zed",
+      "revId": "5e251bcdd1c48dc29efcb059d29c3ec87c8b196d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
