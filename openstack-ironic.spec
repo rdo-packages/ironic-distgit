@@ -87,7 +87,7 @@ BuildRequires:  python3-pysnmp
 BuildRequires:  python3-pytz
 BuildRequires:  python3-requests
 BuildRequires:  python3-scciclient
-BuildRequires:  python3-sqlalchemy
+BuildRequires:  python3-sqlalchemy < 1.4.0
 BuildRequires:  python3-stestr
 BuildRequires:  python3-stevedore
 BuildRequires:  python3-sushy
@@ -196,6 +196,7 @@ Requires:   python3-pytz >= 2013.6
 Requires:   python3-requests >= 2.14.2
 Requires:   python3-rfc3986 >= 0.3.1
 Requires:   python3-sqlalchemy >= 1.2.19
+Requires:   python3-sqlalchemy < 1.4.0
 Requires:   python3-stevedore >= 1.20.0
 Requires:   python3-swiftclient >= 3.2.0
 Requires:   python3-tenacity >= 6.2.0
