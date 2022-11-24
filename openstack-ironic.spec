@@ -308,6 +308,8 @@ Summary: The Ironic Conductor
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
+Requires: dosfstools
+Requires: mtools
 
 %if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
