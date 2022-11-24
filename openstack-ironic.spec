@@ -310,6 +310,7 @@ Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
 Requires: dosfstools
 Requires: mtools
+Requires: xorriso
 
 %if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
