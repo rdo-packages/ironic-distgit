@@ -16,6 +16,24 @@
       "message": "Are these new dependencies required for zed?. If so, they should be cherry-picked to zed-rdo branch",
       "revId": "980cf395cd3750fe86c48b0e3bfee05c7f7e34a3",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a38e4ed5_ad874b76",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2022-12-22T20:43:38Z",
+      "side": 1,
+      "message": "Yes I\u0027ll backport these all to zed",
+      "parentUuid": "d87e9eec_7986d868",
+      "revId": "980cf395cd3750fe86c48b0e3bfee05c7f7e34a3",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
