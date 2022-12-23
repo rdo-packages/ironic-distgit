@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c3f3be34_48321e19",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-12-23T16:05:20Z",
+      "side": 1,
+      "message": "Could you please bump the release ? it\u0027s needed in order to build a new NVR on CBS which will include the 3 backported patches",
+      "revId": "a971ec78bdb0978676e19ab31490c45ff3ae5410",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
