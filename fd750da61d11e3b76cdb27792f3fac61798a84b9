@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "55f1506b_7eae73c2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2023-01-18T22:41:43Z",
+      "side": 1,
+      "message": "recheck error: RPC failed; curl 18 transfer closed",
+      "revId": "fd750da61d11e3b76cdb27792f3fac61798a84b9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
