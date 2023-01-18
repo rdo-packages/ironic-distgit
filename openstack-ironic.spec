@@ -312,6 +312,7 @@ Requires: dosfstools
 Requires: mtools
 Requires: xorriso
 Requires: pykickstart
+Requires: syslinux-nonlinux
 
 %if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
