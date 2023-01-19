@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "9b856ac74c3807345a23a771df116435e0915f83",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81ff3a82_4eec7867",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2023-01-19T01:25:26Z",
+      "side": 1,
+      "message": "recheck error: RPC failed; curl 18 transfer closed",
+      "revId": "9b856ac74c3807345a23a771df116435e0915f83",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
