@@ -1,0 +1,9 @@
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Code-Review+2: Julia Kreger <jkreger@gmail.com>
+Workflow+1: Julia Kreger <jkreger@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 27 Jan 2023 17:53:30 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/46742
+Project: openstack/ironic-distgit
+Branch: refs/heads/rpm-master
