@@ -3,6 +3,8 @@
 %global full_release ironic-%{version}
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+# we are excluding some BRs from automatic generator
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order sphinx openstackdocstheme pyasn1-lextudio pyasn1-modules-lextudio pysnmp-lextudio
 
 Name:           openstack-ironic
 # Liberty semver reset
@@ -11,7 +13,7 @@ Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
 Version:        XXX
 Release:        XXX
-License:        ASL 2.0
+License:        Apache-2.0
 URL:            http://www.openstack.org
 Source0:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz
 
@@ -36,84 +38,20 @@ BuildArch:      noarch
 BuildRequires:  /usr/bin/gpgv2
 %endif
 BuildRequires:  openstack-macros
-BuildRequires:  python3-setuptools
 BuildRequires:  python3-devel
-BuildRequires:  python3-pbr
+BuildRequires:  pyproject-rpm-macros
 BuildRequires:  openssl-devel
 BuildRequires:  libxml2-devel
 BuildRequires:  libxslt-devel
 BuildRequires:  gmp-devel
-BuildRequires:  python3-sphinx
 BuildRequires:  systemd
-# Required to run unit tests
-BuildRequires:  python3-alembic
-BuildRequires:  python3-automaton
-BuildRequires:  python3-cinderclient
-BuildRequires:  python3-ddt
-BuildRequires:  python3-eventlet
-BuildRequires:  python3-futurist
-BuildRequires:  python3-glanceclient
-BuildRequires:  python3-jinja2
-BuildRequires:  python3-jsonpatch
-BuildRequires:  python3-jsonschema
-BuildRequires:  python3-keystoneauth1
-BuildRequires:  python3-keystonemiddleware
-BuildRequires:  python3-mock
-BuildRequires:  python3-neutronclient
-BuildRequires:  python3-openstacksdk
-BuildRequires:  python3-oslo-concurrency
-BuildRequires:  python3-oslo-config
-BuildRequires:  python3-oslo-context
-BuildRequires:  python3-oslo-db
 BuildRequires:  python3-oslo-db-tests
-BuildRequires:  python3-oslo-i18n
-BuildRequires:  python3-oslo-log
-BuildRequires:  python3-oslo-messaging
-BuildRequires:  python3-oslo-middleware
-BuildRequires:  python3-oslo-policy
-BuildRequires:  python3-oslo-reports
-BuildRequires:  python3-oslo-rootwrap
-BuildRequires:  python3-oslo-serialization
-BuildRequires:  python3-oslo-service
-BuildRequires:  python3-oslo-upgradecheck
-BuildRequires:  python3-oslo-utils
-BuildRequires:  python3-oslo-versionedobjects
-BuildRequires:  python3-oslotest
-BuildRequires:  python3-osprofiler
-BuildRequires:  python3-os-traits
-BuildRequires:  python3-pbr
-BuildRequires:  python3-pecan
-BuildRequires:  python3-psutil
-BuildRequires:  python3-pycdlib
 BuildRequires:  python3-pysnmp
-BuildRequires:  python3-pytz
-BuildRequires:  python3-requests
-BuildRequires:  python3-scciclient
-BuildRequires:  python3-sqlalchemy
-BuildRequires:  python3-stestr
-BuildRequires:  python3-stevedore
-BuildRequires:  python3-sushy
-BuildRequires:  python3-swiftclient
-BuildRequires:  python3-testresources
-BuildRequires:  python3-testscenarios
-BuildRequires:  python3-testtools
-BuildRequires:  python3-tooz
-BuildRequires:  python3-webtest
-
-BuildRequires:  python3-dracclient
-BuildRequires:  python3-ironic-lib
-BuildRequires:  python3-proliantutils
-BuildRequires:  python3-tenacity
-BuildRequires:  python3-webob
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
 
-%if 0%{?rhel} && 0%{?rhel} < 8
-%{?systemd_requires}
-%else
-%{?systemd_ordering} # does not exist on EL7
-%endif
+%{?systemd_ordering}
 
 %prep
 # Required for tarball sources verification
@@ -121,16 +59,31 @@ Requires: udev
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
 %setup -q -n ironic-%{upstream_version}
-# Let RPM handle the requirements
-%py_req_cleanup
 # Remove tempest plugin entrypoint as a workaround
 sed -i '/tempest/d' setup.cfg
 rm -rf ironic_tempest_plugin
+sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
+sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
+sed -i /^minversion.*/d tox.ini
+sed -i /^requires.*virtualenv.*/d tox.ini
+
+# Exclude some bad-known BRs
+for pkg in %{excluded_brs}; do
+  for reqfile in doc/requirements.txt test-requirements.txt; do
+    if [ -f $reqfile ]; then
+      sed -i /^${pkg}.*/d $reqfile
+    fi
+  done
+done
+
+%generate_buildrequires
+%pyproject_buildrequires -t -e %{default_toxenv}
+
 %build
-%{py3_build}
+%pyproject_wheel
 
 %install
-%{py3_install}
+%pyproject_install
 
 install -p -D -m 644 %{SOURCE5} %{buildroot}%{_sysconfdir}/logrotate.d/openstack-ironic
 
@@ -150,7 +103,7 @@ mkdir -p %{buildroot}%{_localstatedir}/log/ironic/
 mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
 
 #Populate the conf dir
-export PYTHONPATH=.
+PYTHONPATH="%{buildroot}/%{python3_sitelib}"
 oslo-config-generator --config-file tools/config/ironic-config-generator.conf --output-file %{buildroot}/%{_sysconfdir}/ironic/ironic.conf
 oslopolicy-sample-generator --config-file tools/policy/ironic-policy-generator.conf
 mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
@@ -165,7 +118,7 @@ install -p -D -m 644 %{SOURCE7} %{buildroot}/%{_sysconfdir}/ironic/dnsmasq-tftp-
 
 
 %check
-PYTHON=%{__python3} stestr run
+%tox -e %{default_toxenv}
 
 %description
 Ironic provides an API for management and provisioning of physical machines
@@ -186,52 +139,6 @@ Ironic provides an API for management and provisioning of physical machines
 %package common
 Summary: Ironic common
 
-Requires:   python3-alembic >= 1.4.2
-Requires:   python3-automaton >= 1.9.0
-Requires:   python3-cinderclient >= 3.3.0
-Requires:   python3-eventlet >= 0.18.2
-Requires:   python3-futurist >= 1.2.0
-Requires:   python3-glanceclient >= 2.8.0
-Requires:   python3-ironic-lib >= 5.4.0
-Requires:   python3-jinja2 >= 3.0.0
-Requires:   python3-jsonpatch >= 1.16
-Requires:   python3-jsonschema >= 3.2.0
-Requires:   python3-keystoneauth1 >= 4.2.0
-Requires:   python3-keystonemiddleware >= 9.5.0
-Requires:   python3-openstacksdk >= 0.48.0
-Requires:   python3-oslo-concurrency >= 4.2.0
-Requires:   python3-oslo-config >= 6.8.0
-Requires:   python3-oslo-context >= 2.22.0
-Requires:   python3-oslo-db >= 9.1.0
-Requires:   python3-oslo-log >= 4.3.0
-Requires:   python3-oslo-messaging >= 14.1.0
-Requires:   python3-oslo-middleware >= 3.31.0
-Requires:   python3-oslo-policy >= 3.7.0
-Requires:   python3-oslo-rootwrap >= 5.8.0
-Requires:   python3-oslo-serialization >= 2.25.0
-Requires:   python3-oslo-service >= 1.24.0
-Requires:   python3-oslo-upgradecheck >= 1.3.0
-Requires:   python3-oslo-utils >= 4.5.0
-Requires:   python3-oslo-versionedobjects >= 1.31.2
-Requires:   python3-osprofiler >= 1.5.0
-Requires:   python3-os-traits >= 0.4.0
-Requires:   python3-pbr >= 3.1.1
-Requires:   python3-pecan >= 1.0.0
-Requires:   python3-oslo-privsep >= 2.4.0
-Requires:   python3-psutil >= 3.2.2
-Requires:   python3-pycdlib >= 1.11.0
-Requires:   python3-pytz >= 2013.6
-Requires:   python3-requests >= 2.18.0
-Requires:   python3-rfc3986 >= 1.2.0
-Requires:   python3-sqlalchemy >= 1.4.0
-Requires:   python3-stevedore >= 1.29.0
-Requires:   python3-sushy >= 4.3.0
-Requires:   python3-swiftclient >= 3.2.0
-Requires:   python3-tenacity >= 6.2.0
-Requires:   python3-tooz >= 2.7.0
-Requires:   python3-webob >= 1.7.1
-
-%if 0%{?fedora} || 0%{?rhel} > 7
 Recommends: ipmitool
 Recommends: python3-dracclient >= 5.1.0
 Recommends: python3-proliantutils >= 2.10.0
@@ -241,7 +148,6 @@ Recommends: python3-scciclient >= 0.8.0
 # Optional features
 Suggests: python3-oslo-i18n >= 3.15.3
 Suggests: python3-oslo-reports >= 1.18.0
-%endif
 
 Requires(pre):  shadow-utils
 
@@ -257,7 +163,7 @@ Components common to all OpenStack Ironic services
 %{_bindir}/ironic-rootwrap
 %{_bindir}/ironic-status
 %{python3_sitelib}/ironic
-%{python3_sitelib}/ironic-*.egg-info
+%{python3_sitelib}/ironic-*.dist-info
 %exclude %{python3_sitelib}/ironic/tests
 %{_sysconfdir}/sudoers.d/ironic
 %config(noreplace) %{_sysconfdir}/logrotate.d/openstack-ironic
@@ -279,11 +185,7 @@ Summary: The Ironic API
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 
-%if 0%{?rhel} && 0%{?rhel} < 8
-%{?systemd_requires}
-%else
-%{?systemd_ordering} # does not exist on EL7
-%endif
+%{?systemd_ordering}
 
 %description api
 Ironic API for management and provisioning of physical machines
@@ -314,11 +216,7 @@ Requires: xorriso
 Requires: pykickstart
 Requires: syslinux-nonlinux
 
-%if 0%{?rhel} && 0%{?rhel} < 8
-%{?systemd_requires}
-%else
-%{?systemd_ordering} # does not exist on EL7
-%endif
+%{?systemd_ordering}
 
 %description conductor
 Ironic Conductor for management and provisioning of physical machines
@@ -362,15 +260,14 @@ ironic to support TFTP to enable initial PXE boot operations using TFTP.
 
 %package -n python3-ironic-tests
 Summary:        Ironic unit tests
-%{?python_provide:%python_provide python3-ironic-tests}
 Requires:       %{name}-common = %{epoch}:%{version}-%{release}
+
 Requires:       python3-mock
 Requires:       python3-oslotest
 Requires:       python3-stestr
 Requires:       python3-testresources
 Requires:       python3-testscenarios
 Requires:       python3-testtools
-
 
 %description -n python3-ironic-tests
 This package contains the Ironic test files.
