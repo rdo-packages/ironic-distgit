@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "87e7ec87_96772e23",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2023-08-03T10:31:09Z",
+      "side": 1,
+      "message": "You need to use\n\nexport PYTHONPATH\u003d....\n\nSee failures to load ironic in oslo-config-generator logs:\n\nDEBUG: + oslo-config-generator --config-file tools/config/ironic-config-generator.conf --output-file /builddir/build/BUILDROOT/openstack-ironic-22.0.1-0.20230803072059.2528bf6.el9.x86_64//etc/ironic/ironic.conf\nDEBUG: WARNING:stevedore.named:Could not load ironic\nDEBUG: + oslopolicy-sample-generator --config-file tools/policy/ironic-policy-generator.conf\nDEBUG: WARNING:stevedore.named:Could not load ironic.api",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 3
+      },
+      "revId": "9e66d80ef64e74df48f4ffca694e8ca6631f50e9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
