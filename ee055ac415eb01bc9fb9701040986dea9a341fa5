@@ -24,6 +24,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "db776178_22c5795b",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-08-03T07:43:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04023e99_23e78b60",
+      "range": {
+        "startLine": 78,
+        "startChar": 0,
+        "endLine": 78,
+        "endChar": 19
+      },
+      "revId": "ee055ac415eb01bc9fb9701040986dea9a341fa5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "b0f1c131_aa31fc64",
@@ -37,6 +61,30 @@
       "writtenOn": "2023-08-02T12:34:10Z",
       "side": 1,
       "message": "I think we we need to use PYTHONPATH\u003d\"%{buildroot}/%{python3_sitelib}\"",
+      "range": {
+        "startLine": 107,
+        "startChar": 0,
+        "endLine": 107,
+        "endChar": 19
+      },
+      "revId": "ee055ac415eb01bc9fb9701040986dea9a341fa5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "799d22c8_c10abe59",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-08-03T07:43:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b0f1c131_aa31fc64",
       "range": {
         "startLine": 107,
         "startChar": 0,
@@ -70,6 +118,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "210ae78d_f1be6ff6",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-08-03T07:43:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ba3c4a83_6a39c464",
+      "range": {
+        "startLine": 143,
+        "startChar": 0,
+        "endLine": 143,
+        "endChar": 12
+      },
+      "revId": "ee055ac415eb01bc9fb9701040986dea9a341fa5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "aa3d9db3_758bdf01",
@@ -93,6 +165,30 @@
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb4ec89e_42b27b8d",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 195,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-08-03T07:43:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aa3d9db3_758bdf01",
+      "range": {
+        "startLine": 191,
+        "startChar": 0,
+        "endLine": 195,
+        "endChar": 6
+      },
+      "revId": "ee055ac415eb01bc9fb9701040986dea9a341fa5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "19c43aef_d5346bd0",
@@ -106,6 +202,30 @@
       "writtenOn": "2023-08-02T12:34:10Z",
       "side": 1,
       "message": "we can remove the conditional",
+      "range": {
+        "startLine": 226,
+        "startChar": 0,
+        "endLine": 230,
+        "endChar": 6
+      },
+      "revId": "ee055ac415eb01bc9fb9701040986dea9a341fa5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec2eed8c_24f08559",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 230,
+      "author": {
+        "id": 757
+      },
+      "writtenOn": "2023-08-03T07:43:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "19c43aef_d5346bd0",
       "range": {
         "startLine": 226,
         "startChar": 0,
