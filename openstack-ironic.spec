@@ -76,6 +76,9 @@ for pkg in %{excluded_brs}; do
   done
 done
 
+# Remove minimal version of netaddr, CS9 provides 0.8.0 which is enough for ironic
+sed -i 's/netaddr.*/netaddr/g' requirements.txt
+
 %generate_buildrequires
 %pyproject_buildrequires -t -e %{default_toxenv}
 
