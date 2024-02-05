@@ -78,6 +78,10 @@ done
 
 # Remove minimal version of netaddr, CS9 provides 0.8.0 which is enough for ironic
 sed -i 's/netaddr.*/netaddr/g' requirements.txt
+# Remove minimal version of jsonschema. The requested version requires to update
+# other packages from CS9 appstream and current version is pretty new to live with
+# until we can update it in RDO.
+sed -i 's/jsonschema.*/jsonschema/g' requirements.txt
 
 %generate_buildrequires
 %pyproject_buildrequires -t -e %{default_toxenv}
