@@ -34,6 +34,23 @@
       "parentUuid": "6b1261ad_b8bc1829",
       "revId": "d6610bd914ffca406772fbc741b32a1d25facf24",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "36340615_2787304f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2024-02-05T15:36:48Z",
+      "side": 1,
+      "message": "I chatted with the committer, and they simply chose a newer version high up thinking it would be fine. Looks like everything is happy if it is 4.0.0 or above. I\u0027ve pushed a change to ironic itself to lower the requirement as such.",
+      "revId": "d6610bd914ffca406772fbc741b32a1d25facf24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
