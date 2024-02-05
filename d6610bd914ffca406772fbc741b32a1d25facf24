@@ -16,6 +16,24 @@
       "message": "No matching package to install: \u0027python3dist(jsonschema) \u003e\u003d 4.19\u0027",
       "revId": "d6610bd914ffca406772fbc741b32a1d25facf24",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e9e5e9c7_ab1df0b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-05T15:14:50Z",
+      "side": 1,
+      "message": "https://review.rdoproject.org/r/c/deps/python-jsonschema/+/50866",
+      "parentUuid": "6b1261ad_b8bc1829",
+      "revId": "d6610bd914ffca406772fbc741b32a1d25facf24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
