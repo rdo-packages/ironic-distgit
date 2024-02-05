@@ -69,6 +69,24 @@
       "parentUuid": "e9e5e9c7_ab1df0b1",
       "revId": "d6610bd914ffca406772fbc741b32a1d25facf24",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bbd93668_2373dfe1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-02-05T16:57:31Z",
+      "side": 1,
+      "message": "That\u0027d be great! FYI, we currently have 4.16.0 in RDO Caracal repo. Once https://review.opendev.org/c/openstack/ironic/+/907759 is merged we can revert this patch",
+      "parentUuid": "36340615_2787304f",
+      "revId": "d6610bd914ffca406772fbc741b32a1d25facf24",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
