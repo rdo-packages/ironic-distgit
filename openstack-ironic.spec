@@ -217,7 +217,9 @@ Requires: dosfstools
 Requires: mtools
 Requires: xorriso
 Requires: pykickstart
-Requires: syslinux-nonlinux
+# Hack to skip syslinux-nonlinux in aarch64. Ironic is noarch package
+# so we can not use %ifarch conditions here.
+Requires: (syslinux-nonlinux or python3(aarch-64))
 
 %{?systemd_ordering}
 
