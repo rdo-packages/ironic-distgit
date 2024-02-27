@@ -218,7 +218,10 @@ Requires: dosfstools
 Requires: mtools
 Requires: xorriso
 Requires: pykickstart
-Requires: syslinux-nonlinux
+# syslinux-nonlinux is not available for aarch64. It is just for
+# bios booting and the world has largely moved past bios booting
+# for physical hardware.
+Recommends: syslinux-nonlinux
 
 %{?systemd_ordering}
 
