@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7bd1d7df_61e2bc36",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 511
+      },
+      "writtenOn": "2024-02-28T19:27:27Z",
+      "side": 1,
+      "message": "so, what if it is a recommendation on x86. Given it is just for bios booting and the world has largely moved past bios booting for physical hardware.",
+      "revId": "8d5649e4f0b1e5fd85aa44340715131a3ea510c5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
