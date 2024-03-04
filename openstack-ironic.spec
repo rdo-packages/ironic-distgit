@@ -4,7 +4,7 @@
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
-%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order sphinx openstackdocstheme pyasn1-lextudio pyasn1-modules-lextudio pysnmp-lextudio
+%global excluded_brs doc8 bandit pre-commit hacking flake8-import-order sphinx openstackdocstheme
 
 Name:           openstack-ironic
 # Liberty semver reset
@@ -46,7 +46,6 @@ BuildRequires:  libxslt-devel
 BuildRequires:  gmp-devel
 BuildRequires:  systemd
 BuildRequires:  python3-oslo-db-tests
-BuildRequires:  python3-pysnmp
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
@@ -145,7 +144,8 @@ Summary: Ironic common
 Recommends: ipmitool
 Recommends: python3-dracclient >= 5.1.0
 Recommends: python3-proliantutils >= 2.10.0
-Recommends: python3-pysnmp >= 4.3.0
+Recommends: python3-pysnmp-lextudio >= 5.0.0
+Recommends: python3-pyasn1-lextudio >= 1.1.0
 Recommends: python3-scciclient >= 0.8.0
 
 # Optional features
