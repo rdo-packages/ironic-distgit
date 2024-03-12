@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b3f6e1fe_eba60ebf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-12T07:42:59Z",
+      "side": 1,
+      "message": "@Riccardo Pittau: should we create the systemd conf file for PXE filter ? As it\u0027s still expiremental, I\u0027m wondering.",
+      "revId": "4be1086c8e3b454c44faa196bd9a30cc7b2d7e02",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
