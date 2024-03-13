@@ -165,6 +165,7 @@ Components common to all OpenStack Ironic services
 %{_bindir}/ironic-dbsync
 %{_bindir}/ironic-rootwrap
 %{_bindir}/ironic-status
+%{_bindir}/ironic-pxe-filter
 %{python3_sitelib}/ironic
 %{python3_sitelib}/ironic-*.dist-info
 %exclude %{python3_sitelib}/ironic/tests
