@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c7bac2e9_9dd4048b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2024-03-13T08:18:54Z",
+      "side": 1,
+      "message": "I think we can leave it out for now, but I\u0027ll wait also for Dmitry to weigh in",
+      "revId": "aecda8cab04aa10dac4228495067b7188e783f4b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
