@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e983793c_2519a16c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-03-14T10:49:52Z",
+      "side": 1,
+      "message": "@Takashi acccording to the info in https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/52049 this is still experimental feature, you plan to add support in puppet-ironic ?",
+      "revId": "09513d1d2011a490768ce3d1e22c0ce37e3689bc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
