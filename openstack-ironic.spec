@@ -25,6 +25,7 @@ Source5:        ironic.logrotate
 Source6:        openstack-ironic-dnsmasq-tftp-server.service
 Source7:        dnsmasq-tftp-server.conf
 Source8:        openstack-ironic.service
+Source9:        openstack-ironic-pxe-filter.service
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz.asc
@@ -95,6 +96,7 @@ install -p -D -m 644 %{SOURCE1} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE6} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE8} %{buildroot}%{_unitdir}
+install -p -D -m 644 %{SOURCE9} %{buildroot}%{_unitdir}
 
 # install sudoers file
 mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
@@ -260,6 +262,30 @@ ironic to support TFTP to enable initial PXE boot operations using TFTP.
 
 %postun dnsmasq-tftp-server
 %systemd_postun_with_restart openstack-ironic-dnsmasq-tftp-server.service
+
+%package pxe-filter
+Summary: The Ironic PXE Filter
+
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
+Requires: dnsmasq
+
+%{?systemd_ordering}
+
+%description pxe-filter
+Ironic PXE Filter for management of dnsmasq PXE filter
+
+%files pxe-filter
+%{_bindir}/ironic-pxe-filter
+%{_unitdir}/openstack-ironic-pxe-filter.service
+
+%post pxe-filter
+%systemd_post openstack-ironic-pxe-filter.service
+
+%preun pxe-filter
+%systemd_preun openstack-ironic-pxe-filter.service
+
+%postun pxe-filter
+%systemd_postun_with_restart openstack-ironic-pxe-filter.service
 
 %package -n python3-ironic-tests
 Summary:        Ironic unit tests
