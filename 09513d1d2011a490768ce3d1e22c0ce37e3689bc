@@ -34,6 +34,24 @@
       "parentUuid": "e983793c_2519a16c",
       "revId": "09513d1d2011a490768ce3d1e22c0ce37e3689bc",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37bfb790_ffda7285",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-03-14T15:24:01Z",
+      "side": 1,
+      "message": "aparently it is https://github.com/openstack/ironic/blob/master/doc/source/admin/inspection/pxe_filter.rst?plain\u003d1#L10",
+      "parentUuid": "a2563d3d_8c81faa9",
+      "revId": "09513d1d2011a490768ce3d1e22c0ce37e3689bc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
