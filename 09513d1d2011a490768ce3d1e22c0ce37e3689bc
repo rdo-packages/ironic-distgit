@@ -52,6 +52,24 @@
       "parentUuid": "a2563d3d_8c81faa9",
       "revId": "09513d1d2011a490768ce3d1e22c0ce37e3689bc",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4f419c5_1579a615",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 682
+      },
+      "writtenOn": "2024-03-14T15:52:11Z",
+      "side": 1,
+      "message": "OK. I\u0027m fine with leaving this now, but if we have to merge https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/52049 to unblock CI then I prefer this approach. If we add ipxe-filter binary to the common package then we can\u0027t move it later to a different package, I guess.",
+      "parentUuid": "37bfb790_ffda7285",
+      "revId": "09513d1d2011a490768ce3d1e22c0ce37e3689bc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
