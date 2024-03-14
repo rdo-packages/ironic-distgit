@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenStack Ironic PXE filter service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=ironic
+ExecStart=/usr/bin/ironic-pxe-filter
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
