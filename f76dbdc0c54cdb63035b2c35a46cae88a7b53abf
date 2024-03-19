@@ -16,6 +16,24 @@
       "message": "Julia, may you review my last comment when you have a chance? i can move to Recommends if you prefer.",
       "revId": "f76dbdc0c54cdb63035b2c35a46cae88a7b53abf",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43dca787_20571bb2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 558
+      },
+      "writtenOn": "2024-03-19T09:27:45Z",
+      "side": 1,
+      "message": "let\u0027s move that to Recommends\nAFAICS we always install it explicitly when needed",
+      "parentUuid": "f87983d1_7281de13",
+      "revId": "f76dbdc0c54cdb63035b2c35a46cae88a7b53abf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
