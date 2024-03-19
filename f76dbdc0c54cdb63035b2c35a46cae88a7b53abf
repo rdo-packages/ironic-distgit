@@ -34,6 +34,24 @@
       "parentUuid": "f87983d1_7281de13",
       "revId": "f76dbdc0c54cdb63035b2c35a46cae88a7b53abf",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d8a1e3c_3fa3239f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2024-03-19T09:36:42Z",
+      "side": 1,
+      "message": "For awareness, https://github.com/openstack-k8s-operators/tcib/blob/main/container-images/tcib/base/os/ironic-base/ironic-conductor/ironic-conductor.yaml is  used to build containers for podified.",
+      "parentUuid": "43dca787_20571bb2",
+      "revId": "f76dbdc0c54cdb63035b2c35a46cae88a7b53abf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
