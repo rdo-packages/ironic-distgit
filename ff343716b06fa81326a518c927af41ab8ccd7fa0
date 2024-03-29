@@ -16,6 +16,24 @@
       "message": "https://tarballs.opendev.org/openstack/ironic/ironic-24.1.1.tar is 404 currently",
       "revId": "ff343716b06fa81326a518c927af41ab8ccd7fa0",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "290d21cd_5c18d6ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-03-29T12:41:43Z",
+      "side": 1,
+      "message": "https://tarballs.opendev.org/openstack/ironic/ironic-24.1.1.tar.gz",
+      "parentUuid": "ffec158c_1ab3b74f",
+      "revId": "ff343716b06fa81326a518c927af41ab8ccd7fa0",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
