@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
+%global sources_gpg_sign 0xf8675126e2411e7748dd46662fc2093e4682645f
 %global full_release ironic-%{version}
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -11,7 +11,7 @@ Name:           openstack-ironic
 # https://review.openstack.org/#/q/I1a161b2c1d1e27268065b6b4be24c8f7a5315afb,n,z
 Epoch:          1
 Summary:        OpenStack Baremetal Hypervisor API (ironic)
-Version:        23.0.0
+Version:        23.0.1
 Release:        1%{?dist}
 License:        Apache-2.0
 URL:            http://www.openstack.org
@@ -276,6 +276,9 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
+* Thu May 09 2024 RDO <dev@lists.rdoproject.org> 1:23.0.1-1
+- Update to 23.0.1
+
 * Fri Sep 22 2023 RDO <dev@lists.rdoproject.org> 1:23.0.0-1
 - Update to 23.0.0
 
