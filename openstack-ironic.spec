@@ -46,6 +46,7 @@ BuildRequires:  libxslt-devel
 BuildRequires:  gmp-devel
 BuildRequires:  systemd
 BuildRequires:  python3-oslo-db-tests
+BuildRequires:  qemu-img
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
@@ -218,6 +219,7 @@ Requires: dosfstools
 Requires: mtools
 Requires: xorriso
 Requires: pykickstart
+Requires: qemu-img
 # syslinux-nonlinux is not available for aarch64. It is just for
 # bios booting and the world has largely moved past bios booting
 # for physical hardware.
