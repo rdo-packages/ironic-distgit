@@ -104,6 +104,7 @@ BuildRequires:  python3-ironic-lib
 BuildRequires:  python3-proliantutils
 BuildRequires:  python3-tenacity
 BuildRequires:  python3-webob
+BuildRequires:  qemu-img
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
@@ -307,6 +308,7 @@ Summary: The Ironic Conductor
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
+Requires: qemu-img
 
 %if 0%{?rhel} && 0%{?rhel} < 8
 %{?systemd_requires}
