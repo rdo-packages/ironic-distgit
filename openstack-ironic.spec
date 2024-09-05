@@ -47,6 +47,7 @@ BuildRequires:  gmp-devel
 BuildRequires:  systemd
 BuildRequires:  python3-oslo-db-tests
 BuildRequires:  python3-pysnmp
+BuildRequires:  qemu-img
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
@@ -215,6 +216,7 @@ Requires: mtools
 Requires: xorriso
 Requires: pykickstart
 Requires: syslinux-nonlinux
+Requires: qemu-img
 
 %{?systemd_ordering}
 
