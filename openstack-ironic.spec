@@ -46,6 +46,7 @@ BuildRequires:  libxslt-devel
 BuildRequires:  gmp-devel
 BuildRequires:  systemd
 BuildRequires:  python3-oslo-db-tests
+BuildRequires:  qemu-img
 
 Requires: %{name}-common = %{epoch}:%{version}-%{release}
 Requires: udev
