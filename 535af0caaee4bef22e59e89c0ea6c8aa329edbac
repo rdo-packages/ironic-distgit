@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fd4d528d_8f527708",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-09-05T07:05:51Z",
+      "side": 1,
+      "message": "LGTM other than inline comment",
+      "revId": "535af0caaee4bef22e59e89c0ea6c8aa329edbac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16ee3c82_ec2e4ce9",
+        "filename": "openstack-ironic.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-09-05T07:05:51Z",
+      "side": 1,
+      "message": "Needs to be removed",
+      "revId": "535af0caaee4bef22e59e89c0ea6c8aa329edbac",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
