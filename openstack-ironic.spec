@@ -388,3 +388,4 @@ This package contains the Ironic test files.
 * Tue Mar 22 2022 RDO <dev@lists.rdoproject.org> 1:20.0.0-1
 - Update to 20.0.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic/commit/a859de61de7aa5beb309dcc933b584a1f7a0d1e7
