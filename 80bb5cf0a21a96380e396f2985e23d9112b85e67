@@ -1,0 +1,9 @@
+Workflow+1: Alfredo Moralejo <amoralej@redhat.com>
+Code-Review+2: Alfredo Moralejo <amoralej@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Riccardo Pittau <elfosardo@gmail.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 20 Sep 2024 09:22:57 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/52125
+Project: openstack/ironic-distgit
+Branch: refs/heads/rpm-master
