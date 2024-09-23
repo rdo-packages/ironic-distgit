@@ -1,0 +1,8 @@
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Mon, 23 Sep 2024 12:38:09 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/54592
+Project: openstack/ironic-distgit
+Branch: refs/heads/dalmatian-rdo
