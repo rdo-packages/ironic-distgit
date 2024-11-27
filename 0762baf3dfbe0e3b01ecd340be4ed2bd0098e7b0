@@ -1,0 +1,8 @@
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Workflow+1: Karolina Kula <kkula@redhat.com>
+Code-Review+2: Karolina Kula <kkula@redhat.com>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 27 Nov 2024 12:12:36 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/55595
+Project: openstack/ironic-distgit
+Branch: refs/heads/wallaby-rdo
