@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "94ba2878_ed0b5fb4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2024-11-27T11:51:11Z",
+      "side": 1,
+      "message": "should be fixed with https://review.rdoproject.org/r/c/openstack/ironic-distgit/+/55595",
+      "revId": "7b73c75530ce35be4a1c8e9cf29959d01d179ed9",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
