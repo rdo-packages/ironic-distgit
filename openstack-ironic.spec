@@ -296,7 +296,6 @@ Ironic PXE Filter for management of dnsmasq PXE filter
 Summary:        Ironic unit tests
 Requires:       %{name}-common = %{epoch}:%{version}-%{release}
 
-Requires:       python3-mock
 Requires:       python3-oslotest
 Requires:       python3-stestr
 Requires:       python3-testresources
