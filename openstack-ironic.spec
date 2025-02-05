@@ -60,9 +60,6 @@ Requires: udev
 %{gpgverify}  --keyring=%{SOURCE102} --signature=%{SOURCE101} --data=%{SOURCE0}
 %endif
 %autosetup -n ironic-%{upstream_version} -S git
-# Remove tempest plugin entrypoint as a workaround
-sed -i '/tempest/d' setup.cfg
-rm -rf ironic_tempest_plugin
 sed -i /^[[:space:]]*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
 sed -i "s/^deps = -c{env:.*_CONSTRAINTS_FILE.*/deps =/" tox.ini
 sed -i /^minversion.*/d tox.ini
