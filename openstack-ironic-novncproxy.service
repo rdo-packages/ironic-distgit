@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenStack Ironic NoVNC proxy service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=ironic
+ExecStart=/usr/bin/ironic-novncproxy
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
