@@ -26,6 +26,7 @@ Source6:        openstack-ironic-dnsmasq-tftp-server.service
 Source7:        dnsmasq-tftp-server.conf
 Source8:        openstack-ironic.service
 Source9:        openstack-ironic-pxe-filter.service
+Source10:       openstack-ironic-novncproxy.service
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.openstack.org/ironic/ironic-%{version}.tar.gz.asc
@@ -96,6 +97,7 @@ install -p -D -m 644 %{SOURCE2} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE6} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE8} %{buildroot}%{_unitdir}
 install -p -D -m 644 %{SOURCE9} %{buildroot}%{_unitdir}
+install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}
 
 # install sudoers file
 mkdir -p %{buildroot}%{_sysconfdir}/sudoers.d
@@ -242,6 +244,31 @@ Ironic Conductor for management and provisioning of physical machines
 %postun conductor
 %systemd_postun_with_restart openstack-ironic-conductor.service
 
+%package novncproxy
+Summary: The Ironic NoVNC Proxy
+
+Requires: %{name}-common = %{epoch}:%{version}-%{release}
+Requires: novnc
+
+%{?systemd_ordering}
+
+%description novncproxy
+Ironic NoVNC proxy which can proxy bare metal console VNC traffic over
+browser websockets connections.
+
+%files novncproxy
+%{_bindir}/ironic-novncproxy
+%{_unitdir}/openstack-ironic-novncproxy.service
+
+%post novncproxy
+%systemd_post openstack-ironic-novncproxy.service
+
+%preun novncproxy
+%systemd_preun openstack-ironic-novncproxy.service
+
+%postun novncproxy
+%systemd_postun_with_restart openstack-ironic-novncproxy.service
+
 %package dnsmasq-tftp-server
 Summary:    tftp-server service for Ironic using dnsmasq
 Requires:   dnsmasq
@@ -307,3 +334,4 @@ This package contains the Ironic test files.
 %{python3_sitelib}/ironic/tests
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/ironic/commit/b44cce176fbb8c81c813304cd443d0f2c20ab6b2
