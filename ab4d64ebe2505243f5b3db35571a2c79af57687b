@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fcea1aff_3e668f5e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2025-02-25T01:02:04Z",
+      "side": 1,
+      "message": "I can take this. The graphical console changes have started to land which will require a number of flow-on packaging changes. This is the first.",
+      "revId": "ab4d64ebe2505243f5b3db35571a2c79af57687b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
