@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e590443_ae48f8f8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 147
+      },
+      "writtenOn": "2025-03-05T22:22:30Z",
+      "side": 1,
+      "message": "I wrote the upstream change. Looks good to me",
+      "revId": "c3f04f2c69865e55e0952b9751222252ecda05a5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
