@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c02870a3_cd529bb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2025-03-18T16:15:09Z",
+      "side": 1,
+      "message": "waiting for https://review.opendev.org/c/openstack/releases/+/944851/2/deliverables/epoxy/ironic.yaml",
+      "revId": "9f6c58d7603b3941b75dc9f41ad1fe82f8234b6c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
