@@ -105,16 +105,12 @@ install -p -D -m 440 %{SOURCE3} %{buildroot}%{_sysconfdir}/sudoers.d/ironic
 
 mkdir -p %{buildroot}%{_sharedstatedir}/ironic/
 mkdir -p %{buildroot}%{_localstatedir}/log/ironic/
-mkdir -p %{buildroot}%{_sysconfdir}/ironic/rootwrap.d
 
 #Populate the conf dir
 export PYTHONPATH="%{buildroot}/%{python3_sitelib}"
 oslo-config-generator --config-file tools/config/ironic-config-generator.conf --output-file %{buildroot}/%{_sysconfdir}/ironic/ironic.conf
 oslopolicy-sample-generator --config-file tools/policy/ironic-policy-generator.conf
-mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.conf %{buildroot}/%{_sysconfdir}/ironic/rootwrap.conf
-mv %{buildroot}%{_prefix}/etc/ironic/rootwrap.d/* %{buildroot}/%{_sysconfdir}/ironic/rootwrap.d/
 # Remove duplicate config files under /usr/etc/ironic
-rmdir %{buildroot}%{_prefix}/etc/ironic/rootwrap.d
 rmdir %{buildroot}%{_prefix}/etc/ironic
 
 # Install distribution config
@@ -166,7 +162,6 @@ Components common to all OpenStack Ironic services
 %doc etc/ironic/policy.yaml.sample
 %license LICENSE
 %{_bindir}/ironic-dbsync
-%{_bindir}/ironic-rootwrap
 %{_bindir}/ironic-status
 %{_datadir}/ironic/vnc-container
 %{python3_sitelib}/ironic
