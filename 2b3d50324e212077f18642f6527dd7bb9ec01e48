@@ -50,6 +50,23 @@
       "message": "recheck ftbfs",
       "revId": "2b3d50324e212077f18642f6527dd7bb9ec01e48",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "508ded18_0efcddd2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2025-10-14T07:21:13Z",
+      "side": 1,
+      "message": "Requires a new dep:-\npackage python3-cheroot-10.0.1-4.el10_0.noarch from epel-low-priority is filtered out by exclude filtering",
+      "revId": "2b3d50324e212077f18642f6527dd7bb9ec01e48",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
